@@ -87,7 +87,7 @@ package body Model.Calculator.Direct_Tax is
       il : Incomes_List;
    begin
      for i in Incomes_List'Range loop
-   if( i in Calculated_Incomes_Range )then
+        if( i in Calculated_Incomes_Range )then
            il( i ) := calculated( i );
         else
            il( i ) := non_calculated( i );
