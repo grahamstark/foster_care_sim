@@ -1,0 +1,44 @@
+with "tb_2012_i386.gpr";
+
+project AFT_386 is
+
+   for Languages use( "Ada" );
+
+   for Source_Dirs use (
+        "src/**",
+        "drivers/**",
+        "tests/**" );
+
+   for Object_Dir use "bin";
+
+   for Main use ( "harness.adb" );
+
+   Includeopt := ("-gnat2012");
+   Libopt := "";
+   SimpleOpts := ( "" );
+   
+   for Exec_Dir use "bin/";
+   for Object_Dir use "bin/";
+
+   package Linker is
+      for Default_Switches ("ada") use ( "-g"  ); -- ,
+   end Linker;
+
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-M140", "-l3");
+   end Pretty_Printer;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-static", "-E" );
+   end Binder;
+
+   package Compiler is
+      for Default_Switches ( "ada" ) use IncludeOPT & ( "-g", "-gnato", "-E", "-fstack-check"  ); -- );
+   end Compiler;
+
+   package Builder is
+      for Default_Switches ("ada")
+      use  IncludeOPT & ("-g", "-gnatQ", "-x",  "-E" );
+   end Builder;
+
+end AFT_386;
