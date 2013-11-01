@@ -8,7 +8,6 @@ with AUnit.Test_Cases;
 with Model.Abstract_Household;
 with Example_Data;
 with Example_Data.Model_Household;
-with Example_Data.DAO;
 with Model_Types;
 
 package body Model.Calculator.Foster_Care_Sim is

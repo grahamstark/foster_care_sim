@@ -9,7 +9,6 @@ with Ada.Calendar;
 with GNATColl.Traces;
 
 with Base_Model_Types;
-with Example_Data.DAO;
 with Example_Data.Examples;
 with Example_Data.Model_Household;
 with Example_Data;
