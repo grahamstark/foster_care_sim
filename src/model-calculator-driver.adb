@@ -77,12 +77,13 @@ package body Model.Calculator.Driver is
       use Example_Data.Examples;
       use Base_Model_Types;
       use Model_Types;
+      use Text_Utils;
 
       budget_expenditures : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
       budget_receipts     : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
       f                   : File_Type;
       
-      procedure Print_Present_Values is
+      procedure Calculate_And_Print_Present_Values is
          gross_expenditures              : Budget_Array;
          gross_receipts                  : Budget_Array;
          net_expenditures                : Budget_Array;
@@ -115,9 +116,27 @@ package body Model.Calculator.Driver is
             net_expenditures_zero,          
             overall_gross_expenditures_zero,
             overall_gross_receipts_zero,    
-            overall_net_expenditures_zero );  
-        
-      end Print_Present_Values;
+            overall_net_expenditures_zero );
+        Put_Line( f, "Present Values  " );
+        Put_Line( f, " ITEM,Expend 5%, Receipts 5%, Net 5%, Expend 0%, , Receipts 0%, Net 0%" );
+        for b in Budget_Array'Range loop
+            Put_Line( f, Prettify_Image( Budget_Type'Image( b )) & "," & 
+               Format( gross_expenditures( b )) & "," &
+               Format( gross_receipts( b )) & "," &
+               Format( net_expenditures( b )) & ",," &
+               Format( gross_expenditures_zero( b )) & "," &
+               Format( gross_receipts_zero( b )) & "," &
+               Format( net_expenditures_zero( b )));
+        end loop;
+        New_Line( f );
+            Put_Line( f, "Over all budgets" & "," & 
+               Format( overall_gross_expenditures ) & "," &
+               Format( overall_gross_receipts ) & "," &
+               Format( overall_net_expenditures ) & ",," &
+               Format( overall_gross_expenditures_zero) & "," &
+               Format( overall_gross_receipts_zero) & "," &
+               Format( overall_net_expenditures_zero ));
+      end Calculate_And_Print_Present_Values;
 
       
       parents_results     : Model.Results.Household_Result;
@@ -241,6 +260,7 @@ package body Model.Calculator.Driver is
          Put_Line( f, To_String( results.vat ));
          
       end loop years;
+      Calculate_And_Print_Present_Values;      
       Close( f );
    end Run_Model;
 

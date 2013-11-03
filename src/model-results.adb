@@ -49,9 +49,9 @@ package body Model.Results is
                   end if;
                when net     => 
                   if( use_totals ) then 
-                     s := Sum( budget_receipts( year )) - Sum( budget_receipts( year )); 
+                     s := Sum( budget_receipts( year ))- Sum( budget_receipts( year )); 
                   else 
-                     s := budget_receipts( year )(which ) - budget_expenditures( year )( which ); 
+                     s := budget_expenditures( year )( which ) - budget_receipts( year )(which ); 
                   end if;
             end case;
             y := y + 1;
