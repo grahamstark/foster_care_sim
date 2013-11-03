@@ -246,6 +246,8 @@ package body Example_Data is
                     if( target_pers.highest_qualification < gcse )then
                        target_pers.highest_qualification := gcse;
                     end if;
+                 when wages_bump =>
+                    target_pers.wage_scale := event.value;
                  when arbitrary_event => null;
                  end case;
             end loop;
@@ -443,7 +445,7 @@ package body Example_Data is
          lw := nodegree_coeffs * values;
       end if;
       w := exp( lw );
-      w := Amount'Max( mw, w ); 
+      w := Amount'Max( mw, w * p.wage_scale ); 
       Put_Line( "Wage " & To_String( w ));
       return w;
    end Infer_Wage;

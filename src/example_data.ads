@@ -30,6 +30,7 @@ package Example_Data is
         completes_gcses,
         completes_a_levels,
         graduates,
+        wages_bump,
         arbitrary_event );
    
    type Event_Obj is tagged record
@@ -88,6 +89,7 @@ package Example_Data is
       years_unemployed_this_spell : Amount := 0.0;
       years_in_work_total         : Amount := 0.0;
       years_unemployed_total      : Amount := 0.0;
+      wage_scale                  : Rate := 1.0;
    end record;
 
    function To_String( pers : Person ) return String;

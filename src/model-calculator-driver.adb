@@ -10,6 +10,7 @@ with Model.Calculator.Universal_Benefit;
 with Model.Calculator.Direct_Tax;
 with Model.Calculator.Foster_Care_Sim;
 with Model.Parameter_System.Defaults;
+with Optimiser;
 
 package body Model.Calculator.Driver is
 

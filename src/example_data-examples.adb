@@ -128,7 +128,7 @@ package body Example_Data.Examples is
               ev( 2015 ).Add_Event( start_work );                
               return ev;
            end;
-        when 9 => -- christian, base case
+        when 9 .. 11 => -- christian, base case
            declare
               ev : Events_List( 2011 .. 2059 );
               sc_ev : Event_Obj := (
@@ -149,22 +149,22 @@ package body Example_Data.Examples is
               ev( 2014 ).Append( teach_ev );
               ev( 2015 ).Append( sc_ev );
               ev( 2018 ).Add_Event( leave_work );
-              ev( 2019 ).Add_Event( start_work );
+              ev( 2010 + which ).Add_Event( start_work );
               ev( 2022 ).Add_Event( leave_work );
               ev( 2023 ).Add_Event( start_work );
-              -- ev( 2013 ).Add_Event( start_work );
-              -- ev( 2013 ).Add_Event( start_higher_education );
-              -- ev( 2015 ).Add_Event( leave_work );
-              -- ev( 2018 ).Add_Event( graduates );
-              -- ev( 2015 ).Add_Event( end_higher_education );
-              -- ev( 2015 ).Add_Event( start_work );                
               return ev;
            end;
-        when 10 => -- christian, base case
+        when 12 .. 15 => -- christian, 
            declare
+              wage_increase : Event_Obj := (
+                event => wages_bump,
+                name  => TuS( "Wages 1% up from defaults" ),
+                value => 1.01,
+                cost_centre => local_authority );
               ev : Events_List( 2011 .. 2059 );
            begin
               ev( 2015 ).Add_Event( leave_school );
+              ev( 2015 ).Append( wage_increase );
               ev( 2015 ).Add_Event( completes_gcses );
               
               ev( 2015 ).Add_Event( leave_fostering );
@@ -173,7 +173,11 @@ package body Example_Data.Examples is
               ev( 2018 ).Add_Event( leave_work );
               ev( 2019 ).Add_Event( start_work );
               ev( 2022 ).Add_Event( leave_work );
-              ev( 2023 ).Add_Event( start_work );
+              if( which = 15 )then
+                 ev( 2025 ).Add_Event( start_work );
+              else
+                 ev( 2011+which ).Add_Event( start_work );
+              end if;
               -- ev( 2014 ).Append( sc_ev );
               -- ev( 2014 ).Append( teach_ev );
               -- ev( 2015 ).Append( sc_ev );
