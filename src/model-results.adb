@@ -67,8 +67,8 @@ package body Model.Results is
          net_expenditures( by )   := Make_Payment_Stream( by, False, net );
       end loop;
       overall_gross_expenditures := Make_Payment_Stream( Budget_Type'First, True, expend );
-      overall_gross_receipts     := Make_Payment_Stream( Budget_Type'First, False, receipt );
-      overall_net_expenditures   := Make_Payment_Stream( Budget_Type'First, False, net );
+      overall_gross_receipts     := Make_Payment_Stream( Budget_Type'First, True, receipt );
+      overall_net_expenditures   := Make_Payment_Stream( Budget_Type'First, True, net );
    end NPVs;
 
    
