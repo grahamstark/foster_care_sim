@@ -59,6 +59,7 @@ package body Model.Calculator.Driver is
       end loop;
       Model.Calculator.Direct_Tax.Make_Household_Taxable_Income( mhh, results );
    end Do_Main_Calculations;
+   
 
    procedure Run_Model( 
       events       : Events_List; 
@@ -76,8 +77,49 @@ package body Model.Calculator.Driver is
       use Example_Data.Examples;
       use Base_Model_Types;
       use Model_Types;
-      
+
+      budget_expenditures : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
+      budget_receipts     : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
       f                   : File_Type;
+      
+      procedure Print_Present_Values is
+         gross_expenditures              : Budget_Array;
+         gross_receipts                  : Budget_Array;
+         net_expenditures                : Budget_Array;
+         overall_gross_expenditures      : Amount;
+         overall_gross_receipts          : Amount;
+         overall_net_expenditures        : Amount;      
+         gross_expenditures_zero         : Budget_Array;
+         gross_receipts_zero             : Budget_Array;
+         net_expenditures_zero           : Budget_Array;
+         overall_gross_expenditures_zero : Amount;
+         overall_gross_receipts_zero     : Amount;
+         overall_net_expenditures_zero   : Amount;      
+      begin
+         Model.Results.NPVs( 
+            budget_expenditures,
+            budget_receipts,
+            0.05,
+            gross_expenditures,        
+            gross_receipts,            
+            net_expenditures,          
+            overall_gross_expenditures,
+            overall_gross_receipts,    
+            overall_net_expenditures );  
+         Model.Results.NPVs( 
+            budget_expenditures,
+            budget_receipts,
+            0.0,
+            gross_expenditures_zero,        
+            gross_receipts_zero,            
+            net_expenditures_zero,          
+            overall_gross_expenditures_zero,
+            overall_gross_receipts_zero,    
+            overall_net_expenditures_zero );  
+        
+      end Print_Present_Values;
+
+      
       parents_results     : Model.Results.Household_Result;
       household_has_split : Boolean := False;
       parents_household   : Example_Data.Household;
@@ -87,8 +129,6 @@ package body Model.Calculator.Driver is
       target_person       : Example_Data.Person;
       target_buno         : Benefit_Unit_Number;
       target_pno          : Person_Number;
-      budget_expenditures : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
-      budget_receipts     : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
    begin
       Create( f, Out_File, outfile_name );
       Put( f, "Year," );

@@ -6,6 +6,72 @@ package body Model.Results is
    use Ada.Strings.Unbounded;
    use Text_Utils;
    
+   function Sum( b : Budget_Array ) return Amount is
+      s : Amount := 0.0;
+   begin
+      for bb of b loop
+         s := s + bb;
+      end loop;
+      return s;
+   end Sum;
+
+   procedure NPVs( 
+      budget_expenditures        : in Budget_By_Year;
+      budget_receipts            : in Budget_By_Year;
+      discount_rate              : Rate;
+      gross_expenditures         : out Budget_Array;
+      gross_receipts             : out Budget_Array;
+      net_expenditures           : out Budget_Array;
+      overall_gross_expenditures : out Amount;
+      overall_gross_receipts     : out Amount;
+      overall_net_expenditures   : out Amount ) is
+      
+      type Target_Type is ( expend, receipt, net );   
+      
+      function Make_Payment_Stream( which : Budget_Type; use_totals : Boolean; target : Target_Type ) return Amount is
+         ps : Payment_Stream;
+         y  : Positive := 1;
+         s  : Amount;
+      begin
+         for year in budget_expenditures'Range loop
+            case target is
+               when expend  => 
+                  if( use_totals ) then 
+                     s := Sum( budget_expenditures( year )); 
+                  else 
+                     s := budget_expenditures( year )( which ); 
+                  end if;
+               when receipt => 
+                  if( use_totals ) then 
+                     s := Sum( budget_receipts( year ));
+                  else 
+                     s := budget_receipts( year )(which ); 
+                  end if;
+               when net     => 
+                  if( use_totals ) then 
+                     s := Sum( budget_receipts( year )) - Sum( budget_receipts( year )); 
+                  else 
+                     s := budget_receipts( year )(which ) - budget_expenditures( year )( which ); 
+                  end if;
+            end case;
+            y := y + 1;
+            ps.Add_To_Payment_Stream( y, s );
+         end loop;
+         return ps.Net_Present_Value( discount_rate ); 
+      end Make_Payment_Stream;          
+      
+   begin
+      for by in Budget_Type loop
+         gross_expenditures( by ) := Make_Payment_Stream( by, False, expend );
+         gross_receipts( by )     := Make_Payment_Stream( by, False, receipt );
+         net_expenditures( by )   := Make_Payment_Stream( by, False, net );
+      end loop;
+      overall_gross_expenditures := Make_Payment_Stream( Budget_Type'First, True, expend );
+      overall_gross_receipts     := Make_Payment_Stream( Budget_Type'First, False, receipt );
+      overall_net_expenditures   := Make_Payment_Stream( Budget_Type'First, False, net );
+   end NPVs;
+
+   
    procedure Assign_To_Budgets( 
       res      : Personal_Result;
       expend   : in out Budget_Array;

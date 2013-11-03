@@ -61,6 +61,17 @@ package Model.Results is
 
    function Budget_Header( delim : Character; which : String ) return String;   
    function To_String( ba : Budget_Array; delim : Character ) return String;
-
+   
+   procedure NPVs( 
+      budget_expenditures        : in Budget_By_Year;
+      budget_receipts            : in Budget_By_Year;
+      discount_rate              : Rate;
+      gross_expenditures         : out Budget_Array;
+      gross_receipts             : out Budget_Array;
+      net_expenditures           : out Budget_Array;
+      overall_gross_expenditures : out Amount;
+      overall_gross_receipts     : out Amount;
+      overall_net_expenditures   : out Amount );
+      
 
 end Model.Results;
