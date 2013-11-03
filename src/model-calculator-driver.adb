@@ -118,8 +118,8 @@ package body Model.Calculator.Driver is
             overall_gross_receipts_zero,    
             overall_net_expenditures_zero );
          Put_Line( f, "Present Values  " );
-         Put_Line( f, ",,Discounted 3.5%,,,Undiscounted" );
-         Put_Line( f, " ,Expenditure, Receipts, Net Expenditure,,,Expenditure, Receipts, Net" );
+         Put_Line( f, ",,Discounted 3.5%,,,,Undiscounted" );
+         Put_Line( f, " ,Expenditure, Receipts, Net Expenditure,,Expenditure, Receipts, Net" );
          for b in Budget_Array'Range loop
             Put_Line( f, Prettify_Image( Budget_Type'Image( b )) & "," & 
                Format( gross_expenditures( b )) & "," &
