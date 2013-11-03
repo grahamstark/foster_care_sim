@@ -30,7 +30,7 @@ package body Model.Results is
       
       function Make_Payment_Stream( which : Budget_Type; use_totals : Boolean; target : Target_Type ) return Amount is
          ps : Payment_Stream;
-         y  : Positive := 1;
+         y  : Natural := 0;
          s  : Amount;
       begin
          for year in budget_expenditures'Range loop

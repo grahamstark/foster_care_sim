@@ -100,7 +100,7 @@ package body Model.Calculator.Driver is
          Model.Results.NPVs( 
             budget_expenditures,
             budget_receipts,
-            0.05,
+            0.035,
             gross_expenditures,        
             gross_receipts,            
             net_expenditures,          
@@ -117,9 +117,10 @@ package body Model.Calculator.Driver is
             overall_gross_expenditures_zero,
             overall_gross_receipts_zero,    
             overall_net_expenditures_zero );
-        Put_Line( f, "Present Values  " );
-        Put_Line( f, " ITEM,Expend 5%, Receipts 5%, Net 5%, Expend 0%, , Receipts 0%, Net 0%" );
-        for b in Budget_Array'Range loop
+         Put_Line( f, "Present Values  " );
+         Put_Line( f, ",,Discounted 3.5%,,,Undiscounted" );
+         Put_Line( f, " ,Expenditure, Receipts, Net Expenditure,,,Expenditure, Receipts, Net" );
+         for b in Budget_Array'Range loop
             Put_Line( f, Prettify_Image( Budget_Type'Image( b )) & "," & 
                Format( gross_expenditures( b )) & "," &
                Format( gross_receipts( b )) & "," &
@@ -127,18 +128,17 @@ package body Model.Calculator.Driver is
                Format( gross_expenditures_zero( b )) & "," &
                Format( gross_receipts_zero( b )) & "," &
                Format( net_expenditures_zero( b )));
-        end loop;
-        New_Line( f );
-            Put_Line( f, "Over all budgets" & "," & 
-               Format( overall_gross_expenditures ) & "," &
-               Format( overall_gross_receipts ) & "," &
-               Format( overall_net_expenditures ) & ",," &
-               Format( overall_gross_expenditures_zero) & "," &
-               Format( overall_gross_receipts_zero) & "," &
-               Format( overall_net_expenditures_zero ));
+         end loop;
+         New_Line( f );
+         Put_Line( f, "Over all budgets" & "," & 
+            Format( overall_gross_expenditures ) & "," &
+            Format( overall_gross_receipts ) & "," &
+            Format( overall_net_expenditures ) & ",," &
+            Format( overall_gross_expenditures_zero) & "," &
+            Format( overall_gross_receipts_zero) & "," &
+            Format( overall_net_expenditures_zero ));
       end Calculate_And_Print_Present_Values;
 
-      
       parents_results     : Model.Results.Household_Result;
       household_has_split : Boolean := False;
       parents_household   : Example_Data.Household;
@@ -216,17 +216,14 @@ package body Model.Calculator.Driver is
             target_person,
             events( year ),
             results.bus( target_buno ).pers( target_pno ));
-         
          Model.Calculator.Direct_Tax.Make_Household_Net_Income( 
             Map_Household( eh ), results ); 
-            
          results.bus( target_buno ).pers( target_pno ).Assign_To_Budgets( 
             budget_expenditures( year ), budget_receipts( year ));
          if household_has_split then
             Model.Calculator.Direct_Tax.Make_Household_Net_Income( 
                Map_Household( parents_household ), parents_results );
          end if;
-         
          declare
             vatr : constant Rate := system.indir.vat / ( 1.0 + system.indir.vat );
             vatable : constant Amount := 
@@ -252,13 +249,11 @@ package body Model.Calculator.Driver is
             end;
          end if;
          Put( f, year'Img & "," & To_String( events( year ), 5, ',' ));
-         
          Put( f, target_person.Summary_String( ',' ));
          Put( f, To_String( budget_expenditures( year ), ',' ));
          Put( f, To_String( budget_receipts( year ), ',' ));
          Put( f, results.bus( target_buno ).pers( target_pno ).Summary_String( ',' ));
          Put_Line( f, To_String( results.vat ));
-         
       end loop years;
       Calculate_And_Print_Present_Values;      
       Close( f );
