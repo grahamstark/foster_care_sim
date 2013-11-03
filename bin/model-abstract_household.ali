@@ -1,0 +1,255 @@
+V "GNAT Lib v2013"
+A -fstack-check=specific
+A -gnat2012
+A -g
+A -gnatQ
+A -gnat2012
+A -g
+A -gnato
+A -gnatA
+P SS ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_ALLOCATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLICIT_LOOPS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_STREAMS
+RV NO_UNCHECKED_ACCESS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_ALIASING
+RV NO_ELABORATION_CODE
+RV SPARK
+
+U model.abstract_household%s  model-abstract_household.ads  4006f3a5 EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+Z ada.containers.generic_array_sort%s
+W ada.containers.indefinite_vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.finalization%s	a-finali.adb		a-finali.ali
+Z ada.iterator_interfaces%s
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_deallocation%s
+W model%s		model.ads		model.ali
+W model_types%s		model_types.ads		model_types.ali
+W system%s		system.ads		system.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-calend.ads		20130417131018 d86d6c8c
+D a-charac.ads		20130417131019 2d3ec45b
+D a-chlat1.ads		20130417131019 2825df20
+D a-contai.ads		20130417131019 61e5e089
+D a-cgarso.ads		20130417131018 9129bfa8
+D a-cohata.ads		20130417131019 04abccc5
+D a-cohama.ads		20130417131019 9f97b812
+D a-coinve.ads		20130417131019 cfa7d9ff
+D a-coinve.adb		20130417131019 b115484c
+D a-coorma.ads		20130417131019 f6e6861b
+D a-coorse.ads		20130417131019 6649dc0e
+D a-crbltr.ads		20130417131019 b8a2dc05
+D a-convec.ads		20130417131019 0aaf3975
+D a-direio.ads		20130417131019 5842da07
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-iteint.ads		20130417131020 7c7305e9
+D a-numeri.ads		20130417131020 bb51c45a
+D a-ngelfu.ads		20130417131020 243903c9
+D a-ngrear.ads		20130417131020 86992c51
+D a-stream.ads		20130417131021 2ca4ee37
+D a-string.ads		20130417131021 90ac6797
+D a-strbou.ads		20130417131021 9806fe84
+D a-strmap.ads		20130417131021 9cb836fb
+D a-strsup.ads		20130417131021 a27dcb33
+D a-strunb.ads		20130417131021 3f91d4c5
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tideio.ads		20130417131022 1e9d1f0b
+D a-teioed.ads		20130417131022 8ca49dac
+D a-tienio.ads		20130417131022 fc618ae6
+D a-tiflio.ads		20130417131022 56fbda09
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-uncdea.ads		20130417131022 f15a5ed1
+D base_model_types.ads	20131029090718 06c6ac31
+D financial_functions.ads  20131103114608 770a8f9f
+D format_utils.ads	20130715085512 d9ab729a
+D interfac.ads		20130417131027 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D key_value_io.ads	20130715085512 d58a72d7
+D keyed_text_buffer.ads	20130715085512 a5b8d868
+D line_extractor.ads	20130715085512 c6f73843
+D maths_functions.ads	20131003150340 0b74a59f
+D model.ads		20131013113219 aad8402a
+D model-abstract_household.ads  20131031132332 d7e9fac9
+D model_types.ads	20131103105330 f29090b9
+D random_normal_draw.ads  20130715085512 d7117888
+D system.ads		20130417131036 90249111
+D s-atocou.ads		20130417131028 4a9c6cb4
+D s-atocou.adb		20130417131028 7116b4cf
+D s-crtl.ads		20130417131029 dfcfca61
+D s-direio.ads		20130417131029 068812e8
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-stposu.ads		20130417131032 ffeba1c5
+D s-stratt.ads		20130417131032 aedef97e
+D s-string.ads		20130417131032 46b01415
+D s-ststop.ads		20130417131032 ee472be4
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D t_utils.ads		20131030194724 48d853c8
+D tax_utils.ads		20131021170636 97433c02
+D text_utils.ads	20131031144348 54c51d8b
+D utils.ads		20130715085512 31abf9cd
+X 1 ada.ads
+16K9*Ada 19e8 48|1r6 78r39
+X 5 a-contai.ads
+16K13*Containers 24e19 48|1r10 78r43
+X 8 a-cohama.ads
+52R9*Map
+X 9 a-coinve.ads
+45k24*Indefinite_Vectors 486e38 48|1w21 78r54
+55R9*Vector 48|79r49[78]
+X 14 a-convec.ads
+55R9*Vector
+X 19 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[9|73]>
+X 25 a-strbou.ads
+162V17*"="{boolean}<27|168p13> 14|43i19[78|25]
+X 28 a-strunb.ads
+166V14*"="{boolean} 14|43i19
+X 38 base_model_types.ads
+25F9*Real<long_float>
+31F12*Amount{25F9} 48|9r80 22r67 72r82
+43I12*Age_Range{natural} 48|13r37 51r19 52r19 52r32 66r19 67r19 67r32
+52I12*Person_Count{natural} 48|55r22 55r49 70r22 70r49
+55I12*Benefit_Unit_Count{natural} 48|62r38
+X 47 model.ads
+27K9*Model 49e10 48|4r9 83r5
+X 48 model-abstract_household.ads
+4K15*Abstract_Household 47|27k9 48|83l11 83e29
+8h9*Incomes 9p13 9r29 10p13 10r30 24r43
+9y13*Get_Income{38|31F12} 9>25 9>38
+9r25 i{8R9}
+9e38 w{49|76E12}
+10y13*Get_Incomes{49|72A12} 10>26
+10r26 i{8R9}
+12h9*Demog 13p13 13r22 14p13 14r29 15p13 15r25 16p13 16r38 17p13 17r35 24r33
+13y13*Age{38|43I12} 13>18
+13r18 d{12R9}
+14y13*Employment{49|82E9} 14>25
+14r25 d{12R9}
+15y13*Gender{49|83E9} 15>21
+15r21 d{12R9}
+16y13*Family_Relationship{49|84E9} 16>34
+16r34 d{12R9}
+17y13*Education_Status{49|81E9} 17>31
+17r31 d{12R9}
+19h9*Employment_Record 20p13 20r44 21p13 21r31 22p13 22r40 24r55
+20y13*Is_Contracted_In_To_Serps{boolean} 20>40
+20r40 e{19R9}
+21y13*Hours_Worked{49|79I12} 21>27
+21r27 e{19R9}
+22y13*Average_Wage_Per_Hour{38|31F12} 22>36
+22r36 e{19R9}
+24h9*Person<12R9><8R9><19R9> 9p13 10p13 13p13 14p13 15p13 16p13 17p13 20p13
+. 21p13 22p13 56r70 75r87 78r84
+27K12*Expenses 29l8 29e16
+28h12*Expenses
+31K12*Health 33l8 33e14
+32h12*Health
+35K12*Life_Events 37l8 37e19
+36h12*Life_Events
+39K12*Weights 41l8 41e15
+40h12*Weights
+43K12*Wealth 45l8 45e14
+44h12*Wealth
+47h9*Benefit_Unit 49p13 50r19 56p13 56r30 76r73
+49y13*Get_Num_People{38|52I12} 50>7 51>7 52>7 53>7 54>7 55>7
+50r7 bu{47R9}
+51i7 start_age{38|43I12}
+52i7 end_age{38|43I12}
+53e7 relationship_from{49|84E9}
+54e7 relationship_to{49|84E9}
+55i7 start_person{38|52I12}
+56y13*Get_Person<24R9> 56>25 56>44
+56r25 bu{47R9}
+56i44 which{positive}
+59h9*Household 61p13 62r19 64p13 65r19 72p13 72r36 73p13 73r35 75p13 75r30
+. 76p13 76r36
+61y13*Get_Num_Benefit_Units{38|55I12} 62>7
+62r7 hh{59R9}
+64y13*Get_Num_People{38|52I12} 65>7 66>7 67>7 68>7 69>7 70>7
+65r7 hh{59R9}
+66i7 start_age{38|43I12}
+67i7 end_age{38|43I12}
+68e7 relationship_from{49|84E9}
+69e7 relationship_to{49|84E9}
+70i7 start_person{38|52I12}
+72y13*Get_Housing_Cost{38|31F12} 72>31 72>47
+72r31 hh{59R9}
+72e47 htype{49|63E9}
+73y13*Get_Tenure_Type{49|17E9} 73>30
+73r30 hh{59R9}
+75y13*Get_Person<24R9> 75>25 75>41 75>59
+75r25 hh{59R9}
+75i41 bu_no{positive}
+75i59 pers_no{positive}
+76y13*Get_Benefit_Unit<47R9> 76>31 76>47
+76r31 hh{59R9}
+76i47 which{positive}
+78K12*Person_List_Package[9|45] 79r29
+79R12*Person_Vector{9|55R9[78]}
+X 49 model_types.ads
+5K9*Model_Types 48|2w6 6r8 49|115e16
+17E9*Tenure_Type 48|73r54 49|17e93
+63E9*Housing_Cost_Type 48|72r55 49|63e59
+72A12*Incomes_List{76|67A12[66]}<19E9> 48|10r47
+76E12*Non_Calculated_Incomes_Range{19E9} 48|9r42
+79I12*Work_Hours_Range{natural} 48|21r58
+81E9*Education_Type 48|17r50 49|81e104
+82E9*Employment_Status 48|14r44 49|82e99
+83E9*Gender_Type 48|15r40 49|83e40
+84E9*Relationship_Type 48|16r53 53r27 53r48 54r27 54r48 68r27 68r48 69r27
+. 69r48 49|84e102
+X 76 t_utils.ads
+66A9*Abs_Amount_Array(38|25F9)<49|19E9>
+67A12*Amount_Array{66A9[49|66]}<49|19E9>
+

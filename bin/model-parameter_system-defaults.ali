@@ -1,0 +1,409 @@
+V "GNAT Lib v2013"
+A -fstack-check=specific
+A -gnat2012
+A -g
+A -gnatQ
+A -gnat2012
+A -g
+A -gnato
+A -gnatA
+P SS ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK
+
+U model.parameter_system.defaults%b  model-parameter_system-defaults.adb  b12581ea NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.assertions%s	a-assert.adb		a-assert.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W example_data%s	example_data.adb	example_data.ali
+W interfaces%s		interfac.ads		interfac.ali
+W model.parameter_system%s  model-parameter_system.ads  model-parameter_system.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_lli%s	s-imglli.adb		s-imglli.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+U model.parameter_system.defaults%s  model-parameter_system-defaults.ads  ccd6ee48 EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W model.parameter_system%s  model-parameter_system.ads  model-parameter_system.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-assert.ads		20130417131018 0a052b2b
+D a-calend.ads		20130417131018 d86d6c8c
+D a-charac.ads		20130417131019 2d3ec45b
+D a-chlat1.ads		20130417131019 2825df20
+D a-contai.ads		20130417131019 61e5e089
+D a-cohata.ads		20130417131019 04abccc5
+D a-cohama.ads		20130417131019 9f97b812
+D a-coorma.ads		20130417131019 f6e6861b
+D a-coorse.ads		20130417131019 6649dc0e
+D a-crbltr.ads		20130417131019 b8a2dc05
+D a-convec.ads		20130417131019 0aaf3975
+D a-direio.ads		20130417131019 5842da07
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-iteint.ads		20130417131020 7c7305e9
+D a-numeri.ads		20130417131020 bb51c45a
+D a-ngelfu.ads		20130417131020 243903c9
+D a-ngrear.ads		20130417131020 86992c51
+D a-stream.ads		20130417131021 2ca4ee37
+D a-string.ads		20130417131021 90ac6797
+D a-strbou.ads		20130417131021 9806fe84
+D a-strmap.ads		20130417131021 9cb836fb
+D a-strsup.ads		20130417131021 a27dcb33
+D a-strunb.ads		20130417131021 3f91d4c5
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tideio.ads		20130417131022 1e9d1f0b
+D a-teioed.ads		20130417131022 8ca49dac
+D a-tienio.ads		20130417131022 fc618ae6
+D a-tiflio.ads		20130417131022 56fbda09
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-uncdea.ads		20130417131022 f15a5ed1
+D base_model_types.ads	20131029090718 06c6ac31
+D example_data.ads	20131101154959 3cf81dc7
+D financial_functions.ads  20131103114608 770a8f9f
+D format_utils.ads	20130715085512 d9ab729a
+D interfac.ads		20130417131027 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D key_value_io.ads	20130715085512 d58a72d7
+D keyed_text_buffer.ads	20130715085512 a5b8d868
+D line_extractor.ads	20130715085512 c6f73843
+D maths_functions.ads	20131003150340 0b74a59f
+D model.ads		20131013113219 aad8402a
+D model-parameter_system.ads  20131031221953 b9cc261e
+D model-parameter_system-defaults.ads  20131028095437 ad77a4da
+D model-parameter_system-defaults.adb  20131101155509 12c2e608
+D model_types.ads	20131103105330 f29090b9
+D random_normal_draw.ads  20130715085512 d7117888
+D system.ads		20130417131036 90249111
+D s-assert.ads		20130417131028 a3a4e6ab
+D s-atocou.ads		20130417131028 4a9c6cb4
+D s-atocou.adb		20130417131028 7116b4cf
+D s-conca2.ads		20130417131029 fbd0f2fc
+D s-crtl.ads		20130417131029 dfcfca61
+D s-direio.ads		20130417131029 068812e8
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-imglli.ads		20130417131030 114f55d1
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-stposu.ads		20130417131032 ffeba1c5
+D s-stratt.ads		20130417131032 aedef97e
+D s-string.ads		20130417131032 46b01415
+D s-ststop.ads		20130417131032 ee472be4
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D t_utils.ads		20131030194724 48d853c8
+D tax_utils.ads		20131021170636 97433c02
+D text_utils.ads	20131031144348 54c51d8b
+D utils.ads		20130715085512 31abf9cd
+X 1 ada.ads
+16K9*Ada 19e8 48|1r6 5r8 49|1r6 2r6 7r8 8r8
+X 2 a-assert.ads
+24K13*Assertions 36e19 49|1w10 7r12
+34U14*Assert 49|18s7 46s7
+X 3 a-calend.ads
+36K13*Calendar 375e17 48|1w10 5r12
+44I12*Year_Number{integer} 48|7r41 11r43 12r51 13r49 15r14 19r46 49|69r51
+. 127r43 208r49 271r46 285r31 317r47 333r43 353r40 364r41
+X 8 a-cohama.ads
+52R9*Map
+X 10 a-coorse.ads
+52R9*Set
+117U14*Insert 49|132s30[80|55[50|66]] 133s30[80|55[50|66]] 134s30[80|55[50|66]]
+. 135s30[80|55[50|66]] 136s30[80|55[50|66]] 137s30[80|55[50|66]] 138s30[80|55[50|66]]
+. 141s26[80|55[50|66]] 142s26[80|55[50|66]] 143s26[80|55[50|66]] 144s26[80|55[50|66]]
+. 145s26[80|55[50|66]] 147s28[80|55[50|66]] 211s24[80|55[50|66]] 212s24[80|55[50|66]]
+. 217s26[80|55[50|66]] 218s26[80|55[50|66]] 219s26[80|55[50|66]] 220s26[80|55[50|66]]
+. 221s26[80|55[50|66]] 222s26[80|55[50|66]] 223s26[80|55[50|66]] 224s26[80|55[50|66]]
+. 225s26[80|55[50|66]] 226s26[80|55[50|66]] 228s26[80|55[50|66]]
+X 12 a-convec.ads
+55R9*Vector
+X 17 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[9|68]>
+X 20 a-ngrear.ads
+43A9*Real_Vector(long_float)<integer>
+X 23 a-strbou.ads
+162V17*"="{boolean}<25|168p13> 12|43i19[82|25]
+X 26 a-strunb.ads
+166V14*"="{boolean} 12|43i19
+X 28 a-textio.ads
+49K13*Text_IO 471e16 49|2w10 8r12
+263U14*Put_Line 49|295s13
+X 36 base_model_types.ads
+25F9*Real<long_float>
+30F12*Rate{25F9}
+31F12*Amount{25F9} 49|80r73 96r73 112r73 178r64 188r75 198r75
+43I12*Age_Range{natural}
+102A9*Amount_Array(31F12)<integer>
+107A9*Age_Limit_Array(43I12)<integer>
+X 37 example_data.ads
+8K9*Example_Data 134e17 49|3w6 256r60 310r65
+16f4*ONE_BEDROOM_FLAT_SOCIAL_HOUSING{36|31F12} 49|256r73 310r78
+X 45 maths_functions.ads
+27A12*Vector{20|43A9[25[46|37]]}<integer> 49|12r17[46|37] 13r23[46|37] 14r19[46|37]
+. 15r21[46|37] 39r17[46|37] 40r29[46|37] 41r30[46|37] 42r29[46|37] 43r30[46|37]
+. 71r21[46|37] 129r21[46|37] 130r21[46|37]
+X 46 model.ads
+27K9*Model 49e10 48|3r9 21r5 49|5r14 378r5
+X 47 model-parameter_system.ads
+3K15*Parameter_System 46|27k9 47|216e28 48|3r15 21r11 49|5r20 378r11
+7E9*Loan_Plan_Type 7e45 48|16r31 49|286r31
+7n37*plan_2{7E9} 49|365r43 371r79
+38R9*Student_Loan_And_Grant_System 65e14 48|18r50 49|288r49 289r13
+43a7*grant_income_limits{20|43A9[45|25[46|37]]} 49|295r63 296m17
+44a7*assembly_learning_grant{20|43A9[45|25[46|37]]} 49|297m17
+45a7*maintenance_loan_london{20|43A9[45|25[46|37]]} 49|299m17
+46a7*maintenance_loan_away{20|43A9[45|25[46|37]]} 49|298m17
+47a7*maintenance_loan_home{20|43A9[45|25[46|37]]} 49|300m17
+48f7*tuition_fee_loan{36|31F12} 49|301m17
+49f7*tuition_fee_grant{36|31F12} 49|302m17
+50f7*ema{36|31F12} 49|303m17
+51f7*ema_income_limit{36|31F12} 49|304m17
+52f7*ema_income_limit_w_kids{36|31F12} 49|305m17
+53a7*algfe{20|43A9[45|25[46|37]]} 49|306m22
+54a7*algfe_income_limit{20|43A9[45|25[46|37]]} 49|307m17
+55f7*higher_education_bursary{36|31F12} 49|308m17
+56f7*average_accommodation_costs_out_of_term_time{36|31F12} 49|310m17
+62f10*income_limit{36|31F12} 49|293m17
+63f10*payment_rate{36|30F12} 49|294m17
+68R9*Foster_Payment_System 72e14 49|317r68 318r13
+69a7*age_limits{36|107A9} 49|325m17
+70a7*minimum_amounts{36|102A9} 49|326m17
+71a7*childs_contributions{36|102A9} 49|327m17
+74R9*Income_Tax_System 84e14 48|11r64 49|11r24 127r64 128r13
+75r6*non_savings_income_rates{81|58R9[46|32]} 49|25m14
+76r6*savings_income_rates{81|58R9[46|32]} 49|29m14
+77r6*dividend_income_rates{81|58R9[46|32]} 49|33m14
+78f6*personal_allowance{36|31F12} 49|180m20 190m20 200m20
+79r6*non_savings_income{50|73R12} 49|132m11 133m11 134m11 135m11 136m11 137m11
+. 138m11
+80r6*savings_income{50|73R12} 49|141m11 142m11 143m11 144m11 145m11
+81r6*dividends_income{50|73R12} 49|147m11
+88R9*National_Insurance_System 93e14 48|12r72 49|38r24 69r72 70r13
+89r6*employee_in_rates{81|58R9[46|32]} 49|53m14
+90r6*employee_out_rates{81|58R9[46|32]} 49|57m14
+91r6*employer_in_rates{81|58R9[46|32]} 49|61m14
+92r6*employer_out_rates{81|58R9[46|32]} 49|65m14
+103f7*single_with_housing_no_children{36|31F12} 49|240m27
+104f7*single_with_housing_with_children{36|31F12} 49|241m27
+105f7*single_with_housing_limited_work_capacity{36|31F12} 49|242m27
+112f7*single_no_housing_no_children{36|31F12} 49|244m27
+113f7*single_no_housing_with_children{36|31F12} 49|245m27
+114f7*single_no_housing_limited_work_capacity{36|31F12} 49|246m27
+121f7*couple_with_housing_no_children{36|31F12} 49|248m27
+122f7*couple_with_housing_with_children{36|31F12} 49|249m27
+123f7*couple_with_housing_limited_work_capacity{36|31F12} 49|250m27
+129f7*couple_no_housing_no_children{36|31F12} 49|252m27
+130f7*couple_no_housing_with_children{36|31F12} 49|253m27
+131f7*couple_no_housing_limited_work_capacity{36|31F12} 49|254m27
+136f7*single_claimant_aged_under_25{36|31F12} 49|233m27
+137f7*single_claimant_aged_25_or_over{36|31F12} 49|234m27
+138f7*joint_claimants_both_aged_under_25{36|31F12} 49|235m27
+139f7*joint_claimants_either_aged_25_or_over{36|31F12} 49|236m27
+141f7*first_child_or_qualifying_young_person{36|31F12} 49|237m27
+142f7*second_and_each_subsequent_child_or_qualifying_young_person{36|31F12}
+. 49|238m27
+145R9*Universal_Credit_System 185e14 48|13r70 49|208r70 209r12
+146r7*earned_income{50|73R12} 49|211m10 212m10
+147r7*unearned_income{50|73R12} 49|217m10 218m10 219m10 220m10 221m10 222m10
+. 223m10 224m10 225m10 226m10 228m10
+149r7*allowances{134R9} 49|233m16 234m16 235m16 236m16 237m16 238m16
+150r7*disregards{97R9} 49|240m16 241m16 242m16 244m16 245m16 246m16 248m16
+. 249m16 250m16 252m16 253m16 254m16
+152f7*withdrawal_rate{36|30F12} 49|257m16
+156f7*limited_capability_for_work{36|31F12} 49|258m16
+157f7*limited_capability_for_work_and_work_related_activity{36|31F12} 49|259m16
+159f7*caring_for_a_severely_disabled_person_for_at_least_35_hours_a_week{36|31F12}
+. 49|260m16
+164f7*childcare_costs_percent{36|30F12} 49|261m16
+165f7*maximum_childcare_award_families{36|31F12} 49|262m16
+166f7*maximum_childcare_award_lone_parents{36|31F12} 49|263m16
+168f7*maximum_payment_families{36|31F12} 49|264m16
+169f7*maximum_payment_singles{36|31F12} 49|265m16
+176f7*one_bedroom_in_shared_accommodation_rate{36|31F12} 49|256m16
+187R9*Social_Care_Costs 190e14 49|333r64 334r12
+188a7*current_system{50|100A9} 49|343m16
+189a7*when_i_am_ready{50|100A9} 49|338m16
+192R9*Child_Benefit_System 196e14 48|19r67 49|271r67 272r12
+193f7*first_child{36|31F12} 49|276m16
+194f7*additional_children{36|31F12} 49|277m16
+195f7*guardians_allowance{36|31F12} 49|278m16
+198R9*Indirect_Taxes 200e14 49|353r61 354r15
+199f7*vat{36|30F12} 49|358m19
+202R9*Complete_System 214e15 48|7r62 49|364r62 365r13
+206r7*cb{192R9} 49|367m11
+207r7*it{74R9} 49|368m11
+208r7*ni{88R9} 49|369m11
+209r7*uc{145R9} 49|370m11
+210r7*sl{38R9} 49|371m11
+211r7*fp{68R9} 49|372m11
+212r7*sc{187R9} 49|373m11
+213r7*indir{198R9} 49|374m11
+X 48 model-parameter_system-defaults.ads
+3K32*Defaults 47|3k15 48|21l28 21e36 49|5b37 378l28 378t36
+7V13*Get_Complete_System{47|202R9} 7>34 49|364b13 376l9 376t28
+7i34 year{3|44I12} 49|364b34 367r43 368r40 369r48 370r46 371r60 372r44 373r40
+. 374r40
+11V13 Get_Income_Tax_System{47|74R9} 11>36 49|127b13 206l8 206t29 368s17
+11i36 year{3|44I12} 49|127b36 172r12
+12V13 Get_National_Insurance_System{47|88R9} 12>44 49|69b13 125l8 125t37
+. 369s17
+12i44 year{3|44I12} 49|69b44 73r12
+13V13 Get_Universal_Credit_System{47|145R9} 13>42 49|208b13 269l8 269t35
+. 370s17
+13i42 year{3|44I12} 49|208b42 231r12
+14V13 Get_Student_Loan_And_Grant_System{47|38R9} 15>7 16>7 17>7 18>7 49|284b13
+. 315l8 315t41 371s17
+15i7 year{3|44I12} 49|285b7 291r12 371r52
+16e7 plan_type{47|7E9} 49|286b7 289r44 371r66
+17i7 num_maintenance_bands{positive} 49|287b7 289r55 371r87
+18i7 num_algfe_bands{positive} 49|288b7 289r78 371r115
+19V13 Get_Child_Benefit_System{47|192R9} 19>39 49|271b13 282l8 282t32 367s17
+19i39 year{3|44I12} 49|271b39 274r12
+X 49 model-parameter_system-defaults.adb
+10U14 Set_Rates_And_Bands 10b14 11=9 12>9 13>9 14>9 15>9 35l8 35t27 181s16
+. 191s16 201s16
+11r9 sys{47|74R9} 25m10 25r10 29m10 29r10 33m10 33r10
+12a9 bands{45|27A12[46|37]} 18r15 22r16 23r21 27r21 31r21
+13a9 non_savings{45|27A12[46|37]} 18r30 19r15 24r21
+14a9 savings{45|27A12[46|37]} 19r36 20r15 28r21
+15a9 dividends{45|27A12[46|37]} 20r32 32r21
+16r7 rb{81|52R9[46|32]} 23m10 24m10 25r58 27m10 28m10 29r54 31m10 32m10 33r55
+22i11 i{integer} 23r28 24r34 25r62 27r28 28r30 29r58 31r28 32r32 33r59
+37U14 Set_Rates_And_Bands_NI 37b14 38=9 39>9 40>9 41>9 42>9 43>9 67l8 67t30
+. 82s16 98s16 114s16
+38r9 sys{47|88R9} 53m10 53r10 57m10 57r10 61m10 61r10 65m10 65r10
+39a9 bands{45|27A12[46|37]} 46r15 50r16 51r21 55r21 59r21 63r21
+40a9 employee_in_rates{45|27A12[46|37]} 46r30 47r15 52r21
+41a9 employee_out_rates{45|27A12[46|37]} 47r42 48r15 56r21
+42a9 employer_in_rates{45|27A12[46|37]} 48r43 60r21
+43a9 employer_out_rates{45|27A12[46|37]} 64r21
+44r7 rb{81|52R9[46|32]} 51m10 52m10 53r51 55m10 56m10 57r52 59m10 60m10 61r51
+. 63m10 64m10 65r52
+50i11 i{integer} 51r28 52r40 53r55 55r28 56r41 57r56 59r28 60r40 61r55 63r28
+. 64r41 65r56
+70r7 sys{47|88R9} 83m19 83r19 99m19 99r19 115m19 115r19 124r14
+71A15 V4{45|27A12[46|37]}<integer> 76r37 77r37 78r37 79r37 80r37 92r37 93r37
+. 94r37 95r37 96r37 108r37 109r37 110r37 111r37 112r37
+76a16 employee_in_rates{71A15} 85r19
+77a16 employee_out_rates{71A15} 86r19
+78a16 employer_in_rates{71A15} 87r19
+79a16 employer_out_rates{71A15} 88r19
+80a16 bands{71A15} 84r19
+92a16 employee_in_rates{71A15} 101r19
+93a16 employee_out_rates{71A15} 102r19
+94a16 employer_in_rates{71A15} 103r19
+95a16 employer_out_rates{71A15} 104r19
+96a16 bands{71A15} 100r19
+108a16 employee_in_rates{71A15} 117r19
+109a16 employee_out_rates{71A15} 118r19
+110a16 employer_in_rates{71A15} 119r19
+111a16 employer_out_rates{71A15} 120r19
+112a16 bands{71A15} 116r19
+128r7 sys{47|74R9} 132m7 132r7 133m7 133r7 134m7 134r7 135m7 135r7 136m7
+. 136r7 137m7 137r7 138m7 138r7 141m7 141r7 142m7 142r7 143m7 143r7 144m7
+. 144r7 145m7 145r7 147m7 147r7 180m16 181m37 181r37 190m16 191m37 191r37
+. 200m16 201m37 201r37 205r14
+129A15 V3{45|27A12[46|37]}<integer> 175r37 176r37 177r37 178r37
+130A15 V4{45|27A12[46|37]}<integer> 185r37 186r37 187r37 188r37 195r37 196r37
+. 197r37 198r37
+175a16 non_savings_income{129A15} 181r49
+176a16 savings_income{129A15} 181r69
+177a16 dividends_income{129A15} 181r85
+178a16 bands{129A15} 181r42
+185a16 non_savings_income{130A15} 191r49
+186a16 savings_income{130A15} 191r69
+187a16 dividends_income{130A15} 191r85
+188a16 bands{130A15} 191r42
+195a16 non_savings_income{130A15} 201r49
+196a16 savings_income{130A15} 201r69
+197a16 dividends_income{130A15} 201r85
+198a16 bands{130A15} 201r42
+209r7 uc{47|145R9} 211m7 211r7 212m7 212r7 217m7 217r7 218m7 218r7 219m7
+. 219r7 220m7 220r7 221m7 221r7 222m7 222r7 223m7 223r7 224m7 224r7 225m7
+. 225r7 226m7 226r7 228m7 228r7 233m13 234m13 235m13 236m13 237m13 238m13
+. 240m13 241m13 242m13 244m13 245m13 246m13 248m13 249m13 250m13 252m13 253m13
+. 254m13 256m13 257m13 258m13 259m13 260m13 261m13 262m13 263m13 264m13 265m13
+. 268r14
+272r6 sys{47|192R9} 276m12 277m12 278m12 281r14
+289r7 sys{47|38R9} 293m13 294m13 295r59 296m13 297m13 298m13 299m13 300m13
+. 301m13 302m13 303m13 304m13 305m13 306m18 307m13 308m13 310m13 313r15
+317V13 Get_Foster_Payment_System{47|68R9} 317b13 317>40 331l9 331t34 372s17
+317i40 year{3|44I12} 320r12
+318r7 fcs{47|68R9} 325m13 326m13 327m13 330r14
+333V13 Get_Social_Care_Costs{47|187R9} 333b13 333>36 351l8 351t29 373s17
+333i36 year{3|44I12} 336r12
+334r7 sc{47|187R9} 338m13 343m13 350r14
+353V13 Get_Indirect_Taxes{47|198R9} 353b13 353>33 362l9 362t27 374s20
+353i33 year{3|44I12} 356r12
+354r7 indir{47|198R9} 358m13 361r14
+365r7 sys{47|202R9} 367m7 368m7 369m7 370m7 371m7 372m7 373m7 374m7 375r14
+X 50 model_types.ads
+20n7*wages{19E9} 49|132r38 211r32
+21n7*self_employment{19E9} 49|133r38 212r32
+22n7*private_pensions{19E9} 49|134r38 222r34
+24n7*bank_interest{19E9} 49|141r34 217r34
+25n7*building_society{19E9} 49|142r34 218r34
+26n7*stocks_shares{19E9} 49|143r34 219r34
+27n7*peps{19E9} 49|144r34 220r34
+29n7*dividends{19E9} 49|147r36 228r34
+30n7*property{19E9} 49|137r38 225r34
+31n7*royalties{19E9} 49|138r38 226r34
+33n7*other_investment_income{19E9} 49|145r34 221r34
+48n7*retirement_pension{19E9} 49|135r38 223r34
+49n7*other_pensions{19E9} 49|136r38 224r34
+73R12*Incomes_Set{80|56R12[66]}
+96n34*initial_review{96E9} 49|339r16 344r16
+96n50*maintenance{96E9} 49|340r16 345r16
+96n63*placement_ceases{96E9} 49|341r16 346r16
+96n81*bi_annual_review{96E9} 49|342r16 347r16
+100A9*Admin_Activity_Array(36|31F12)<96E9>
+X 80 t_utils.ads
+56R12*Set{10|52R9[55[50|66]]}
+X 81 tax_utils.ads
+52R9*Rate_And_Band 49|16r12[46|32] 44r12[46|32]
+53f7*rate{36|25F9} 49|24m13[46|32] 28m13[46|32] 32m13[46|32] 52m13[46|32]
+. 56m13[46|32] 60m13[46|32] 64m13[46|32]
+54f7*band{36|25F9} 49|23m13[46|32] 27m13[46|32] 31m13[46|32] 51m13[46|32]
+. 55m13[46|32] 59m13[46|32] 63m13[46|32]
+58R9*Rates_And_Bands
+62U14*Set_Rate_And_Band 49|25s39[46|32] 29s35[46|32] 33s36[46|32] 53s32[46|32]
+. 57s33[46|32] 61s32[46|32] 65s33[46|32]
+

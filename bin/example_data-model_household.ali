@@ -1,0 +1,330 @@
+V "GNAT Lib v2013"
+A -fstack-check=specific
+A -gnat2012
+A -g
+A -gnatQ
+A -gnat2012
+A -g
+A -gnato
+A -gnatA
+P SS ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLICIT_LOOPS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK
+
+U example_data.model_household%b  example_data-model_household.adb  25abd191 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.assertions%s	a-assert.adb		a-assert.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W example_data%s	example_data.adb	example_data.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.concat_8%s	s-conca8.adb		s-conca8.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+U example_data.model_household%s  example_data-model_household.ads  6792b946 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W base_model_types%s	base_model_types.adb	base_model_types.ali
+W example_data%s	example_data.adb	example_data.ali
+W model%s		model.ads		model.ali
+W model.abstract_household%s  model-abstract_household.ads  model-abstract_household.ali
+W model_types%s		model_types.ads		model_types.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-assert.ads		20130417131018 0a052b2b
+D a-calend.ads		20130417131018 d86d6c8c
+D a-charac.ads		20130417131019 2d3ec45b
+D a-chlat1.ads		20130417131019 2825df20
+D a-contai.ads		20130417131019 61e5e089
+D a-cohata.ads		20130417131019 04abccc5
+D a-cohama.ads		20130417131019 9f97b812
+D a-coinve.ads		20130417131019 cfa7d9ff
+D a-coorma.ads		20130417131019 f6e6861b
+D a-coorse.ads		20130417131019 6649dc0e
+D a-crbltr.ads		20130417131019 b8a2dc05
+D a-convec.ads		20130417131019 0aaf3975
+D a-direio.ads		20130417131019 5842da07
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-iteint.ads		20130417131020 7c7305e9
+D a-numeri.ads		20130417131020 bb51c45a
+D a-ngelfu.ads		20130417131020 243903c9
+D a-ngrear.ads		20130417131020 86992c51
+D a-stream.ads		20130417131021 2ca4ee37
+D a-string.ads		20130417131021 90ac6797
+D a-strbou.ads		20130417131021 9806fe84
+D a-strmap.ads		20130417131021 9cb836fb
+D a-strsup.ads		20130417131021 a27dcb33
+D a-strunb.ads		20130417131021 3f91d4c5
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tideio.ads		20130417131022 1e9d1f0b
+D a-teioed.ads		20130417131022 8ca49dac
+D a-tienio.ads		20130417131022 fc618ae6
+D a-tiflio.ads		20130417131022 56fbda09
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-uncdea.ads		20130417131022 f15a5ed1
+D base_model_types.ads	20131029090718 06c6ac31
+D example_data.ads	20131101154959 3cf81dc7
+D example_data-model_household.ads  20131031132344 78d562c0
+D example_data-model_household.adb  20131031132300 577b987a
+D financial_functions.ads  20131103114608 770a8f9f
+D format_utils.ads	20130715085512 d9ab729a
+D interfac.ads		20130417131027 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D key_value_io.ads	20130715085512 d58a72d7
+D keyed_text_buffer.ads	20130715085512 a5b8d868
+D line_extractor.ads	20130715085512 c6f73843
+D maths_functions.ads	20131003150340 0b74a59f
+D model.ads		20131013113219 aad8402a
+D model-abstract_household.ads  20131031132332 d7e9fac9
+D model_types.ads	20131103105330 f29090b9
+D random_normal_draw.ads  20130715085512 d7117888
+D system.ads		20130417131036 90249111
+D s-assert.ads		20130417131028 a3a4e6ab
+D s-atocou.ads		20130417131028 4a9c6cb4
+D s-atocou.adb		20130417131028 7116b4cf
+D s-conca8.ads		20130417131029 ea110f26
+D s-crtl.ads		20130417131029 dfcfca61
+D s-direio.ads		20130417131029 068812e8
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-imenne.ads		20130417131030 8707cbf0
+D s-imgint.ads		20130417131030 02dbe0c2
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-stposu.ads		20130417131032 ffeba1c5
+D s-stratt.ads		20130417131032 aedef97e
+D s-string.ads		20130417131032 46b01415
+D s-ststop.ads		20130417131032 ee472be4
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D t_utils.ads		20131030194724 48d853c8
+D tax_utils.ads		20131021170636 97433c02
+D text_utils.ads	20131031144348 54c51d8b
+D utils.ads		20130715085512 31abf9cd
+X 1 ada.ads
+16K9*Ada 19e8 40|1r6 5r8
+X 2 a-assert.ads
+24K13*Assertions 36e19 40|1w10 5r12
+34U14*Assert 40|112s7
+X 8 a-cohama.ads
+52R9*Map
+X 13 a-convec.ads
+55R9*Vector
+X 18 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[11|68]>
+X 24 a-strbou.ads
+162V17*"="{boolean}<26|168p13> 13|43i19[84|25]
+X 27 a-strunb.ads
+166V14*"="{boolean} 13|43i19
+X 37 base_model_types.ads
+18K9*Base_Model_Types 173e21 39|3w6 8r8
+25F9*Real<long_float>
+31F12*Amount{25F9} 39|13r96 22r73 40r99 40|7r85 51r62 87r88
+43I12*Age_Range{natural} 39|15r55 28r27 29r27 29r40 43r19 44r19 44r32 40|21r44
+. 105r19 106r19 106r32 147r19 148r19 148r32
+46I12*Child_Count{natural}
+52I12*Person_Count{natural} 39|32r22 32r49 47r22 47r49 40|109r22 109r49 110r11
+. 151r22 151r49 152r11
+55I12*Benefit_Unit_Count{natural} 39|36r77 40|98r66
+X 38 example_data.ads
+8K9*Example_Data 134e17 39|5r9 55r5 40|3r14 179r5
+68A9*Income_Array(37|31F12)<51|19E9>
+70R9*Person 91e14 39|11r29 51r29 40|61r29 120r20
+72i7*age{37|43I12} 40|23r16 64m10 64r29 122r19 122r45
+73e7*gender{51|83E9} 40|33r16 65m10 65r29
+74e7*education{51|81E9} 40|58r16 72m10 72r29
+76e7*employment{51|82E9} 40|28r16 66m10 66r29
+77a7*income{68A9} 40|9r16 16r24 67m10 67r29
+78i7*hours_worked{natural} 40|43r17 68m10 68r29
+79f7*wage_per_hour{37|31F12} 40|53r16 71m10 71r29
+80e7*relationship{51|84E9} 40|48r16 70m10 70r29 122r70 122r113
+81b7*is_in_serps{boolean} 40|38r17 69m10 69r29
+93V13*To_String{string}
+94V13*Summary_String{string}
+95V13*Infer_Wage{37|31F12}
+96V13*Minimum_Wage{37|31F12}
+98A9*Person_Array(70R9)<integer>
+100R9*Benefit_Unit 103e14 39|24r35 53r36 40|130r36
+101i7*num_people{37|52I12} 40|118r35 133m10 133r27 134r24
+102a7*people{98A9} 40|120r33 135m13 135r31 161r91 167r68
+104V13*To_String{string}
+106A9*Benefit_Unit_Array(100R9)<integer>
+108R9*Household 113e14 39|35r32 52r32 40|76r32
+109a7*housing{51|64A9} 40|79m10 79r23 89r17
+110e7*tenure{51|17E9} 40|94r17
+111i7*num_benefit_units{37|55I12} 40|80m10 80r33 81r24 100r17 154r24
+112a7*benefit_units{106A9} 40|82m13 82r37 142r35 161r68
+115V13*To_String{string}
+116U14*Find_Person
+117V13*Find_Person<70R9>
+118U14*Delete_BU
+120V13*Get_Num_Children{37|46I12}
+122U14*Trigger_Events
+128V13*Get_One_Person<70R9>
+132V13*Vatable_Expenditure{37|31F12}
+X 39 example_data-model_household.ads
+5K22*Model_Household 38|8k9 39|55l18 55e33 40|3b27 179l18 179t33
+11R9*Model_Person<38|70R9><50|8R9><50|19R9><50|24R9> 38|93p13 94p13 95p13
+. 96p13 132p13 39|11e88 13P24 13r40 14P24 14r41 15P24 15r33 16P24 16r49 17P24
+. 17r46 18P24 18r40 19P24 19r36 20P24 20r55 21P24 21r42 22P24 22r51 40|7r29
+. 12r30 21r22 26r29 31r25 36r44 41r31 46r38 51r40 56r35 62r12
+13V24*Get_Income{37|31F12}<50|9p13> 13>36 13>54 40|7b13 10l8 10t18
+13r36 i{11R9} 40|7b25 9r14
+13e54 w{51|76E12} 40|7b43 9r24
+14V24*Get_Incomes{51|72A12}<50|10p13> 14>37 40|12b13 19l8 19t19
+14r37 i{11R9} 40|12b26 16r22
+15V24*Age{37|43I12}<50|13p13> 15>29 40|21b13 24l8 24t11
+15r29 i{11R9} 40|21b18 23r14
+16V24*Family_Relationship{51|84E9}<50|16p13> 16>45 40|46b13 49l8 49t27
+16r45 i{11R9} 40|46b34 48r14
+17V24*Education_Status{51|81E9}<50|17p13> 17>42 40|56b13 59l8 59t24
+17r42 i{11R9} 40|56b31 58r14
+18V24*Employment{51|82E9}<50|14p13> 18>36 40|26b13 29l8 29t18
+18r36 i{11R9} 40|26b25 28r14
+19V24*Gender{51|83E9}<50|15p13> 19>32 40|31b13 34l8 34t14
+19r32 i{11R9} 40|31b21 33r14
+20V24*Is_Contracted_In_To_Serps{boolean}<50|20p13> 20>51 40|36b13 39l8 39t33
+20r51 i{11R9} 40|36b40 38r15
+21V24*Hours_Worked{51|79I12}<50|21p13> 21>38 40|41b13 44l8 44t20
+21r38 i{11R9} 40|41b27 43r15
+22V24*Average_Wage_Per_Hour{37|31F12}<50|22p13> 22>47 40|51b13 54l8 54t29
+22r47 i{11R9} 40|51b36 53r14
+24R9*Model_Benefit_Unit<38|100R9><50|47R9> 38|104p13 39|24e106 25P24 25r41
+. 26P24 27r27 40|104r19 131r12 166r30
+25V24*Get_Person<50|24R9><50|56p13> 25>36 25>61 40|166b13 170l8 170t18
+25r36 bu{24R9} 40|166b25 167r65
+25i61 which{positive} 40|166b50 167r76
+26V24*Get_Num_People{37|52I12}<50|49p13> 27>7 28>7 29>7 30>7 31>7 32>7 40|103b13
+. 128l8 128t22
+27r7 bu{24R9} 40|104b7 118r32 120r30
+28i7 start_age{37|43I12} 40|105b7 112r15 114r26 122r26
+29i7 end_age{37|43I12} 40|106b7 112r28 115r24 122r52
+30e7 relationship_from{51|84E9} 40|107b7 112r40 116r34 122r86
+31e7 relationship_to{51|84E9} 40|108b7 112r61 117r32 122r129
+32i7 start_person{37|52I12} 40|109b7 118r16
+35R9*Model_Household<38|108R9><50|59R9> 38|115p13 116p14 117p13 118p14 120p13
+. 122p14 128p13 39|35e97 36P24 36r52 37P24 37r47 38P24 38r41 40P24 40r47
+. 41P24 42r19 49P24 49r46 40|77r12 87r36 92r35 98r41 140r36 146r19 160r30
+36V24*Get_Num_Benefit_Units{37|55I12}<50|61p13> 36>47 40|98b13 101l8 101t29
+36r47 hh{35R9} 40|98b36 100r14
+37V24*Get_Benefit_Unit<50|47R9><50|76p13> 37>42 37>64 40|140b13 143l8 143t24
+. 155s25
+37r42 hh{35R9} 40|140b31 142r32
+37i64 which{positive} 40|140b53 142r50
+38V24*Get_Person<50|24R9><50|75p13> 38>36 38>58 38>76 40|160b13 164l8 164t18
+38r36 hh{35R9} 40|160b25 161r65
+38i58 bu_no{positive} 40|160b47 161r83
+38i76 pers_no{positive} 40|160b65 161r99
+40V24*Get_Housing_Cost{37|31F12}<50|72p13> 40>42 40>64 40|87b13 90l8 90t24
+40r42 hh{35R9} 40|87b31 89r14
+40e64 htype{51|63E9} 40|87b53 89r26
+41V24*Get_Num_People{37|52I12}<50|64p13> 42>7 43>7 44>7 45>7 46>7 47>7 40|145b13
+. 158l8 158t22
+42r7 hh{35R9} 40|146b7 154r21 155r22
+43i7 start_age{37|43I12} 40|147b7 155r63
+44i7 end_age{37|43I12} 40|148b7 155r74
+45e7 relationship_from{51|84E9} 40|149b7 155r83
+46e7 relationship_to{51|84E9} 40|150b7 155r102
+47i7 start_person{37|52I12} 40|151b7 155r119
+49V24*Get_Tenure_Type{51|17E9}<50|73p13> 49>41 40|92b13 95l8 95t23
+49r41 hh{35R9} 40|92b30 94r14
+51V13*Map_Person<50|24R9> 51>25 40|61b13 74l8 74t18 161s53 167s53
+51r25 p{38|70R9} 40|61b25 64r27 65r27 66r27 67r27 68r27 69r27 70r27 71r27
+. 72r27
+52V13*Map_Household<50|59R9> 52>28 40|76b13 85l9 85t22
+52r28 h{38|108R9} 40|76b28 79r21 80r31 82r35
+53V13*Map_Benefit_Unit<50|47R9> 53>31 40|130b13 138l8 138t24 142s14
+53r31 bu{38|100R9} 40|130b31 133r24 135r28
+X 40 example_data-model_household.adb
+13a7 il{51|72A12} 16m10 18r14
+15e11 it{51|76E12} 16r14 16r32
+62r7 mp{39|11R9} 64m7 65m7 66m7 67m7 68m7 69m7 70m7 71m7 72m7 73r14
+77r7 mh{39|35R9} 79m7 80m7 81r21 82m10 84r14
+81i11 i{integer} 82r28 82r52
+110i7 n{37|52I12} 123m13 123r18 127r14
+118i11 p{integer} 120r41
+120r13 pers{38|70R9} 122r14 122r40 122r65 122r108
+131r7 mb{39|24R9} 133m7 134r21 135m10 137r14
+134i11 i{integer} 135r21 135r39
+152i7 n{37|52I12} 155m13 155r18 157r14
+154i11 b{integer} 155r43
+161c7 mp<50|24R9> 163r14
+167c7 mp<50|24R9> 169r14
+X 49 model.ads
+27K9*Model 39|1r6 9r8 11r40 24r52 25r87 35r46 37r90 38r104 51r45 52r51 53r58
+. 40|61r45 76r51 130r58 140r79 160r93 161r12 166r76 167r12 49|49e10
+X 50 model-abstract_household.ads
+4K15*Abstract_Household 39|1w12 9r14 11r46 24r58 25r93 35r52 37r96 38r110
+. 51r51 52r57 53r64 40|61r51 76r57 130r64 140r85 160r99 161r18 166r82 167r18
+. 50|83e29
+8h9*Incomes
+12h9*Demog
+19h9*Employment_Record
+24h9*Person<12R9><8R9><19R9> 39|11r65 25r112 38r129 51r70 40|61r70 160r118
+. 161r37 166r101 167r37
+47h9*Benefit_Unit 39|24r77 37r115 53r83 40|130r83 140r104
+49y13*Get_Num_People{37|52I12} 40|155R47
+59h9*Household 39|35r71 52r76 40|76r76
+X 51 model_types.ads
+5K9*Model_Types 39|2w6 7r8 51|115e16
+17E9*Tenure_Type 39|49r71 40|92r60 51|17e93
+63E9*Housing_Cost_Type 39|40r72 40|87r61 51|63e59
+64A9*Housing_Array(37|31F12)<63E9>
+72A12*Incomes_List{82|67A12[66]}<19E9> 39|14r63 40|12r52 13r12
+76E12*Non_Calculated_Incomes_Range{19E9} 39|13r58 40|7r47 15r17
+79I12*Work_Hours_Range{natural} 39|21r64 40|41r53
+81E9*Education_Type 39|17r68 40|56r57 51|81e104
+82E9*Employment_Status 39|18r62 40|26r51 51|82e99
+83E9*Gender_Type 39|19r58 40|31r47 51|83e40
+84E9*Relationship_Type 39|16r71 30r27 30r48 31r27 31r48 45r27 45r48 46r27
+. 46r48 40|46r60 107r27 107r48 108r27 108r48 149r27 149r48 150r27 150r48
+. 51|84e102
+X 82 t_utils.ads
+66A9*Abs_Amount_Array(37|25F9)<51|19E9>
+67A12*Amount_Array{66A9[51|66]}<51|19E9>
+

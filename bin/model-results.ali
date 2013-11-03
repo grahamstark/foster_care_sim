@@ -1,0 +1,356 @@
+V "GNAT Lib v2013"
+A -fstack-check=specific
+A -gnat2012
+A -g
+A -gnatQ
+A -gnat2012
+A -g
+A -gnato
+A -gnatA
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLICIT_LOOPS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK
+
+U model.results%b	model-results.adb	5cfc3f7b NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W interfaces%s		interfac.ads		interfac.ali
+W model%s		model.ads		model.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W text_utils%s		text_utils.adb		text_utils.ali
+
+U model.results%s	model-results.ads	6a1e24d0 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W model%s		model.ads		model.ali
+W model.abstract_household%s  model-abstract_household.ads  model-abstract_household.ali
+W model_types%s		model_types.ads		model_types.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-calend.ads		20130417131018 d86d6c8c
+D a-charac.ads		20130417131019 2d3ec45b
+D a-chlat1.ads		20130417131019 2825df20
+D a-contai.ads		20130417131019 61e5e089
+D a-cohata.ads		20130417131019 04abccc5
+D a-cohama.ads		20130417131019 9f97b812
+D a-coinve.ads		20130417131019 cfa7d9ff
+D a-coorma.ads		20130417131019 f6e6861b
+D a-coorse.ads		20130417131019 6649dc0e
+D a-crbltr.ads		20130417131019 b8a2dc05
+D a-convec.ads		20130417131019 0aaf3975
+D a-direio.ads		20130417131019 5842da07
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-iteint.ads		20130417131020 7c7305e9
+D a-numeri.ads		20130417131020 bb51c45a
+D a-ngelfu.ads		20130417131020 243903c9
+D a-ngrear.ads		20130417131020 86992c51
+D a-stream.ads		20130417131021 2ca4ee37
+D a-string.ads		20130417131021 90ac6797
+D a-strbou.ads		20130417131021 9806fe84
+D a-strmap.ads		20130417131021 9cb836fb
+D a-strsup.ads		20130417131021 a27dcb33
+D a-strunb.ads		20130417131021 3f91d4c5
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tideio.ads		20130417131022 1e9d1f0b
+D a-teioed.ads		20130417131022 8ca49dac
+D a-tienio.ads		20130417131022 fc618ae6
+D a-tiflio.ads		20130417131022 56fbda09
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D base_model_types.ads	20131029090718 06c6ac31
+D financial_functions.ads  20131103114608 770a8f9f
+D format_utils.ads	20130715085512 d9ab729a
+D interfac.ads		20130417131027 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D key_value_io.ads	20130715085512 d58a72d7
+D keyed_text_buffer.ads	20130715085512 a5b8d868
+D line_extractor.ads	20130715085512 c6f73843
+D maths_functions.ads	20131003150340 0b74a59f
+D model.ads		20131013113219 aad8402a
+D model-abstract_household.ads  20131031132332 d7e9fac9
+D model-results.ads	20131103113727 e5bf0e8a
+D model-results.adb	20131103131251 d217f8bf
+D model_types.ads	20131103105330 f29090b9
+D random_normal_draw.ads  20130715085512 d7117888
+D system.ads		20130417131036 90249111
+D s-atocou.ads		20130417131028 4a9c6cb4
+D s-atocou.adb		20130417131028 7116b4cf
+D s-conca2.ads		20130417131029 fbd0f2fc
+D s-crtl.ads		20130417131029 dfcfca61
+D s-direio.ads		20130417131029 068812e8
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-imenne.ads		20130417131030 8707cbf0
+D s-imgint.ads		20130417131030 02dbe0c2
+D s-imgrea.ads		20130417131030 c7a851e2
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-stposu.ads		20130417131032 ffeba1c5
+D s-stratt.ads		20130417131032 aedef97e
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D t_utils.ads		20131030194724 48d853c8
+D tax_utils.ads		20131021170636 97433c02
+D text_utils.ads	20131031144348 54c51d8b
+D utils.ads		20130715085512 31abf9cd
+X 1 ada.ads
+16K9*Ada 19e8 47|1r6 6r8
+X 7 a-cohama.ads
+52R9*Map
+X 9 a-coorma.ads
+53R9*Map
+77U14*Clear 47|219s20[35|152] 236s20[35|152] 247s20[35|152]
+X 12 a-convec.ads
+55R9*Vector
+X 17 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[9|68]>
+X 22 a-string.ads
+16K13*Strings 35e16 47|1r10 6r12
+X 23 a-strbou.ads
+162V17*"="{boolean}<25|168p13> 12|43i19[79|25]
+X 26 a-strunb.ads
+76K21*Unbounded 489e26 47|1w18 6r20
+79R9*Unbounded_String 473e14 47|103r11 112r11 121r11 159r11 184r11 198r11
+100V13*To_String{string} 47|108s14 117s14 135s14 179s14 194s14 208s14
+123V14*"&"{79R9} 47|106s17 115s17 123s14 123s46 123s112 124s14 124s46 124s78
+. 125s14 125s46 125s86 126s14 126s46 126s76 127s14 127s46 127s87 128s14 128s46
+. 128s89 129s14 129s46 129s85 130s14 130s46 130s91 131s14 131s46 131s86 132s14
+. 132s46 132s87 133s14 133s48 133s96 134s14 161s14 162s14 163s14 164s14 165s14
+. 167s14 168s14 169s14 170s14 172s14 173s14 174s14 175s14 176s14 177s14 178s14
+. 186s14 186s31 186s52 187s14 187s46 187s86 188s14 188s36 188s66 190s17 190s38
+. 190s46 191s18 193s14 200s14 200s38 200s66 201s14 201s46 201s86 202s14 202s36
+. 202s66 204s17 204s39 204s47 205s18 207s14
+131V14*"&"{79R9} 47|106s68 115s33 161s55 162s63 163s46 164s56 165s58 167s66
+. 168s66 169s60 170s57 172s55 173s43 174s53 175s59 176s54 177s54 178s61
+166V14*"="{boolean} 12|43i19
+X 35 base_model_types.ads
+25F9*Real<long_float>
+30F12*Rate{25F9} 46|14r36 15r36 68r36 47|21r36 127r48 128r48
+31F12*Amount{25F9} 46|11r36 12r36 13r36 17r36 18r36 19r36 20r36 21r37 39r35
+. 40r35 52r30 53r30 54r30 72r40 73r40 74r40 47|9r44 10r11 25r40 26r40 27r40
+. 31r110 34r15
+52I12*Person_Count{natural}
+53I12*Person_Number{52I12} 46|34r37 37r35
+55I12*Benefit_Unit_Count{natural}
+56I12*Benefit_Unit_Number{55I12} 46|47r45 50r30
+88V13*To_String{string} 47|115s19 124s48 125s48 126s48 129s48 130s48 131s48
+. 132s48 133s50 161s16 162s16 163s16 164s16 165s16 167s16 168s16 169s16 170s16
+. 172s16 173s16 174s16 175s16 176s16 177s16 178s16 187s48 188s38 201s48 202s38
+157R12*Auxiliary_Results{9|53R9[152]} 46|16r36 41r35 55r30
+160V13*To_String{string} 47|134s16 193s16 207s16
+162U14*Inc 47|80s7 81s7 82s7 83s7 84s7 85s7 86s7 87s7 88s7 89s7 90s7 92s7
+. 94s10 96s7 97s7 98s7 99s7
+X 36 financial_functions.ads
+46R9*Payment_Stream 47|32r15[44|39]
+48U14*Add_To_Payment_Stream 47|58s16[44|39]
+69V13*Net_Present_Value{35|25F9} 47|60s20[44|39]
+X 44 model.ads
+27K9*Model 49e10 46|2r6 4r9 7r8 77r5 47|4r14 250r5
+X 45 model-abstract_household.ads
+4K15*Abstract_Household 83e29 46|2w12 7r14
+X 46 model-results.ads
+4K15*Results 44|27k9 46|77l11 77e18 47|4b20 250l11 250t18
+9R9*Personal_Result 22e14 24p13 24r35 26p14 27r18 31p13 31r31 32p14 32r33
+. 34r56 47|76r18 120r31 158r35 211r33
+10a7*incomes{48|72A12} 47|81r46 84r45 85r43 86r44 87r44 88r44 89r44 90r44
+. 92r47 94r45 96r44 97r44 99r42 123r101 161r31 162r31 164r31 165r31 167r31
+. 168r31 169r31 170r31 213m11
+11f7*employers_ni{35|31F12} 47|98r44 124r63 163r31 214m11
+12f7*total_taxable_income{35|31F12} 47|125r63 172r31 215m11
+13f7*net_income{35|31F12} 47|126r63 173r31 216m11
+14f7*marginal_rate_earned{35|30F12} 47|127r64 217m11
+15f7*marginal_rate_unearned{35|30F12} 47|128r64 218m11
+16r7*intermed{35|157R12} 47|134r31 219m11
+17f7*total_student_loans{35|31F12} 47|129r63 174r31 224m14
+18f7*outstanding_student_loans{35|31F12} 47|130r63 175r31 225m14
+19f7*assigned_admin_costs{35|31F12} 47|80r46 131r63 176r31 220m11
+20f7*childs_contributions{35|31F12} 47|83r48 132r64 177r31 221m11
+21f7*student_accommodation_costs{35|31F12} 47|82r46 133r66 178r31 222m11
+24V13*Summary_String{string} 24>29 24>52 47|158b13 180l8 180t22
+24r29 res{9R9} 47|158b29 161r27 162r27 163r27 164r27 165r27 167r27 168r27
+. 169r27 170r27 172r27 173r27 174r27 175r27 176r27 177r27 178r27
+24e52 delim{character} 47|158b52 161r57 162r65 163r48 164r58 165r60 167r68
+. 168r68 169r62 170r59 172r57 173r45 174r55 175r61 176r56 177r56 178r63
+25V13*Summary_String_Header{string} 25>36 47|138b13 156l8 156t29
+25e36 delim{character} 47|138b36 140r29 141r36 142r30 143r29 144r31 145r38
+. 146r38 147r32 148r31 149r38 150r28 151r37 152r43 153r38 154r38
+26U14*Assign_To_Budgets 27>7 28=7 29=7 47|75b14 100l9 100t26
+27r7 res{9R9} 47|76b7 80r42 81r42 82r42 83r44 84r41 85r39 86r40 87r40 88r40
+. 89r40 90r40 92r43 94r41 96r40 97r40 98r40 99r38
+28a7 expend{48|93A9} 47|77b7 80m12 80r12 81m12 81r12 82m12 82r12 85m12 85r12
+. 86m12 86r12 87m12 87r12 88m12 88r12 89m12 89r12 90m12 90r12 94m15 94r15
+. 99m12 99r12
+29a7 receipts{48|93A9} 47|78b7 83m12 83r12 84m12 84r12 92m12 92r12 96m12
+. 96r12 97m12 97r12 98m12 98r12
+31V13*To_String{string} 31>24 47|120b13 136l8 136t17 191s20
+31r24 res{9R9} 47|120b24 123r97 124r59 125r59 126r59 127r60 128r60 129r59
+. 130r59 131r59 132r60 133r62 134r27
+32U14*Zero 32=20 32>50 47|211b14 227l8 227t12 232s24
+32r20 res{9R9} 47|211b20 213m7 214m7 215m7 216m7 217m7 218m7 219m7 219r7
+. 220m7 221m7 222m7 224m10 225m10
+32b50 including_stocks{boolean} 47|211b50 223r11
+34A9*Pers_Result_Array(9R9)<integer> 38r35
+36R9*Benefit_Unit_Result 42e14 43p14 43r33 45p13 45r31 47r70 47|183r31 229r33
+37i7*num_people{35|53I12} 47|186r37 189r25
+38a7*pers{34A9} 47|191r35 231r20 232m14
+39f7*total_taxable_income{35|31F12} 47|187r63 234m11
+40f7*net_income{35|31F12} 47|188r53 235m11
+41r7*intermed{35|157R12} 47|193r31 236m11
+43U14*Zero 43=20 43>54 47|229b14 237l8 237t12 242s23
+43r20 res{36R9} 47|229b20 231r16 232m10 232r10 234m7 235m7 236m7 236r7
+43b54 including_stocks{boolean} 47|229b54 232r30
+45V13*To_String{string} 45>24 47|183b13 195l8 195t17 205s20
+45r24 res{36R9} 47|183b24 186r33 187r59 188r49 189r21 191r31 193r27
+47A9*Benefit_Unit_Result_Array(36R9)<integer> 51r30
+49R9*Household_Result 56e14 58p13 58r31 60p14 60r33 47|197r31 239r33
+50i7*num_benefit_units{35|56I12} 47|200r44 203r25
+51a7*bus{47A9} 47|205r35 241r20 242m14
+52f7*total_taxable_income{35|31F12} 47|201r63 245m11
+53f7*net_income{35|31F12} 47|202r53 246m11
+54f7*vat{35|31F12} 47|244m11
+55r7*intermed{35|157R12} 47|207r31 247m11
+58V13*To_String{string} 58>24 47|197b13 209l8 209t17
+58r24 res{49R9} 47|197b24 200r40 201r59 202r49 203r21 205r31 207r27
+60U14*Zero 60=20 60>51 47|239b14 248l8 248t12
+60r20 res{49R9} 47|239b20 241r16 242m10 242r10 244m7 245m7 246m7 247m7 247r7
+60b51 including_stocks{boolean} 47|239b51 242r29
+62V13*Budget_Header{string} 62>28 62>47 47|102b13 109l8 109t21
+62e28 delim{character} 47|102b28 106r70
+62s47 which{string} 47|102b47 106r60
+63V13*To_String{string} 63>24 63>43 47|111b13 118l8 118t17
+63a24 ba{48|93A9} 47|111b24 114r16
+63e43 delim{character} 47|111b43 115r35
+65U14*NPVs 66>7 67>7 68>7 69<7 70<7 71<7 72<7 73<7 74<7 47|18b14 72l8 72t12
+66a7 budget_expenditures{48|94A9} 47|19b7 36r22 40r32 42r27 54r27
+67a7 budget_receipts{48|94A9} 47|20b7 46r32 48r27 52r32 52r63 54r66
+68f7 discount_rate{35|30F12} 47|21b7 60r39
+69a7 gross_expenditures{48|93A9} 47|22b7 65m10
+70a7 gross_receipts{48|93A9} 47|23b7 66m10
+71a7 net_expenditures{48|93A9} 47|24b7 67m10
+72f7 overall_gross_expenditures{35|31F12} 47|25b7 69m7
+73f7 overall_gross_receipts{35|31F12} 47|26b7 70m7
+74f7 overall_net_expenditures{35|31F12} 47|27b7 71m7
+X 47 model-results.adb
+9V13 Sum{35|31F12} 9b13 9>18 16l8 16t11 40s27 46s27 52s27 52s58
+9a18 b{48|93A9} 12r17
+10f7 s{35|31F12} 13m10 13r15 15r14
+12f11 bb=12:17{35|31F12} 13r19
+29E12 Target_Type 29e51 31r89
+29n29 expend{29E12} 38r21 65r70 69r83
+29n37 receipt{29E12} 44r21 66r70 70r84
+29n46 net{29E12} 50r21 67r70 71r84
+31V16 Make_Payment_Stream{35|31F12} 31b16 31>37 31>58 31>80 61l11 61t30 65s38
+. 66s38 67s38 69s37 70s37 71s37
+31e37 which{48|86E9} 42r56 48r51 54r56 54r90
+31b58 use_totals{boolean} 39r23 45r23 51r23
+31e80 target{29E12} 37r18
+32r10 ps{36|46R9[44|39]} 58m13 58r13 60r17
+33i10 y{natural} 57m13 57r18 58r39
+34f10 s{35|31F12} 40m22 42m22 46m22 48m22 52m22 54m22 58r42
+36i14 year{integer} 40r53 42r48 46r49 48r44 52r49 52r80 54r48 54r83
+64e11 by{48|86E9} 65r30 65r59 66r26 66r59 67r28 67r59
+93e11 i{48|19E9} 94r54
+103r7 s{26|79R9} 106m10 106r15 108r25
+105e11 b{48|86E9} 106r54
+112r7 s{26|79R9} 115m10 115r15 117r25
+114f11 b=114:16{35|31F12} 115r30
+121r7 s{26|79R9} 123m7 123r12 124m7 124r12 125m7 125r12 126m7 126r12 127m7
+. 127r12 128m7 128r12 129m7 129r12 130m7 130r12 131m7 131r12 132m7 132r12
+. 133m7 133r12 134m7 134r12 135r25
+159r7 s{26|79R9} 161m7 161r12 162m7 162r12 163m7 163r12 164m7 164r12 165m7
+. 165r12 167m7 167r12 168m7 168r12 169m7 169r12 170m7 170r12 172m7 172r12
+. 173m7 173r12 174m7 174r12 175m7 175r12 176m7 176r12 177m7 177r12 178m7
+. 178r12 179r25
+184r7 s{26|79R9} 186m7 186r12 187m7 187r12 188m7 188r12 190m10 190r15 191m10
+. 191r15 193m7 193r12 194r25
+189i11 p{integer} 190r40 191r41
+198r7 s{26|79R9} 200m7 200r12 201m7 201r12 202m7 202r12 204m10 204r15 205m10
+. 205r15 207m7 207r12 208r25
+203i11 p{integer} 204r41 205r40
+231i11 p{integer} 232r20
+241i11 b{integer} 242r19
+X 48 model_types.ads
+5K9*Model_Types 46|1w6 6r8 48|115e16
+35n7*income_tax{19E9} 47|96r53 161r40
+36n7*national_insurance{19E9} 47|97r53 162r40
+37n7*local_taxes{19E9} 47|84r54
+38n7*repayments{19E9} 47|92r56
+40n7*education_allowances{19E9} 47|86r53 167r40
+41n7*foster_care_payments{19E9} 47|81r55 168r40
+42n7*student_grants{19E9} 47|87r53 169r40
+43n7*student_loans{19E9} 47|88r53 170r40
+45n7*disabled_living_allowance{19E9} 47|93r16
+46n7*child_benefit{19E9} 47|165r40
+58n7*winter_fuel_payments{19E9} 47|93r45
+59n7*housing_benefit{19E9} 47|90r53
+60n7*council_tax_benefit{19E9} 47|85r52 89r53
+61n7*tax_credits{19E9} 47|99r51 164r40
+66K12*T_Incomes[77|48] 47|123r48 123r69
+72A12*Incomes_List{77|67A12[66]}<19E9> 46|10r36
+86E9*Budget_Type 47|31r45 64r17 69r58 70r58 71r58 105r16 106r35 48|92e22
+89n7*childrens_services{86E9} 47|80r20 81r20 82r20 83r22
+90n7*local_authority{86E9} 47|84r22 85r20
+91n7*welsh_government{86E9} 47|86r20 87r20 88r20 89r20 90r20 92r23
+92n7*uk_government{86E9} 47|94r24 96r23 97r23 98r23 99r21
+93A9*Budget_Array(35|31F12)<86E9> 46|28r25 29r25 63r29 69r40 70r40 71r40
+. 47|9r22 22r40 23r40 24r40 77r25 78r25 111r29
+94A9*Budget_By_Year(93A9)<integer> 46|66r39 67r39 47|19r39 20r39
+X 77 t_utils.ads
+66A9*Abs_Amount_Array(35|25F9)<48|19E9> 47|123r79[48|66]
+85V13*To_String{string} 47|123s58[48|66]
+X 79 text_utils.ads
+13K9*Text_Utils 47|2w6 7r8 79|111e15
+21a4*LINE_BREAK{string} 47|123r114 124r80 125r88 126r78 127r89 128r91 129r87
+. 130r93 131r88 132r89 133r98 186r54 187r88 188r68 190r48 200r68 201r88 202r68
+. 204r49
+56V13*Prettify_Image{string} 47|106s19
+

@@ -1,0 +1,717 @@
+V "GNAT Lib v2013"
+A -fstack-check=specific
+A -gnat2012
+A -g
+A -gnatQ
+A -gnat2012
+A -g
+A -gnato
+A -gnatA
+P SS ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLICIT_LOOPS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK
+
+U example_data%b	example_data.adb	d9c5053c OO PK
+W ada%s			ada.ads			ada.ali
+W ada.assertions%s	a-assert.adb		a-assert.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+Z ada.containers.generic_anonymous_array_sort%s
+Z ada.containers.generic_sort%s
+Z ada.direct_io%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+Z ada.numerics%s	a-numeri.ads		a-numeri.ali
+Z ada.numerics.aux%s	a-numaux.adb		a-numaux.ali
+Z ada.numerics.float_random%s  a-nuflra.adb	a-nuflra.ali
+Z ada.numerics.generic_elementary_functions%s
+Z ada.numerics.generic_real_arrays%s
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.float_aux%s  a-tiflau.adb		a-tiflau.ali
+W ada.text_io.float_io%s
+Z ada.unchecked_conversion%s
+Z gnatcoll%s		gnatcoll.ads		gnatcoll.ali
+Z gnatcoll.traces%s	gnatcoll-traces.adb	gnatcoll-traces.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z interfaces.c_streams%s  i-cstrea.adb		i-cstrea.ali
+W maths_functions%s	maths_functions.adb	maths_functions.ali  AD
+Z random_normal_draw%s	random_normal_draw.adb	random_normal_draw.ali
+Z system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.concat_6%s	s-conca6.adb		s-conca6.ali
+Z system.crtl%s		s-crtl.ads		s-crtl.ali
+Z system.direct_io%s	s-direio.adb		s-direio.ali
+W system.exn_llf%s	s-exnllf.adb		s-exnllf.ali
+W system.fat_lflt%s	s-fatlfl.ads		s-fatlfl.ali
+W system.fat_llf%s	s-fatllf.ads		s-fatllf.ali
+Z system.file_control_block%s  s-ficobl.ads	s-ficobl.ali
+Z system.file_io%s	s-fileio.adb		s-fileio.ali
+Z system.generic_array_operations%s  s-gearop.adb  s-gearop.ali
+W system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W text_utils%s		text_utils.adb		text_utils.ali
+
+U example_data%s	example_data.ads	6d25f3bb EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+Z ada.containers.generic_array_sort%s
+W ada.containers.vectors%s
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.finalization%s	a-finali.adb		a-finali.ali
+Z ada.iterator_interfaces%s
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_deallocation%s
+W base_model_types%s	base_model_types.adb	base_model_types.ali
+W model_types%s		model_types.ads		model_types.ali
+W system%s		system.ads		system.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+W t_utils%s		t_utils.adb		t_utils.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-assert.ads		20130417131018 0a052b2b
+D a-calend.ads		20130417131018 d86d6c8c
+D a-charac.ads		20130417131019 2d3ec45b
+D a-chlat1.ads		20130417131019 2825df20
+D a-contai.ads		20130417131019 61e5e089
+D a-cgaaso.ads		20130417131018 0179e0e0
+D a-cgaaso.adb		20130417131018 a55922a1
+D a-cgarso.ads		20130417131018 9129bfa8
+D a-cogeso.ads		20130417131019 fb85939d
+D a-cogeso.adb		20130417131019 6cb00bfe
+D a-cohata.ads		20130417131019 04abccc5
+D a-cohama.ads		20130417131019 9f97b812
+D a-coorma.ads		20130417131019 f6e6861b
+D a-coorse.ads		20130417131019 6649dc0e
+D a-crbltr.ads		20130417131019 b8a2dc05
+D a-convec.ads		20130417131019 0aaf3975
+D a-convec.adb		20130417131019 ba151ea6
+D a-direio.ads		20130417131019 5842da07
+D a-direio.adb		20130417131019 ddb08ceb
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-iteint.ads		20130417131020 7c7305e9
+D a-numeri.ads		20130417131020 bb51c45a
+D a-numaux.ads		20130417131020 243fe0b7
+D a-nuflra.ads		20130417131020 49c50e0b
+D a-ngelfu.ads		20130417131020 243903c9
+D a-ngelfu.adb		20130417131020 859ccdff
+D a-ngrear.ads		20130417131020 86992c51
+D a-ngrear.adb		20130417131020 05e4fe6d
+D a-stream.ads		20130417131021 2ca4ee37
+D a-string.ads		20130417131021 90ac6797
+D a-strbou.ads		20130417131021 9806fe84
+D a-strmap.ads		20130417131021 9cb836fb
+D a-strsup.ads		20130417131021 a27dcb33
+D a-strunb.ads		20130417131021 3f91d4c5
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tideio.ads		20130417131022 1e9d1f0b
+D a-tienio.ads		20130417131022 fc618ae6
+D a-tiflau.ads		20130417131022 c0393f21
+D a-tiflio.ads		20130417131022 56fbda09
+D a-tiflio.adb		20130417131022 fd9b1cfc
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-uncdea.ads		20130417131022 f15a5ed1
+D base_model_types.ads	20131029090718 06c6ac31
+D example_data.ads	20131101154959 3cf81dc7
+D example_data.adb	20131101154910 d6904a5c
+D gnat.ads		20130417131026 fd2ad2f1
+D g-os_lib.ads		20130417131025 0db74523
+D g-souinf.ads		20130417131026 e66ff50e
+D g-string.ads		20130417131026 c6abc540
+D gnatcoll.ads		20130108105034 6a5da479
+D gnatcoll-io.ads	20130108105034 54261358
+D gnatcoll-io-native.ads  20130108105034 6e98f0b4
+D gnatcoll-path.ads	20130108105034 44783065
+D gnatcoll-traces.ads	20130403121412 adda3db6
+D gnatcoll-vfs.ads	20130108105034 abec9650
+D gnatcoll-vfs_types.ads  20130108105034 14be4a8d
+D interfac.ads		20130417131027 cb4a8015
+D i-c.ads		20130417131026 5421119b
+D i-cstrin.ads		20130417131027 341d0ddf
+D i-cstrea.ads		20130417131026 8128536b
+D maths_functions.ads	20131003150340 0b74a59f
+D maths_functions.adb	20131003111524 d34ed85f
+D model_types.ads	20131103105330 f29090b9
+D random_normal_draw.ads  20130715085512 d7117888
+D random_normal_draw.adb  20130715085512 564ce9c8
+D system.ads		20130417131036 90249111
+D s-assert.ads		20130417131028 a3a4e6ab
+D s-atocou.ads		20130417131028 4a9c6cb4
+D s-atocou.adb		20130417131028 7116b4cf
+D s-conca2.ads		20130417131029 fbd0f2fc
+D s-conca4.ads		20130417131029 025fe3be
+D s-conca6.ads		20130417131029 c7caf514
+D s-crtl.ads		20130417131029 dfcfca61
+D s-direio.ads		20130417131029 068812e8
+D s-exctab.ads		20130417131029 66e51330
+D s-exnllf.ads		20130417131029 81841eef
+D s-fatgen.ads		20130417131029 9267ca45
+D s-fatlfl.ads		20130417131029 378cba9f
+D s-fatllf.ads		20130417131029 4d5c1475
+D s-ficobl.ads		20130417131029 55a71d43
+D s-fileio.ads		20130417131029 45ce2f0f
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-gearop.ads		20130417131030 82346945
+D s-gearop.adb		20130417131030 6679477d
+D s-imgboo.ads		20130417131030 f5d971eb
+D s-imenne.ads		20130417131030 8707cbf0
+D s-imgint.ads		20130417131030 02dbe0c2
+D s-imgrea.ads		20130417131030 c7a851e2
+D s-os_lib.ads		20130417131030 cf6cfdbf
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-rannum.ads		20130417131032 5eb33f0a
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-stposu.ads		20130417131032 ffeba1c5
+D s-stratt.ads		20130417131032 aedef97e
+D s-string.ads		20130417131032 46b01415
+D s-ststop.ads		20130417131032 ee472be4
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D t_utils.ads		20131030194724 48d853c8
+D text_utils.ads	20131031144348 54c51d8b
+X 1 ada.ads
+16K9*Ada 19e8 49|4r6 5r6 6r6 12r8 13r8 42r29 50|1r6 3r6 4r6 5r6 10r8 11r8
+. 96r8 107r8 157r15 270r11 321r11 347r11 360r11 373r11 547r11 563r11
+X 2 a-assert.ads
+24K13*Assertions 36e19 50|3w10 10r12
+34U14*Assert 50|174s10 221s21
+X 3 a-calend.ads
+36K13*Calendar 375e17 49|4w10 12r12
+44I12*Year_Number{integer} 49|65r27 66r26
+X 6 a-contai.ads
+16K13*Containers 24e19 49|6r10 42r33 50|4w10 157r19
+20I9*Count_Type<integer> 50|157r30
+X 7 a-cgaaso.ads
+39u26*Generic_Anonymous_Array_Sort 6|16k13
+X 8 a-cgaaso.adb
+40U14 Sort[10|39] 11|34b26[31|729[66|25[50|12]]]
+X 10 a-cogeso.ads
+39u26*Generic_Sort 6|16k13
+X 13 a-cohama.ads
+52R9*Map
+X 17 a-convec.ads
+40I9 Index_Type 49|42r53
+41+9 Element_Type 49|42r75
+45k24*Vectors 474e27 49|6w21 42r44
+49I12*Extended_Index{integer}
+55R9*Vector 49|43r37[42]
+63R9*Cursor
+91V13*Capacity{6|20I9}
+93U14*Reserve_Capacity
+97V13*Length{6|20I9} 50|171R18[49|42]
+99U14*Set_Length
+103V13*Is_Empty{boolean}
+105U14*Clear
+107V13*To_Cursor{63R9[49|42]}
+113V13*Element{49|35R9}
+119U14*Replace_Element
+124U14*Replace_Element
+129U14*Query_Element
+138U14*Update_Element
+143U14*Update_Element
+148R9*Constant_Reference_Type
+154R9*Reference_Type
+158V13*Constant_Reference{148R9[49|42]}
+163V13*Reference{154R9[49|42]}
+168V13*Constant_Reference{148R9[49|42]}
+173V13*Reference{154R9[49|42]}
+178U14*Assign
+182U14*Move
+184U14*Insert
+189U14*Insert
+194U14*Insert
+200U14*Insert
+206U14*Insert
+212U14*Insert
+219U14*Insert
+224U14*Insert
+230U14*Prepend
+234U14*Prepend
+239U14*Append
+243U14*Append 50|555s14[49|42] 571s14[49|42]
+248U14*Insert_Space
+253U14*Insert_Space
+259U14*Delete
+264U14*Delete
+269U14*Delete_First
+273U14*Delete_Last
+277U14*Reverse_Elements
+279U14*Swap
+281U14*Swap
+283V13*First_Index{integer}
+285V13*First{63R9[49|42]}
+287V13*First_Element{49|35R9}
+289V13*Last_Index{49I12[49|42]}
+291V13*Last{63R9[49|42]}
+293V13*Last_Element{49|35R9}
+303V13*Find_Index{49I12[49|42]}
+308V13*Find{63R9[49|42]}
+313V13*Reverse_Find_Index{49I12[49|42]}
+318V13*Reverse_Find{63R9[49|42]}
+323V13*Contains{boolean}
+327U14*Iterate
+331U14*Reverse_Iterate
+335V13*Iterate<24|32R9[70[49|42]]>
+338V13*Iterate<24|32R9[70[49|42]]>
+387U25 Adjust<22|52p14>
+389U25 Finalize<22|53p14>
+391U14 Write
+397U14 Read
+X 22 a-finali.ads
+51U14*Initialize<88|44p14>
+X 24 a-iteint.ads
+24h9*Forward_Iterator
+32h9 Reversible_Iterator<24R9[14|68]>
+X 28 a-ngelfu.ads
+47V13*Log<long_float> 50|516s22[66|38[50|12]]
+54V13*Exp<long_float> 50|445s12[66|38[50|12]] 475s12[66|38[50|12]]
+X 30 a-ngrear.ads
+43A9*Real_Vector(long_float)<integer>
+44A9*Real_Matrix(long_float)<integer><integer>
+57V14*"*"<long_float> 50|439s30[66|25[50|12]] 441s30[66|25[50|12]] 443s32[66|25[50|12]]
+. 474s20[66|25[50|12]] 517s25[66|25[50|12]]
+X 31 a-ngrear.adb
+50U14 Back_Substitute[89|46] 89|401i22 415i22[66|25[50|12]] 90|99b14[66|25[50|12]]
+55V13 Diagonal[89|56]{30|43A9[66|25[50|12]]} 90|50b13[66|25[50|12]]
+60U14 Forward_Eliminate[89|76] 89|402i22[66|25[50|12]] 416i22 90|175b14[66|25[50|12]]
+67U14 Swap_Column[89|437] 90|796b14[66|25[50|12]]
+71U14 Transpose[89|446] 90|810b14[66|25[50|12]]
+91V13 Length[89|88]{natural} 90|64b13[66|25[50|12]]
+106V13 Sqrt[89|428] 89|300i21 90|593b13[66|25[50|12]]
+139V16*"+"[89|101]{30|43A9[66|25[50|12]]} 90|407b13[66|25[50|12]]
+147V16*"+"[89|114]{30|44A9[66|25[50|12]]} 90|392b13[66|25[50|12]]
+155V16*"+"[89|130]{30|43A9[66|25[50|12]]} 90|483b13[66|25[50|12]]
+165V16*"+"[89|172]{30|44A9[66|25[50|12]]} 90|420b13[66|25[50|12]]
+175V16*"-"[89|101]{30|43A9[66|25[50|12]]} 90|407b13[66|25[50|12]]
+183V16*"-"[89|114]{30|44A9[66|25[50|12]]} 90|392b13[66|25[50|12]]
+191V16*"-"[89|130]{30|43A9[66|25[50|12]]} 90|483b13[66|25[50|12]]
+201V16*"-"[89|172]{30|44A9[66|25[50|12]]} 90|420b13[66|25[50|12]]
+211V16*"*"[89|247]{30|43A9[66|25[50|12]]} 90|577b13[66|25[50|12]]
+220V16*"*"[89|266]{30|44A9[66|25[50|12]]} 90|559b13[66|25[50|12]]
+229V16*"*"[89|211]{30|43A9[66|25[50|12]]} 90|543b13[66|25[50|12]]
+238V16*"*"[89|230]{30|44A9[66|25[50|12]]} 90|525b13[66|25[50|12]]
+247V16*"*"[89|318]{30|44A9[66|25[50|12]]} 90|778b13[66|25[50|12]]
+256V16*"*"[89|287]{48|25F9} 90|354b13[66|25[50|12]]
+265V16*"*"[89|341]{30|43A9[66|25[50|12]]} 90|747b13[66|25[50|12]]
+275V16*"*"[89|364]{30|43A9[66|25[50|12]]} 90|899b13[66|25[50|12]]
+285V16*"*"[89|389]{30|44A9[66|25[50|12]]} 90|644b13[66|25[50|12]]
+295V16*"/"[89|211]{30|43A9[66|25[50|12]]} 90|543b13[66|25[50|12]]
+304V16*"/"[89|230]{30|44A9[66|25[50|12]]} 90|525b13[66|25[50|12]]
+313V16*"abs"[89|301]<long_float> 90|377b13[66|25[50|12]]
+324V16*"abs"[89|101]{30|43A9[66|25[50|12]]} 90|407b13[66|25[50|12]]
+332V16*"abs"[89|114]{30|44A9[66|25[50|12]]} 90|392b13[66|25[50|12]]
+340V16*Solve[89|406]{30|43A9[66|25[50|12]]} 90|678b13[66|25[50|12]]
+343V16*Solve[89|420]{30|44A9[66|25[50|12]]} 90|712b13[66|25[50|12]]
+345V16*Unit_Matrix[89|481]{30|44A9[66|25[50|12]]} 90|862b13[66|25[50|12]]
+352V16*Unit_Vector[89|495]{30|43A9[66|25[50|12]]} 90|883b13[66|25[50|12]]
+721U17 Swap 7|37i19[66|25[50|12]]
+725V16 Less{boolean} 7|36i18[66|25[50|12]]
+729U17 Sort[7|39] 8|37b26[66|25[50|12]]
+X 33 a-string.ads
+16K13*Strings 35e16 49|5r10 13r12 50|1r10 96r12 107r12 270r15 321r15 347r15
+. 360r15 373r15 547r15 563r15
+X 34 a-strbou.ads
+162V17*"="{boolean}<36|168p13> 17|43i19[114|25]
+X 37 a-strunb.ads
+76K21*Unbounded 489e26 49|5w18 13r20 50|1w18 96r20 107r20 270r23 321r23 347r23
+. 360r23 373r23 547r23 563r23
+79R9*Unbounded_String 473e14 49|37r21 50|97r11 109r11 272r11 323r11 349r11
+. 362r11 375r11
+100V13*To_String{string} 50|103s14 119s14 294s14 343s14 356s14 369s14 378s14
+119V14*"&"{79R9} 50|113s17
+123V14*"&"{79R9} 50|100s17 100s27 274s14 274s34 274s62 275s14 275s34 275s64
+. 276s14 276s34 276s69 277s14 277s34 277s75 278s14 278s42 278s99 279s14 279s34
+. 279s79 280s14 280s34 280s100 281s14 281s34 281s80 282s14 282s34 282s68
+. 283s14 283s34 283s81 284s14 284s34 284s70 285s14 285s34 285s83 288s14 288s48
+. 288s83 289s14 289s48 289s87 290s14 290s48 290s93 291s14 291s48 291s96 292s14
+. 292s48 292s88 293s14 293s48 293s91 325s14 326s14 327s14 328s14 329s14 330s14
+. 331s14 332s14 333s14 334s14 335s14 336s14 337s14 338s14 339s14 340s14 341s14
+. 342s14 351s14 351s41 351s74 353s17 353s30 353s51 354s17 364s14 364s38 364s78
+. 366s17 366s36 366s57 367s17 377s14
+131V14*"&"{79R9} 50|100s35 113s30 117s17 325s42 326s44 327s66 328s72 329s88
+. 330s76 331s49 332s77 333s48 334s78 335s67 336s80 337s49 338s53 339s59 340s62
+. 341s54 342s57 377s54
+166V14*"="{boolean} 17|43i19
+X 39 a-textio.ads
+49K13*Text_IO 471e16 50|5w10 11r12
+263U14*Put_Line 50|133s19 173s10 214s21 218s21 260s18 429s7 447s7
+X 48 base_model_types.ads
+18K9*Base_Model_Types 173e21 49|2w6 11r8
+25F9*Real<long_float> 50|12r39
+31F12*Amount{25F9} 49|16r47 38r21 48r21 68r67 79r23 85r37 86r37 87r37 88r37
+. 89r37 90r37 95r45 96r47 132r52 132r68 50|228r52 261r42 381r47 382r12 402r45
+. 404r12 405r12 406r21 436r22 437r22 446r12 452r47 454r12 455r12 456r21 472r22
+. 473r22 476r12 500r52 500r68 503r18 504r18 518r18 519r18 561r21
+43I12*Age_Range{natural} 49|72r23 72r36 50|275r36 326r16 393r22
+46I12*Child_Count{natural} 49|120r55 50|529r55 530r12
+52I12*Person_Count{natural} 49|101r22
+53I12*Person_Number{52I12} 49|98r32 116r101 128r90 50|14r90 35r13 48r101
+. 52r14 72r14 84r13 155r22
+55I12*Benefit_Unit_Count{natural} 49|111r27 111r49
+56I12*Benefit_Unit_Number{55I12} 49|116r70 118r55 128r56 50|14r56 24r55 34r14
+. 48r70 51r15 71r14 83r14 85r21 154r18
+88V13*To_String{string} 50|260s100 282s36 288s50 289s50 290s50 291s50 292s50
+. 293s50 331s16 333s16 337s16 338s16 339s16 340s16 341s16 342s16 447s27
+91V13*To_String{string} 50|260s56
+162U14*Inc 50|130s19 134s19 135s19 138s19 139s19 142s19
+X 49 example_data.ads
+8K9*Example_Data 134l5 134e17 50|8b14 189r51 596l5 596t17
+15N4*WEEKS_WORKED_PER_YEAR 50|222r52
+16f4*ONE_BEDROOM_FLAT_SOCIAL_HOUSING{48|31F12} 50|189r64
+17E9*Foster_Status_Type 17e105 82r23 50|285r36 336r32
+17n33*not_fostered{17E9} 82r45
+17n47*currently_fostered{17E9} 50|141r41 201r50
+17n67*when_i_am_ready{17E9}
+17n84*previously_fostered{17E9} 50|204r50
+18E9*Event_Type 33e26 36r21 44r61 50r58 51r54 50|546r61 551r39 574r58 582r54
+19n14*age_1_year{18E9} 50|180r24
+20n9*start_fostering{18E9} 50|200r23
+21n9*leave_fostering{18E9} 50|203r23
+22n9*start_wiar{18E9} 50|206r23
+23n9*end_wiar{18E9} 50|207r23
+24n9*leave_school{18E9} 50|208r23
+25n9*start_higher_education{18E9} 50|213r23
+26n9*end_higher_education{18E9} 50|217r23
+27n9*start_work{18E9} 50|220r23
+28n9*leave_work{18E9} 50|229r23
+29n9*leave_household{18E9} 50|181r24
+30n9*completes_gcses{18E9} 50|245r23
+31n9*completes_a_levels{18E9} 50|241r23
+32n9*graduates{18E9} 50|237r23
+33n9*arbitrary_event{18E9} 50|249r23 568r19
+35R9*Event_Obj 40e14 42r91 51r95 50|549r12 565r12 582r95 583r12
+36e7*event{18E9} 50|179r27 552m10 568m10 577r16 586r16
+37r7*name{37|79R9} 50|113r25 551m10 567m10
+38f7*value{48|31F12} 50|553m10 569m10
+39e7*cost_centre{68|86E9} 50|554m10 570m10
+42K12*Event_Ops[17|45] 43r27
+43R9*Events_Set<17|55R9[42]> 22|51P14 49|43e60 44p14 44r41 45p14 46r28 50p13
+. 50r38 51p13 51r34 62p13 62r33 64r54 125r25 50|106r33 152r23 546r41 559r28
+. 574r38 582r34
+44U14*Add_Event 44=25 44>53 50|546b14 556l8 556t17
+44r25 events{43R9} 50|546b25 555m7 555r7
+44e53 event{18E9} 50|546b53 551r57 552r19
+45U14*Add_Arbitrary_Event 46=7 47>7 48>7 49>7 50|558b14 572l8 572t27
+46r7 events{43R9} 50|559b7 571m7 571r7
+47s7 name{string} 50|560b7 567r23
+48f7 value{48|31F12} 50|561b7 569r19
+49e7 cost_centre{68|86E9} 50|562b7 570r25
+50V13*Contains_Event{boolean} 50>29 50>50 50|574b13 580l8 580t22
+50r29 events{43R9} 50|574b29 576r16
+50e50 event{18E9} 50|574b50 577r24
+51V13*Find_Event<35R9> 51>25 51>46 51<66 50|582b13 593l8 593t18
+51r25 events{43R9} 50|582b25 585r16
+51e46 event{18E9} 50|582b46 586r24
+51b66 found{boolean} 50|582b66 587m13 591m7
+61V13*Event_String_Header{string} 61>34 61>53 50|95b13 104l8 104t27
+61e34 delim{character} 50|95b34 100r37
+61i53 to_print{positive} 50|95b53 99r21
+62V13*To_String{string} 62>24 62>45 62>66 50|106b13 120l8 120t17
+62r24 events{43R9} 50|106b24 112r20
+62i45 to_print{positive} 50|106b45 116r21
+62e66 delim{character} 50|106b66 113r32 117r19
+64A9*Events_List(43R9)<integer>
+65i4*TARGET_YEAR{3|44I12} 66r44 66r59
+66I12*Year_Range{3|44I12}
+68A9*Income_Array(48|31F12)<68|19E9> 77r23
+70R9*Person 91e14 93p13 93r31 94p13 94r36 95p13 95r29 96p13 96r31 98r51 117r87
+. 128r113 132p13 132r38 50|14r113 19r44 56r23 69r87 70r14 86r13 127r23 162r25
+. 176r27 257r25 269r31 320r36 381r31 402r29 452r31 500r38 535r23
+71i7*pid{positive} 50|58r25 133r71 274r56 325r36
+72i7*age{48|43I12} 50|21m12 21r24 165r78 275r58 326r38 392r17 429r45 436r32
+. 436r40 437r32 472r32 472r40 473r32 537r24
+73e7*gender{68|83E9} 50|276r60 327r56 434r29 468r29
+74e7*education{68|81E9} 50|129r25 209m33 215m33 219m33 277r63 328r59 389r13
+75e7*highest_qualification{68|15E9} 50|238r37 239m36 242r37 243m36 246r37
+. 247m36 278r75 329r63 438r12 440r15 469r29 470r29
+76e7*employment{68|82E9} 50|132r24 137r25 210r37 211m36 216m33 221r41 227m33
+. 233m33 279r66 330r62 429r66 430r13 514r29
+77a7*income{68A9} 50|228m33 236m33 261m23 280r90 331r32
+78i7*hours_worked{natural} 50|222m33 228r72 234m33 260r72 261r55 281r65 332r61
+79f7*wage_per_hour{48|31F12} 50|223m33 228r101 235m33 259m23 260r116 261r77
+. 282r52 333r32
+80e7*relationship{68|84E9} 50|165r27 186m37 202m33 205m33 283r66 334r62 537r43
+81b7*is_in_serps{boolean} 50|284r56 335r52
+82e7*foster_status{17E9} 50|141r25 201m33 204m33 285r67 336r63
+85f7*years_fostered{48|31F12} 50|142m29 288r66 337r32
+86f7*years_in_education{48|31F12} 50|130m29 289r66 338r32
+87f7*years_in_work_this_spell{48|31F12} 50|134m29 224m33 290r66 339r32
+88f7*years_unemployed_this_spell{48|31F12} 50|138m29 226m33 231m33 291r66
+. 340r32
+89f7*years_in_work_total{48|31F12} 50|135m29 292r66 341r32 435r24 471r24
+90f7*years_unemployed_total{48|31F12} 50|139m29 293r66 342r32
+93V13*To_String{string} 93>24 50|269b13 295l8 295t17 354s19
+93r24 pers{70R9} 50|269b24 274r51 275r53 276r55 277r58 278r70 279r61 280r85
+. 281r60 282r47 283r61 284r51 285r62 288r61 289r61 290r61 291r61 292r61 293r61
+94V13*Summary_String{string} 94>29 94>44 50|320b13 344l8 344t22
+94r29 pers{70R9} 50|320b29 325r31 326r33 327r51 328r54 329r58 330r57 331r27
+. 332r56 333r27 334r57 335r47 336r58 337r27 338r27 339r27 340r27 341r27 342r27
+94e44 delim{character} 50|320b44 325r44 326r46 327r68 328r74 329r90 330r78
+. 331r51 332r79 333r50 334r80 335r69 336r82 337r51 338r55 339r61 340r64 341r56
+. 342r59
+95V13*Infer_Wage{48|31F12} 95>25 50|223s50 259s40 402b13 449l8 449t18
+95r25 p{70R9} 50|402b25 406r45 429r43 429r64 430r11 434r27 435r22 436r30
+. 436r38 437r30 438r10 440r13
+96V13*Minimum_Wage{48|31F12} 96>27 50|381b13 400l8 400t20 406s31 456s31
+96r27 p{70R9} 50|381b27 389r11 392r15
+98A9*Person_Array(70R9)<integer> 102r22
+100R9*Benefit_Unit 103e14 104p13 104r29 106r50 50|36r11 346r29
+101i7*num_people{48|52I12} 50|38m10 38r27 39r14 42r29 54r53 90m31 125r51
+. 160r52 192m51 255r52 351r61 352r24 533r51
+102a7*people{98A9} 50|16r43 43m16 43r34 56m64 76r42 86m53 91m31 127m63 162m65
+. 176m72 191m51 257m65 354r33 535m63
+104V13*To_String{string} 104>24 50|346b13 357l8 357t17 367s19
+104r24 bu{100R9} 50|346b24 351r58 352r21 354r30
+106A9*Benefit_Unit_Array(100R9)<integer> 112r27
+108R9*Household 113e14 115p13 115r29 116p14 116r32 117p13 117r31 118p14 118r37
+. 120p13 120r36 122p14 123r32 124r29 128p13 128r34 50|14r34 24r37 33r42 48r32
+. 69r31 82r42 122r41 150r30 151r27 183r34 359r29 372r34 529r36
+109a7*housing{68|64A9} 50|189m32
+110e7*tenure{68|17E9} 50|190m32
+111i7*num_benefit_units{48|55I12} 50|26m10 26r34 27r27 53r28 85r47 88m10
+. 124r27 159r28 185m32 254r27 364r58 365r24 377r34 532r27
+112a7*benefit_units{106A9} 50|16r17 28m13 28r38 36m35 54r30 56m41 76r20 86m31
+. 90m10 91m10 125r29 127m41 160r30 162m43 176m45 191m32 192m32 255r30 257m43
+. 367r33 533r29 535m41
+115V13*To_String{string} 115>24 50|359b13 370l8 370t17
+115r24 hh{108R9} 50|359b24 364r55 365r21 367r30
+116U14*Find_Person 116>27 116>43 116<59 116<91 116<116 50|48b14 67l8 67t19
+. 74s10 172s13
+116r27 hh{108R9} 50|48b27 53r25 54r27 56r38
+116i43 pid{positive} 50|48b43 58r31
+116i59 buno{48|56I12} 50|48b59 51m7 59m19
+116i91 pno{48|53I12} 50|48b91 52m7 60m19
+116b116 found{boolean} 50|48b116 50m7 61m19
+117V13*Find_Person<70R9> 117>26 117>42 117<58 50|69b13 79l8 79t19
+117r26 hh{108R9} 50|69b26 74r7 76r17
+117i42 pid{positive} 50|69b42 74r23
+117b58 found{boolean} 50|69b58 74m39 75r11
+118U14*Delete_BU 118=25 118>48 50|24b14 30l9 30t18 40s13
+118r25 hh{108R9} 50|24b25 26m7 26r31 27r24 28m10 28r35
+118i48 buno{48|56I12} 50|24b48 27r16
+120V13*Get_Num_Children{48|46I12} 120>31 50|529b13 544l8 544t24
+120r31 hh{108R9} 50|529b31 532r24 533r26 535r38
+122U14*Trigger_Events 123=7 124<7 125>7 126>7 50|149b14 267l8 267t22
+123r7 hh{108R9} 50|150b7 159r25 160r27 162m40 162r40 166m37 172r10 176m42
+. 176r42 194m41 197r39 198m25 254r24 255r27 257m40 257r40 265m22
+124r7 parents_hh{108R9} 50|151b7 197m25 266m22
+125c7 events<43R9> 50|152b7 171r11 178r26
+126i7 target_pid{positive} 50|153b7 172r26 173r37 174r55
+128V13*Get_One_Person<70R9> 128>29 128>45 128>77 50|14b13 17l8 17t22
+128r29 hh{108R9} 50|14b29 16r14
+128i45 which_bu{48|56I12} 50|14b45 16r32
+128i77 which_pers{48|53I12} 50|14b77 16r51
+130V13*Summary_String_Header{string} 130>36 50|297b13 318l9 318t30
+130e36 delim{character} 50|297b36 300r16 301r16 302r19 303r22 304r34 305r23
+. 306r18 307r25 308r26 309r25 310r24 311r26 312r27 313r31 314r37 315r40 316r32
+. 317r35
+132V13*Vatable_Expenditure{48|31F12} 132>34 132>46 50|500b13 522l8 522t27
+132r34 p{70R9} 50|500b34 514r27
+132f46 inc{48|31F12} 50|500b46 512r11 516r27 520r38
+X 50 example_data.adb
+12K12 MF[66|16] 403r11 403r19 403r48 453r11 453r19 453r48 502r11 502r19 502r48
+19U15 Increment_Age 19b15 19=30 22l8 22t21 164s18
+19r30 pers{49|70R9} 21m7 21r19
+27i11 b{integer} 28r28 28r53
+33U14 Remove_From_BU 33b14 33=30 34>7 35>7 46l8 46t22 92s7 194s25
+33r30 hh{49|108R9} 36m32 36r32 40m10 40r10
+34i7 buno{48|56I12} 36r50 40r24
+35i7 pno{48|53I12} 42r19
+36r6 bu{49|100R9} 38r7 38r24 39r11 42r26 43r13 43r31
+42i14 p{integer} 43r24 43r42
+53i11 lbuno{integer} 54r45 56r56 59r27
+54i14 lpno{integer} 56r72 60r26
+56r16 pers{49|70R9} 58r20
+70r7 pers{49|70R9} 78r14
+71i7 buno{48|56I12} 74m28 76r35
+72i7 pno{48|53I12} 74m34 76r50
+82U14 Move_To_New_BU 82b14 82=30 83>7 84>7 93l8 93t22 166s21
+82r30 hh{49|108R9} 85r44 86r28 88m7 90m7 91m7 92m23
+83i7 buno{48|56I12} 86r46 92r27
+84i7 pno{48|53I12} 86r61 92r33
+85i6 nbu{48|56I12} 88r31 90r25 91r25
+86r6 pers{49|70R9} 91r46
+97r7 s{37|79R9} 100m10 100r15 103r25
+99i11 i{integer} 100r29
+109r7 s{37|79R9} 113m10 113r15 117m10 117r15 119r25
+110i7 n{natural} 114m10 114r15 116r16
+112r11 event{49|35R9} 113r19
+116i11 i{integer}
+122U14 Accumulate_HH 122b14 122=29 147l8 147t21 265s7 266s7
+122r29 hh{49|108R9} 124r24 125r26 127m38 127r38
+124i11 buno{integer} 125r44 127r56
+125i14 pno{integer} 127r71
+127r16 pers{49|70R9} 129r20 130r24 132r19 133r66 134r24 135r24 137r20 138r24
+. 139r24 141r20 142r24
+154i6 target_bu{48|56I12} 172m38 173r69 176r60 194r45 195m25
+155i6 target_person{48|53I12} 172m49 173r98 176r80 194r56 196m25
+156b6 found{boolean} 172m64 174r18
+159i12 buno{integer} 160r45 162r58 166r41
+160i15 pno{integer} 162r73 165r95 166r47
+162r18 pers{49|70R9} 164r33 165r22 165r73
+176r13 target_pers{49|70R9} 186r25 191r66 201r21 202r21 204r21 205r21 209r21
+. 210r25 211r24 215r21 216r21 219r21 221r29 222r21 223r21 223r62 224r21 226r21
+. 227r21 228r21 228r60 228r89 231r21 233r21 234r21 235r21 236r21 238r25 239r24
+. 242r25 243r24 246r25 247r24
+178r17 event{49|35R9} 179r21
+183r25 new_hh{49|108R9} 185m25 189m25 190m25 191m25 192m25 198r31
+254i11 buno{integer} 255r45 257r58
+255i15 pno{integer} 257r73
+257r18 pers{49|70R9} 259r18 259r52 260r67 260r111 261r18 261r50 261r72
+272r7 s{37|79R9} 274m7 274r12 275m7 275r12 276m7 276r12 277m7 277r12 278m7
+. 278r12 279m7 279r12 280m7 280r12 281m7 281r12 282m7 282r12 283m7 283r12
+. 284m7 284r12 285m7 285r12 288m7 288r12 289m7 289r12 290m7 290r12 291m7
+. 291r12 292m7 292r12 293m7 293r12 294r25
+323r7 s{37|79R9} 325m7 325r12 326m7 326r12 327m7 327r12 328m7 328r12 329m7
+. 329r12 330m7 330r12 331m7 331r12 332m7 332r12 333m7 333r12 334m7 334r12
+. 335m7 335r12 336m7 336r12 337m7 337r12 338m7 338r12 339m7 339r12 340m7
+. 340r12 341m7 341r12 342m7 342r12 343r25
+349r7 s{37|79R9} 351m7 351r12 353m10 353r15 354m10 354r15 356r25
+352i11 i{integer} 353r47 354r41
+362r7 s{37|79R9} 364m7 364r12 366m10 366r15 367m10 367r15 369r25
+365i11 i{integer} 366r53 367r48
+372V13 Summary_String{string} 372b13 372>29 372>45 379l8 379t22
+372r29 hh{49|108R9} 377r31
+372e45 delim{character} 377r56
+375r7 s{37|79R9} 377m7 377r12 378r25
+382f7 mw{48|31F12} 390m10 393m40 394m30 395m30 396m29 399r14
+404f7 w{48|31F12} 445m7 446m7 446r28 447r38 448r14
+405f7 lw{48|31F12} 439m10 441m10 443m10 445r17
+406f7 mw{48|31F12} 446r24
+407a7 degree_coeffs{66|27A12[12]} 439r16
+414a7 noqual_coeffs{66|27A12[12]} 441r16
+421a7 nodegree_coeffs{66|27A12[12]} 443r16
+427a7 values{66|27A12[12]} 433m7 434m7 435m7 436m7 437m7 439r32 441r32 443r34
+452V13 Infer_Wage_1{48|31F12} 452b13 452>27 498l8 498t20
+452r27 p{49|70R9} 456r45 468r27 469r27 470r27 471r22 472r30 472r38 473r30
+454f7 w{48|31F12} 475m7 476m7 476r28 497r14
+455f7 lw{48|31F12} 474m7 475r17
+456f7 mw{48|31F12} 476r24
+457a7 coeffs{66|27A12[12]} 474r13
+465a7 values{66|27A12[12]} 467m7 468m7 469m7 470m7 471m7 472m7 473m7 474r22
+503f7 sh_food{48|31F12} 517m7 518m7 518r35 519m7 519r35 520r26
+504f7 vatable{48|31F12} 520m7 521r14
+505a7 coeffs{66|27A12[12]} 517r18
+510a7 values{66|27A12[12]} 513m7 514m7 515m7 516m7 517r27
+530i7 nc{48|46I12} 538m19 538r25 543r14
+532i11 buno{integer} 533r44 535r56
+533i14 pno{integer} 535r71
+535r16 pers{49|70R9} 537r19 537r38
+549r7 ev{49|35R9} 551m7 552m7 553m7 554m7 555r22
+565r7 ev{49|35R9} 567m7 568m7 569m7 570m7 571r22
+576r11 e{49|35R9} 577r14
+583r7 ev{49|35R9} 592r14
+585r11 e{49|35R9} 586r14 588r20
+X 66 maths_functions.ads
+16k9*Maths_Functions 50|6w6 12r22 66|100e20
+25K12*Matrix_Functions[30|38] 50|403r51[12] 453r51[12] 502r51[12]
+27A12*Vector{30|43A9[25[50|12]]}<integer> 50|407r23[12] 414r23[12] 421r25[12]
+. 427r16[12] 457r16[12] 465r16[12] 505r18[12] 510r18[12]
+38K12*Elementary_Functions[28|39] 50|403r22[12] 453r22[12] 502r22[12]
+X 68 model_types.ads
+5K9*Model_Types 49|1w6 10r8 68|115e16
+15E9*Qualification_Type 49|75r31 75r53 50|278r44 329r32 68|15e74
+15n33*no_qualification{15E9} 50|440r39 470r53
+15n51*gcse{15E9} 50|246r61 247r61
+15n57*a_level{15E9} 50|242r61 243r61
+15n66*degree{15E9} 50|238r61 239r61 438r36 469r53
+17E9*Tenure_Type 49|110r27 110r42 68|17e93
+17n26*social_rented{17E9} 50|190r42
+20n7*wages{19E9} 50|228r41 261r31 331r40
+21n7*self_employment{19E9} 50|236r41
+63n32*rent{63E9} 50|189r41
+64A9*Housing_Array(48|31F12)<63E9> 49|109r27
+66K12*T_Incomes[113|48] 50|280r36 280r57
+76E12*Non_Calculated_Incomes_Range{19E9} 49|68r33
+79I12*Work_Hours_Range{natural} 50|281r36 332r32
+81E9*Education_Type 49|74r23 74r41 50|277r36 328r32 68|81e104
+81n29*not_in_education{81E9} 50|129r38 209r46 219r46
+81n55*apprentice{81E9} 50|389r25
+81n86*higher_education{81E9} 50|215r46
+82E9*Employment_Status 49|76r23 76r44 50|279r36 330r32 68|82e99
+82n32*full_time{82E9} 50|132r38 221r55 227r47 430r27 514r43
+82n43*part_time{82E9} 50|132r51 514r56
+82n54*unemployed{82E9} 50|137r38 211r50 233r47
+82n66*in_education{82E9} 50|210r50 216r47
+83E9*Gender_Type 49|73r23 73r38 50|276r36 327r32 68|83e40
+83n32*Female{83E9} 50|434r38 468r38
+84E9*Relationship_Type 49|80r23 50|283r36 334r32 68|84e102
+84n32*head{84E9} 49|80r44 50|186r53
+84n61*child{84E9} 50|165r43 537r59
+84n68*foster_child{84E9} 50|165r52 202r49 537r68
+84n82*other_relationship{84E9} 50|205r49
+86E9*Budget_Type 49|39r21 49r21 50|562r21 68|92e22
+91n7*welsh_government{86E9} 50|554r25
+X 113 t_utils.ads
+48k9*T_Utils 49|3w6 113|162e12
+66A9*Abs_Amount_Array(48|25F9)<68|19E9> 50|280r67[68|66]
+85V13*To_String{string} 50|280s46[68|66]
+X 114 text_utils.ads
+13K9*Text_Utils 50|2w6 108r8 271r11 322r11 348r11 361r11 374r11 548r11 564r11
+. 114|111e15
+21a4*LINE_BREAK{string} 50|274r64 275r66 276r71 277r77 278r101 279r81 280r102
+. 281r82 282r70 283r83 284r72 285r85 288r85 289r89 290r95 291r98 292r90 293r93
+. 351r76 353r53 364r80 366r59
+49V13*TuS=49:73{37|79R9} 50|551s18 567s18
+56V13*Prettify_Image{string} 50|327s16 328s16 329s16 330s16 332s16 334s16
+. 335s16 336s16 551s23
+

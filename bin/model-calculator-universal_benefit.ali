@@ -1,0 +1,320 @@
+V "GNAT Lib v2013"
+A -fstack-check=specific
+A -gnat2012
+A -g
+A -gnatQ
+A -gnat2012
+A -g
+A -gnato
+A -gnatA
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK
+
+U model.calculator.universal_benefit%b  model-calculator-universal_benefit.adb  73bd0c57 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.assertions%s	a-assert.adb		a-assert.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W model%s		model.ads		model.ali
+W model.calculator%s	model-calculator.ads	model-calculator.ali
+W model.calculator.direct_tax%s  model-calculator-direct_tax.adb  model-calculator-direct_tax.ali
+W model_types%s		model_types.ads		model_types.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_4%s	s-conca4.adb		s-conca4.ali
+W system.concat_6%s	s-conca6.adb		s-conca6.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+U model.calculator.universal_benefit%s  model-calculator-universal_benefit.ads  d14a7e19 EE NE OO PK
+W model%s		model.ads		model.ali
+W model.abstract_household%s  model-abstract_household.ads  model-abstract_household.ali
+W model.calculator%s	model-calculator.ads	model-calculator.ali
+W model.parameter_system%s  model-parameter_system.ads  model-parameter_system.ali
+W model.results%s	model-results.adb	model-results.ali
+W model_types%s		model_types.ads		model_types.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-assert.ads		20130417131018 0a052b2b
+D a-calend.ads		20130417131018 d86d6c8c
+D a-charac.ads		20130417131019 2d3ec45b
+D a-chlat1.ads		20130417131019 2825df20
+D a-contai.ads		20130417131019 61e5e089
+D a-cohata.ads		20130417131019 04abccc5
+D a-cohama.ads		20130417131019 9f97b812
+D a-coinve.ads		20130417131019 cfa7d9ff
+D a-coorma.ads		20130417131019 f6e6861b
+D a-coorse.ads		20130417131019 6649dc0e
+D a-crbltr.ads		20130417131019 b8a2dc05
+D a-convec.ads		20130417131019 0aaf3975
+D a-direio.ads		20130417131019 5842da07
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-iteint.ads		20130417131020 7c7305e9
+D a-numeri.ads		20130417131020 bb51c45a
+D a-ngelfu.ads		20130417131020 243903c9
+D a-ngrear.ads		20130417131020 86992c51
+D a-stream.ads		20130417131021 2ca4ee37
+D a-string.ads		20130417131021 90ac6797
+D a-strbou.ads		20130417131021 9806fe84
+D a-strmap.ads		20130417131021 9cb836fb
+D a-strsup.ads		20130417131021 a27dcb33
+D a-strunb.ads		20130417131021 3f91d4c5
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-tideio.ads		20130417131022 1e9d1f0b
+D a-teioed.ads		20130417131022 8ca49dac
+D a-tienio.ads		20130417131022 fc618ae6
+D a-tiflio.ads		20130417131022 56fbda09
+D a-tiinio.ads		20130417131022 aa04e5d6
+D a-unccon.ads		20130417131022 f9eb8f06
+D base_model_types.ads	20131029090718 06c6ac31
+D financial_functions.ads  20131103114608 770a8f9f
+D format_utils.ads	20130715085512 d9ab729a
+D interfac.ads		20130417131027 cb4a8015
+D i-cstrea.ads		20130417131026 8128536b
+D key_value_io.ads	20130715085512 d58a72d7
+D keyed_text_buffer.ads	20130715085512 a5b8d868
+D line_extractor.ads	20130715085512 c6f73843
+D maths_functions.ads	20131003150340 0b74a59f
+D model.ads		20131013113219 aad8402a
+D model-abstract_household.ads  20131031132332 d7e9fac9
+D model-calculator.ads	20131018160944 aa4ec8db
+D model-calculator-direct_tax.ads  20131029220931 58599b5a
+D model-calculator-universal_benefit.ads  20131028171526 020ef426
+D model-calculator-universal_benefit.adb  20131031233617 f9ee8338
+D model-parameter_system.ads  20131031221953 b9cc261e
+D model-results.ads	20131103113727 e5bf0e8a
+D model_types.ads	20131103105330 f29090b9
+D random_normal_draw.ads  20130715085512 d7117888
+D system.ads		20130417131036 90249111
+D s-assert.ads		20130417131028 a3a4e6ab
+D s-atocou.ads		20130417131028 4a9c6cb4
+D s-atocou.adb		20130417131028 7116b4cf
+D s-conca2.ads		20130417131029 fbd0f2fc
+D s-conca4.ads		20130417131029 025fe3be
+D s-conca6.ads		20130417131029 c7caf514
+D s-crtl.ads		20130417131029 dfcfca61
+D s-direio.ads		20130417131029 068812e8
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-imenne.ads		20130417131030 8707cbf0
+D s-imgint.ads		20130417131030 02dbe0c2
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-secsta.ads		20130417131032 eea35a36
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-stposu.ads		20130417131032 ffeba1c5
+D s-stratt.ads		20130417131032 aedef97e
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D t_utils.ads		20131030194724 48d853c8
+D tax_utils.ads		20131021170636 97433c02
+D text_utils.ads	20131031144348 54c51d8b
+D utils.ads		20130715085512 31abf9cd
+X 1 ada.ads
+16K9*Ada 19e8 50|2r6 3r6 5r6 9r8 10r8 101r9
+X 2 a-assert.ads
+24K13*Assertions 36e19 50|2w10 9r12
+34U14*Assert 50|78s6
+X 8 a-cohama.ads
+52R9*Map
+X 10 a-coorma.ads
+53R9*Map
+X 11 a-coorse.ads
+52R9*Set
+X 13 a-convec.ads
+55R9*Vector
+X 15 a-except.ads
+53K13*Exceptions 355e19 50|3w10 101r13
+93U14*Raise_Exception 50|101s24
+X 18 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[9|73]>
+X 24 a-strbou.ads
+162V17*"="{boolean}<26|168p13> 13|43i19[86|25]
+X 27 a-strunb.ads
+166V14*"="{boolean} 13|43i19
+X 29 a-textio.ads
+49K13*Text_IO 471e16 50|5w10 10r12
+263U14*Put_Line 50|69s6 71s9 74s9
+X 36 base_model_types.ads
+25F9*Real<long_float>
+30F12*Rate{25F9}
+31F12*Amount{25F9} 50|36r40 53r45 56r36 57r36 58r36 59r36 60r36 61r36 62r36
+. 63r36 64r36 67r36 105r90 175r28 176r16 179r30 188r24 191r18 193r18
+43I12*Age_Range{natural} 50|23r19 50r32
+46I12*Child_Count{natural} 50|105r98
+52I12*Person_Count{natural} 50|18r21 47r45 49r45 52r45
+157R12*Auxiliary_Results{10|53R9[152]}
+159U14*Add_To_Map 50|119s7 120s7 121s7 128s7 168s7 181s12 182s12 183s12 189s7
+. 190s7 192s7
+X 45 model.ads
+27K9*Model 49e10 49|1r6 2r6 3r6 6r9 8r7 9r7 14r22 21r22 24r5 50|4r6 7r14
+. 16r22 22r19 45r22 65r36 91r21 173r17 197r5
+X 46 model-abstract_household.ads
+4K15*Abstract_Household 83e29 49|1w12 14r28 21r28 50|16r28 22r25 45r28 65r42
+. 91r27
+8h9*Incomes
+10y13*Get_Incomes{53|72A12} 50|173R83
+12h9*Demog
+13y13*Age{36|43I12} 50|23R37 69R29 71R46 73R14 84R20 94R21 94R41 112R38
+14y13*Employment{53|82E9} 50|73R32
+16y13*Family_Relationship{53|84E9} 50|26R21 69R63 71R94
+17y13*Education_Status{53|81E9} 50|24R42
+19h9*Employment_Record
+24h9*Person<12R9><8R9><19R9> 50|22r44 65r61 91r46
+47h9*Benefit_Unit 49|14r47 21r47 50|16r47 45r47
+49y13*Get_Num_People{36|52I12} 50|20R24 48R12 50R12 51R12 52R64 70R13 170R26
+56y13*Get_Person<24R9> 50|22R68 66R12 71R30 71R78 91R65 173R65
+X 47 model-calculator.ads
+1K15*Calculator 45|27k9 47|3e21 49|6r15 24r11 50|4r12 7r20 173r23 197r11
+X 48 model-calculator-direct_tax.ads
+6K26*Direct_Tax 44e32 50|4w23 173r34
+27V13*Combine_Incomes{53|72A12} 50|173s45
+X 49 model-calculator-universal_benefit.ads
+6K26*Universal_Benefit 47|1k15 49|24l22 24e39 50|7b31 197l22 197t39
+12U13*Calculate_Child_Benefit 13>6 14>6 15=6 50|14b14 39l8 39t31
+13r6 sys{51|192R9} 50|15b6 33r92 36r14
+14c6 bu<46|47R9> 50|16b6 20r21 22r65
+15r6 res{52|36R9} 50|17b6 33m9 33r51 35m12 35r54
+17U13*Calculate_Universal_Benefit 18>6 19>6 20>6 21>6 22=6 50|41b14 195l7
+. 195t34
+18r6 sys{51|145R9} 50|42b6 54r34 55r16 85r37 87r37 95r37 97r37 104r26 105r13
+. 113r34 138r29 140r29 145r29 147r29 154r29 156r29 161r29 163r29 178r31 179r64
+. 191r71
+19e6 tenure{53|17E9} 50|43b6 111r11
+20a6 housing_costs{53|64A9} 50|44b6 116r31
+21c6 bu<46|47R9> 50|45b6 48r9 50r9 51r9 52r61 66r9 70r10 71r27 71r75 91r62
+. 170r23 173r62
+22r6 res{52|36R9} 50|46b6 119m19 119r19 120m19 120r19 121m19 121r19 128m19
+. 128r19 168m19 168r19 173r96 181m24 181r24 182m24 182r24 183m24 183r24 189m19
+. 189r19 190m19 190r19 192m19 192r19 194m7
+X 50 model-calculator-universal_benefit.adb
+12X3 ex 101r41
+18i6 num_children{36|52I12} 28m19 28r35 34r13 36r48
+20i11 i{integer} 22r80
+22c12 pers<46|24R9> 23r32 24r37 26r16
+23i12 age{36|43I12} 27r20 27r37
+24e12 educ{53|81E9} 27r51
+47i6 num_children{36|52I12} 78r63 81r24 103r11 105r118 112r51 137r17 144r17
+. 153r17 160r17
+49i6 num_adults{36|52I12} 78r50 80r22 82r11 101r76 112r14 136r14 152r14
+52i6 num_people{36|52I12} 54r14 78r14 78r35 79r41
+53f6 maximum_benefit{36|31F12} 193r39
+56f6 earned_income{36|31F12} 184m12 184r29 188m7 188r41 189r86 191r93
+57f6 unearned_income{36|31F12} 185m12 185r31 190r69 191r53
+58f6 total_allowance{36|31F12} 122m7 128r71 191r35
+59f6 disregard{36|31F12} 138m16 140m16 145m16 147m16 154m16 156m16 161m16
+. 163m16 168r65 188r57
+60f6 standard_allowance{36|31F12} 85m15 87m15 95m15 97m15 121r74 123r11
+61f6 child_element{36|31F12} 104m9 119r69 124r11
+62f6 additional_child_element{36|31F12} 125r11
+63f6 housing_allowance{36|31F12} 113m13 116m10 120r73 126r11 135r11
+64f6 capability_for_work_element{36|31F12} 127r11
+65c6 head<46|24R9> 69r24 69r58 73r9 73r27 84r15 94r16 112r33
+67f6 payment{36|31F12} 191m7 192r68 193m7 193r30 194r47
+91c12 spouse<46|24R9> 94r34
+170i11 pno{integer} 173r77 173r106 181r67 182r77 183r78
+172a12 incomes{53|72A12} 178r22 178r53 178r77 179r55 181r76
+175f12 earn{36|31F12} 182r86 184r45
+179f12 unearn{36|31F12} 183r87 185r49
+X 51 model-parameter_system.ads
+3K15*Parameter_System 49|3w12 9r13 51|216e28
+103f7*single_with_housing_no_children{36|31F12} 50|154r44
+104f7*single_with_housing_with_children{36|31F12} 50|156r44
+112f7*single_no_housing_no_children{36|31F12} 50|138r44
+113f7*single_no_housing_with_children{36|31F12} 50|140r44
+121f7*couple_with_housing_no_children{36|31F12} 50|161r44
+122f7*couple_with_housing_with_children{36|31F12} 50|163r44
+129f7*couple_no_housing_no_children{36|31F12} 50|145r44
+130f7*couple_no_housing_with_children{36|31F12} 50|147r44
+136f7*single_claimant_aged_under_25{36|31F12} 50|85r52
+137f7*single_claimant_aged_25_or_over{36|31F12} 50|87r52
+138f7*joint_claimants_both_aged_under_25{36|31F12} 50|95r52
+139f7*joint_claimants_either_aged_25_or_over{36|31F12} 50|97r52
+141f7*first_child_or_qualifying_young_person{36|31F12} 50|104r41
+142f7*second_and_each_subsequent_child_or_qualifying_young_person{36|31F12}
+. 50|105r28
+145R9*Universal_Credit_System 49|18r22 50|42r22 51|185e14
+146r7*earned_income{53|73R12} 50|178r35
+147r7*unearned_income{53|73R12} 50|179r68
+149r7*allowances{134R9} 50|85r41 87r41 95r41 97r41 104r30 105r17
+150r7*disregards{97R9} 50|138r33 140r33 145r33 147r33 154r33 156r33 161r33
+. 163r33
+152f7*withdrawal_rate{36|30F12} 50|191r75
+168f7*maximum_payment_families{36|31F12} 50|55r20
+169f7*maximum_payment_singles{36|31F12} 50|54r38
+176f7*one_bedroom_in_shared_accommodation_rate{36|31F12} 50|113r38
+192R9*Child_Benefit_System 49|13r22 50|15r22 51|196e14
+193f7*first_child{36|31F12} 50|33r96
+194f7*additional_children{36|31F12} 50|36r18
+X 52 model-results.ads
+4K15*Results 49|2w12 8r13 52|77e18
+10a7*incomes{53|72A12} 50|33m23 33r65 35m26 35r68 173r112 194m21
+34A9*Pers_Result_Array(9R9)<integer>
+36R9*Benefit_Unit_Result 49|15r29 22r29 50|17r29 46r29 52|42e14
+38a7*pers{34A9} 50|33m13 33r55 35m16 35r58 173r100 194m11
+41r7*intermed{36|157R12} 50|119m23 120m23 121m23 128m23 168m23 181m28 182m28
+. 183m28 189m23 190m23 192m23
+X 53 model_types.ads
+5K9*Model_Types 49|4w6 10r7 50|1w6 8r8 53|115e16
+17E9*Tenure_Type 49|19r22 50|43r22 53|17e93
+17n41*private_rented{17E9} 50|111r20
+20n7*wages{19E9} 50|181r85
+35n7*income_tax{19E9} 50|178r62
+36n7*national_insurance{19E9} 50|178r86
+46n7*child_benefit{19E9} 50|33r32 33r74 35r35 35r77
+61n7*tax_credits{19E9} 50|194r30
+63n32*rent{63E9} 50|116r46
+64A9*Housing_Array(36|31F12)<63E9> 49|20r23 50|44r22
+66K12*T_Incomes[84|48] 50|177r19 179r40
+72A12*Incomes_List{84|67A12[66]}<19E9> 50|172r31
+73R12*Incomes_Set{84|56R12[66]}
+81E9*Education_Type 50|24r19 53|81e104
+81n47*school{81E9} 50|27r59
+81n67*further_education{81E9} 50|27r69
+82n66*in_education{82E9} 50|73r45
+84n32*head{84E9} 50|50r48
+84n46*civil_partner{84E9} 50|50r54
+84n61*child{84E9} 50|26r44 48r35
+84n68*foster_child{84E9} 50|26r53 51r36
+84n82*other_relationship{84E9} 50|48r42 51r50
+X 84 t_utils.ads
+56R12*Set{11|52R9[55[53|66]]}
+66A9*Abs_Amount_Array(36|25F9)<53|19E9>
+67A12*Amount_Array{66A9[53|66]}<53|19E9>
+104V13*Sum{36|25F9} 50|177s29[53|66] 179s50[53|66]
+
