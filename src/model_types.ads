@@ -1,9 +1,11 @@
 with T_Utils;
 with Base_Model_Types;
+with Ada.Calendar;
 
 package Model_Types is
 
    use Base_Model_Types;
+   use Ada.Calendar;
 
    type Income_Tax_Income_Types is (
       non_savings_income,
@@ -89,6 +91,7 @@ package Model_Types is
       welsh_government, 
       uk_government );
    type Budget_Array is array( Budget_Type ) of Amount;
+   type Budget_By_Year is array( Year_Number range <> ) of Budget_Array;
       
    type Admin_Activity_Type is ( initial_review, maintenance, placement_ceases, bi_annual_review );
 

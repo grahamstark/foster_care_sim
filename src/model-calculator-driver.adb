@@ -76,6 +76,7 @@ package body Model.Calculator.Driver is
       use Example_Data.Examples;
       use Base_Model_Types;
       use Model_Types;
+      
       f                   : File_Type;
       parents_results     : Model.Results.Household_Result;
       household_has_split : Boolean := False;
@@ -86,8 +87,8 @@ package body Model.Calculator.Driver is
       target_person       : Example_Data.Person;
       target_buno         : Benefit_Unit_Number;
       target_pno          : Person_Number;
-      budget_expenditures : Budget_Array := ( others => 0.0 );
-      budget_receipts     : Budget_Array := ( others => 0.0 );
+      budget_expenditures : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
+      budget_receipts     : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
    begin
       Create( f, Out_File, outfile_name );
       Put( f, "Year," );
@@ -102,8 +103,8 @@ package body Model.Calculator.Driver is
       parents_results.Zero( including_stocks => true );
       years:
       for year in events'Range loop
-         budget_expenditures := ( others => 0.0 );
-         budget_receipts := ( others => 0.0 );
+         -- budget_expenditures := ( others => 0.0 );
+         -- budget_receipts := ( others => 0.0 );
          results.Zero( including_stocks => False );
          parents_results.Zero( including_stocks => False );
          Put_Line( "on year " & year'Img );
@@ -161,7 +162,7 @@ package body Model.Calculator.Driver is
             Map_Household( eh ), results ); 
             
          results.bus( target_buno ).pers( target_pno ).Assign_To_Budgets( 
-            budget_expenditures, budget_receipts );
+            budget_expenditures( year ), budget_receipts( year ));
          if household_has_split then
             Model.Calculator.Direct_Tax.Make_Household_Net_Income( 
                Map_Household( parents_household ), parents_results );
@@ -178,24 +179,24 @@ package body Model.Calculator.Driver is
                       " vatable " & Format( vatable ) & 
                       " vatr " & Format( system.indir.vat ));
             results.vat := vatable * vatr;
-            Inc( budget_receipts( uk_government ), results.vat );
+            Inc( budget_receipts( year )( uk_government ), results.vat );
             Put_Line( "=>VAT "& Format( results.vat ));
          end;
          -- foster payments are allocated to 1st person 1st ben unit
-         Inc( budget_expenditures( childrens_services ), 
+         Inc( budget_expenditures( year)( childrens_services ), 
               results.bus( 1 ).pers( 1 ).incomes( foster_care_payments ));
          if( events( year ).Contains_Event( arbitrary_event ))then
             declare
                arb : Event_Obj'Class := events( year ).Find_Event( arbitrary_event, found );
             begin
-               Inc( budget_expenditures( arb.cost_centre ), arb.value ); 
+               Inc( budget_expenditures( year)( arb.cost_centre ), arb.value ); 
             end;
          end if;
          Put( f, year'Img & "," & To_String( events( year ), 5, ',' ));
          
          Put( f, target_person.Summary_String( ',' ));
-         Put( f, To_String( budget_expenditures, ',' ));
-         Put( f, To_String( budget_receipts, ',' ));
+         Put( f, To_String( budget_expenditures( year ), ',' ));
+         Put( f, To_String( budget_receipts( year ), ',' ));
          Put( f, results.bus( target_buno ).pers( target_pno ).Summary_String( ',' ));
          Put_Line( f, To_String( results.vat ));
          

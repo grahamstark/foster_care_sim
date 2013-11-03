@@ -148,6 +148,10 @@ package body Example_Data.Examples is
               ev( 2014 ).Append( sc_ev );
               ev( 2014 ).Append( teach_ev );
               ev( 2015 ).Append( sc_ev );
+              ev( 2018 ).Add_Event( leave_work );
+              ev( 2019 ).Add_Event( start_work );
+              ev( 2022 ).Add_Event( leave_work );
+              ev( 2023 ).Add_Event( start_work );
               -- ev( 2013 ).Add_Event( start_work );
               -- ev( 2013 ).Add_Event( start_higher_education );
               -- ev( 2015 ).Add_Event( leave_work );
