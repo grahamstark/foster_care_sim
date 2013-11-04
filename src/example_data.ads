@@ -50,7 +50,8 @@ package Example_Data is
       cost_centre : Budget_Type  ); 
    function Contains_Event( events : Events_Set; event : Event_Type ) return Boolean; 
    function Find_Event( events : Events_Set; event : Event_Type; found : out Boolean ) return Event_Obj'Class;
-
+   function Find_Events( events : Events_Set; event : Event_Type; found : out Boolean ) return Events_Set'Class;
+   
 
    -- package T_Events is new T_Utils(
       -- T             => Event_Type,

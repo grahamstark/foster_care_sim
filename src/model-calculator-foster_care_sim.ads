@@ -32,6 +32,7 @@ package Model.Calculator.Foster_Care_Sim is
    procedure Get_Student_Grants_And_Loans(
       sys             : Student_Loan_And_Grant_System;
       hh              : Household;
+      events          : Events_Set;
       part_of_main_hh : Boolean;
       pers            : Person;
       taxable_income  : Amount;

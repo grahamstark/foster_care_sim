@@ -153,6 +153,7 @@ package body Model.Calculator.Foster_Care_Sim is
    procedure Get_Student_Grants_And_Loans(
       sys             : Student_Loan_And_Grant_System;
       hh              : Household;
+      events          : Events_Set;
       part_of_main_hh : Boolean;
       pers            : Person;
       taxable_income  : Amount;
@@ -181,7 +182,7 @@ package body Model.Calculator.Foster_Care_Sim is
          begin
             res.incomes( student_grants ) := asl + sys.tuition_fee_grant;
             if( pers.years_fostered > 0.0 ) then
-               if( pers.years_in_education > 0.0 ) and ( pers.years_in_education <= 1.0 )then
+               if( events.Contains_Event( start_higher_education ))then
                   Inc( res.incomes( student_grants ), sys.higher_education_bursary );
                end if;
                if( not part_of_main_hh )then

@@ -46,9 +46,9 @@ package body Model.Calculator.Universal_Benefit is
      res           : in out Benefit_Unit_Result ) is
      num_children                : constant Person_Count := 
         bu.Get_Num_People( 0, 18, child, other_relationship, 2 );
-     num_adults                  : constant Person_Count := 
+     num_adults                  : constant Person_Count := Age_Range'Max( 1,
         bu.Get_Num_People( 16, Age_Range'Last, head, civil_partner ) +
-        bu.Get_Num_People( 19, 99, foster_child, other_relationship, 1 );
+        bu.Get_Num_People( 19, 99, foster_child, other_relationship, 1 ));
      num_people                  : constant Person_Count := bu.Get_Num_People;
      maximum_benefit             : constant Amount :=
         ( if num_people = 1 then sys.maximum_payment_singles

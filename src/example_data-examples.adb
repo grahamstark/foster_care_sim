@@ -85,7 +85,7 @@ package body Example_Data.Examples is
            end;
         when 6 => -- catherine
            declare
-              ev : Events_List( 2011 .. 2059 );
+              ev : Events_List( 2011 .. 2040 );
            begin
               ev( 2013 ).Add_Event( completes_a_levels );
               ev( 2013 ).Add_Event( leave_school );
@@ -98,7 +98,7 @@ package body Example_Data.Examples is
            end;
         when 7 => -- catherine, leaving at 18, starting uni at 20
            declare
-              ev : Events_List( 2011 .. 2059 );
+              ev : Events_List( 2011 .. 2040 );
            begin
               ev( 2013 ).Add_Event( completes_a_levels );
               ev( 2013 ).Add_Event( leave_school );
@@ -114,7 +114,7 @@ package body Example_Data.Examples is
            end;
         when 8 => -- catherine, leaving at 18, starting uni at 18 but not graduating
            declare
-              ev : Events_List( 2011 .. 2059 );
+              ev : Events_List( 2011 .. 2040 );
            begin
               ev( 2013 ).Add_Event( completes_a_levels );
               ev( 2013 ).Add_Event( leave_school );
@@ -130,7 +130,7 @@ package body Example_Data.Examples is
            end;
         when 9 .. 11 => -- christian, base case
            declare
-              ev : Events_List( 2011 .. 2059 );
+              ev : Events_List( 2011 .. 2040 );
               sc_ev : Event_Obj := (
                 event => arbitrary_event,
                 name  => TuS( "Ongoing support from leaving care personal adviser" ),
@@ -140,11 +140,11 @@ package body Example_Data.Examples is
                 event => arbitrary_event,
                 name  => TuS( "Teaching Support" ),
                 value => 806.00,
-                cost_centre => local_authority );
+                cost_centre => childrens_services );
            begin
+              ev( 2012 ).Add_Event( leave_fostering );
               ev( 2013 ).Add_Event( leave_school );
-              ev( 2013 ).Add_Event( leave_fostering );
-              ev( 2014 ).Add_Event( leave_household );
+              ev( 2013 ).Add_Event( leave_household );
               ev( 2014 ).Append( sc_ev );
               ev( 2014 ).Append( teach_ev );
               ev( 2015 ).Append( sc_ev );
@@ -152,6 +152,13 @@ package body Example_Data.Examples is
               ev( 2010 + which ).Add_Event( start_work );
               ev( 2022 ).Add_Event( leave_work );
               ev( 2023 ).Add_Event( start_work );
+              ev( 2025 ).Add_Event( leave_work );
+              ev( 2027 ).Add_Event( start_work );
+              ev( 2030 ).Add_Event( leave_work );
+              ev( 2033 ).Add_Event( start_work );
+              ev( 2035 ).Add_Event( leave_work );
+              ev( 2040 ).Add_Event( start_work );
+              -- ev( 2045 ).Add_Event( leave_work );
               return ev;
            end;
         when 12 .. 16 => -- christian, 
@@ -166,7 +173,7 @@ package body Example_Data.Examples is
                 name  => TuS( "Wages 5% up from defaults" ),
                 value => 1.05,
                 cost_centre => local_authority );
-              ev : Events_List( 2011 .. 2059 );
+              ev : Events_List( 2011 .. 2040 );
            begin
               if( which = 15 )then
                  ev( 2015 ).Append( wage_increase_1 );
@@ -176,8 +183,8 @@ package body Example_Data.Examples is
               ev( 2015 ).Add_Event( leave_school );
               ev( 2015 ).Add_Event( completes_gcses );              
               ev( 2015 ).Add_Event( leave_fostering );
-              ev( 2016 ).Add_Event( leave_household );
               ev( 2016 ).Add_Event( start_work );
+              ev( 2016 ).Add_Event( leave_household );
               ev( 2018 ).Add_Event( leave_work );
               ev( 2019 ).Add_Event( start_work );
               ev( 2022 ).Add_Event( leave_work );

@@ -205,6 +205,7 @@ package body Example_Data is
                     Put_Line( "end_higher_education" );
                     target_pers.education := not_in_education;
                  when start_work =>
+                    Put_Line( "Start Work age " & target_pers.age'Img ); 
                     Assert( target_pers.employment /= full_time, "already in f/t work" );
                     target_pers.hours_worked := 38*WEEKS_WORKED_PER_YEAR;
                     target_pers.wage_per_hour := Infer_Wage( target_pers );
@@ -255,7 +256,6 @@ package body Example_Data is
                         parents_hh := hh;
                         hh := new_hh;
                      end;
-
                  end case;
             end loop;
          end;
@@ -600,6 +600,19 @@ package body Example_Data is
       found := False;
       return ev;
    end Find_Event;
+
+   function Find_Events( events : Events_Set; event : Event_Type; found : out Boolean ) return Events_Set'Class is
+      ev : Events_Set;
+   begin
+      found := False;
+      for e of events loop
+         if( e.event = event )then 
+            found := True;
+            ev.Append( e );
+         end if;
+      end loop;
+      return ev;
+   end Find_Events;
 
 
 end Example_Data;

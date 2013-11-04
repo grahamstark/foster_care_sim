@@ -199,6 +199,7 @@ package body Model.Calculator.Driver is
             Model.Calculator.Foster_Care_Sim.Get_Student_Grants_And_Loans(
                system.sl,
                parents_household,
+               events( year ),
                not household_has_split,
                target_person,
                parents_results.total_taxable_income,
@@ -207,6 +208,7 @@ package body Model.Calculator.Driver is
             Model.Calculator.Foster_Care_Sim.Get_Student_Grants_And_Loans(
                system.sl,
                eh,
+               events( year ),
                not household_has_split,
                target_person,
                results.total_taxable_income,
@@ -244,9 +246,11 @@ package body Model.Calculator.Driver is
               results.bus( 1 ).pers( 1 ).incomes( foster_care_payments ));
          if( events( year ).Contains_Event( arbitrary_event ))then
             declare
-               arb : Event_Obj'Class := events( year ).Find_Event( arbitrary_event, found );
+               arb : Events_Set'Class := events( year ).Find_Events( arbitrary_event, found );
             begin
-               Inc( budget_expenditures( year)( arb.cost_centre ), arb.value ); 
+               for ev of arb loop 
+                  Inc( budget_expenditures( year)( ev.cost_centre ), ev.value );
+               end loop;
             end;
          end if;
          Put( f, year'Img & "," & To_String( events( year ), 5, ',' ));
