@@ -90,6 +90,7 @@ package Example_Data is
       years_in_work_total         : Amount := 0.0;
       years_unemployed_total      : Amount := 0.0;
       wage_scale                  : Rate := 1.0;
+      ends_fostering_this_period  : Boolean := False;
    end record;
 
    function To_String( pers : Person ) return String;

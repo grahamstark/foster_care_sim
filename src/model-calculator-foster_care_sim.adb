@@ -104,7 +104,7 @@ package body Model.Calculator.Foster_Care_Sim is
          if events.Contains_Event( start_fostering )then
             Inc( res.assigned_admin_costs, sys.current_system( initial_review ));
          end if;
-         if events.Contains_Event( leave_fostering )then
+         if pers.ends_fostering_this_period then
             if( pers.age <= 18 )then
                Inc( res.assigned_admin_costs, sys.current_system( placement_ceases ));
             else

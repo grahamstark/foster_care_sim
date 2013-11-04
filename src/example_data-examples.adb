@@ -144,7 +144,7 @@ package body Example_Data.Examples is
            begin
               ev( 2013 ).Add_Event( leave_school );
               ev( 2013 ).Add_Event( leave_fostering );
-              ev( 2013 ).Add_Event( leave_household );
+              ev( 2014 ).Add_Event( leave_household );
               ev( 2014 ).Append( sc_ev );
               ev( 2014 ).Append( teach_ev );
               ev( 2015 ).Append( sc_ev );
@@ -154,27 +154,35 @@ package body Example_Data.Examples is
               ev( 2023 ).Add_Event( start_work );
               return ev;
            end;
-        when 12 .. 15 => -- christian, 
+        when 12 .. 16 => -- christian, 
            declare
-              wage_increase : Event_Obj := (
+              wage_increase_1 : Event_Obj := (
                 event => wages_bump,
                 name  => TuS( "Wages 1% up from defaults" ),
                 value => 1.01,
                 cost_centre => local_authority );
+              wage_increase_5 : Event_Obj := (
+                event => wages_bump,
+                name  => TuS( "Wages 5% up from defaults" ),
+                value => 1.05,
+                cost_centre => local_authority );
               ev : Events_List( 2011 .. 2059 );
            begin
+              if( which = 15 )then
+                 ev( 2015 ).Append( wage_increase_1 );
+              elsif( which = 16 )then
+                 ev( 2015 ).Append( wage_increase_5 );
+              end if;
               ev( 2015 ).Add_Event( leave_school );
-              ev( 2015 ).Append( wage_increase );
-              ev( 2015 ).Add_Event( completes_gcses );
-              
+              ev( 2015 ).Add_Event( completes_gcses );              
               ev( 2015 ).Add_Event( leave_fostering );
-              ev( 2015 ).Add_Event( leave_household );
+              ev( 2016 ).Add_Event( leave_household );
               ev( 2016 ).Add_Event( start_work );
               ev( 2018 ).Add_Event( leave_work );
               ev( 2019 ).Add_Event( start_work );
               ev( 2022 ).Add_Event( leave_work );
-              if( which = 15 )then
-                 ev( 2025 ).Add_Event( start_work );
+              if( which >= 15 )then
+                 ev( 2011+14 ).Add_Event( start_work );
               else
                  ev( 2011+which ).Add_Event( start_work );
               end if;

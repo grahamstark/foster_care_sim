@@ -162,6 +162,11 @@ package body Example_Data is
                  pers : Person renames hh.benefit_units( buno ).people( pno );
               begin
                  Increment_Age( pers );
+                 if( pers.ends_fostering_this_period )then   
+                    pers.foster_status := previously_fostered;
+                    pers.relationship := other_relationship;
+                    pers.ends_fostering_this_period := False;
+                 end if;
                  if( pers.relationship in child .. foster_child ) and ( pers.age > 18 ) and ( pno > 1 )then
                     Move_To_New_BU( hh, buno, pno );
                  end if;
@@ -177,32 +182,14 @@ package body Example_Data is
          begin
             for event of events loop
                case event.event is
-                  when age_1_year => null;
-                  when leave_household =>
-                     declare
-                        new_hh : Household;
-                     begin
-                        new_hh.num_benefit_units := 1;
-                        target_pers.relationship := head;
-                        -- FIXME move housing assumptions to 
-                        -- procedure based on person
-                        new_hh.housing( rent ) := Example_Data.ONE_BEDROOM_FLAT_SOCIAL_HOUSING*52.0;
-                        new_hh.tenure := social_rented;
-                        new_hh.benefit_units( 1 ).people( 1 ) := target_pers;
-                        new_hh.benefit_units( 1 ).num_people := 1;
-                        -- Housing
-                        Remove_From_BU( hh, target_bu, target_person );
-                        target_bu := 1;
-                        target_person := 1;
-                        parents_hh := hh;
-                        hh := new_hh;
-                     end;
+                 when age_1_year => null;
                  when start_fostering =>
                     target_pers.foster_status := currently_fostered;
                     target_pers.relationship := foster_child;
                  when leave_fostering =>
-                    target_pers.foster_status := previously_fostered;
-                    target_pers.relationship := other_relationship;
+                    target_pers.ends_fostering_this_period := True;
+                    -- target_pers.foster_status := previously_fostered;
+                    -- target_pers.relationship := other_relationship;
                  when start_wiar => null;
                  when end_wiar => null;
                  when leave_school =>
@@ -249,6 +236,26 @@ package body Example_Data is
                  when wages_bump =>
                     target_pers.wage_scale := event.value;
                  when arbitrary_event => null;
+                 when leave_household =>
+                     declare
+                        new_hh : Household;
+                     begin
+                        new_hh.num_benefit_units := 1;
+                        target_pers.relationship := head;
+                        -- FIXME move housing assumptions to 
+                        -- procedure based on person
+                        new_hh.housing( rent ) := Example_Data.ONE_BEDROOM_FLAT_SOCIAL_HOUSING*52.0;
+                        new_hh.tenure := social_rented;
+                        new_hh.benefit_units( 1 ).people( 1 ) := target_pers;
+                        new_hh.benefit_units( 1 ).num_people := 1;
+                        -- Housing
+                        Remove_From_BU( hh, target_bu, target_person );
+                        target_bu := 1;
+                        target_person := 1;
+                        parents_hh := hh;
+                        hh := new_hh;
+                     end;
+
                  end case;
             end loop;
          end;
@@ -446,7 +453,7 @@ package body Example_Data is
       end if;
       w := exp( lw );
       w := Amount'Max( mw, w * p.wage_scale ); 
-      Put_Line( "Wage " & To_String( w ));
+      Put_Line( "Wage " & To_String( w ) & "wage scale " & To_String( p.wage_scale ));
       return w;
    end Infer_Wage;
 
