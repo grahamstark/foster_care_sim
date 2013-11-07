@@ -38,6 +38,10 @@ package body Model.Calculator.Universal_Benefit is
       end loop;
    end Calculate_Child_Benefit;
    
+   --
+   -- FIXME change this so the household is sent, and benefit units are arranged as needed
+   -- internally. 
+   -- FIXME add something to optionally count/not count foster children
    procedure Calculate_Universal_Benefit(
      sys           : Universal_Credit_System;
      tenure        : Tenure_Type;

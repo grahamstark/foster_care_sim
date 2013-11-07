@@ -12,7 +12,7 @@ package Example_Data is
    use Ada.Calendar;
    use Ada.Strings.Unbounded;
 
-   WEEKS_WORKED_PER_YEAR : constant := 47;
+   WEEKS_WORKED_PER_YEAR : constant := 52; -- assume holiday pay as HR suggested
    ONE_BEDROOM_FLAT_SOCIAL_HOUSING : constant Amount := 64.63;
    type Foster_Status_Type is ( not_fostered, currently_fostered, when_i_am_ready, previously_fostered );
    type Event_Type is (

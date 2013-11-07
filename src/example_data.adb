@@ -410,6 +410,90 @@ package body Example_Data is
 
    function Infer_Wage( p : Person ) return Amount is
       use MF; use MF.Elementary_Functions; use MF.Matrix_Functions;
+      subtype V7 is Vector( 1 .. 7 );
+      type Coeffs_Array is array( qualification_Type ) of V7;
+ 
+      COEFFS : Coeffs_Array := (
+         degree => ( 
+           1.53473,     
+           -0.185842,    
+           0.0546440,   
+           -0.000681854, 
+           0.0401239, 
+           -0.000600493,
+           -0.157707 ),    
+         other_higher_ed => (
+             1.64186,     
+            -0.148909,    
+             0.0327440,  
+            -0.000406330, 
+             0.0328575,   
+            -0.000439920, 
+            -0.190557 ),
+         a_level => (
+            1.51409,
+           -0.235083,   
+            0.0408697,  
+           -0.000567801,
+            0.0403371,  
+           -0.000512177,
+           -0.191290 ),            
+         btec_etc => (
+             1.59420,     
+            -0.242329,    
+             0.0375559,   
+            -0.000517623, 
+             0.0283735,   
+            -0.000291880, 
+            -0.242409 ),            
+         gcse => (
+            1.65484,     
+           -0.225797,    
+            0.0262711,   
+           -0.000375450, 
+            0.0299256,
+           -0.000313211, 
+           -0.179826             
+         ),
+         other_qualification => (
+             1.70043,     
+            -0.114438,    
+             0.0200793,   
+            -0.000303641, 
+             0.0261817,   
+            -0.000272960, 
+            -0.170833             
+         ),
+         no_qualification => (
+            1.66331,    
+           -0.107497,   
+            0.0175111,  
+           -0.000214085,
+            0.0168458,  
+           -0.000209104,
+           -0.198569 ));
+      w  : Amount;
+      lw : Amount;
+      mw : constant Amount := Minimum_Wage( p );
+      values : V7;
+   begin
+      values( 1 ) := 1.0;
+      values( 2 ) := 1.0;
+      values( 3 ) := Amount( p.age );
+      values( 4 ) := Amount( p.age * p.age );
+      values( 5 ) := p.years_in_work_total;
+      values( 6 ) := p.years_in_work_total ** 2;
+      values( 7 ) := ( if p.gender = female then 1.0 else 0.0 );
+      lw := COEFFS( p.highest_qualification ) * values;
+      w := exp( lw );
+      w := Amount'Max( mw, w * p.wage_scale ); 
+      Put_Line( "Wage " & To_String( w ) & "wage scale " & To_String( p.wage_scale ));
+      return w;
+      
+   end Infer_Wage;
+      
+   function Infer_Wage_2( p : Person ) return Amount is
+      use MF; use MF.Elementary_Functions; use MF.Matrix_Functions;
       w  : Amount;
       lw : Amount;
       mw : constant Amount := Minimum_Wage( p );
@@ -455,7 +539,7 @@ package body Example_Data is
       w := Amount'Max( mw, w * p.wage_scale ); 
       Put_Line( "Wage " & To_String( w ) & "wage scale " & To_String( p.wage_scale ));
       return w;
-   end Infer_Wage;
+   end Infer_Wage_2;
 
    
    function Infer_Wage_1( p : Person ) return Amount is

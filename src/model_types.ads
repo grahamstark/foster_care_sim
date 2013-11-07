@@ -12,9 +12,21 @@ package Model_Types is
       savings_income,
       dividend_income );
    
-   type Qualification_Type is ( no_qualification, gcse, a_level, degree );
+   type Qualification_Type is ( 
+      no_qualification,
+      gcse, 
+      a_level,
+      btec_etc,
+      other_higher_ed,
+      degree,
+      other_qualification );
    
-   type Tenure_Type is ( social_rented, private_rented, mortgaged, shared_ownership, other );
+   type Tenure_Type is ( 
+      social_rented, 
+      private_rented, 
+      mortgaged, 
+      shared_ownership, 
+      other );
 
    type Incomes_Type is (
       wages,
@@ -60,7 +72,11 @@ package Model_Types is
       council_tax_benefit,
       tax_credits );
 
-   type Housing_Cost_Type is ( rent, mortgage, local_tax ); -- ... and so on
+   type Housing_Cost_Type is ( 
+      rent, 
+      mortgage, 
+      local_tax ); -- ... and so on
+      
    type Housing_Array is array( Housing_Cost_Type ) of Amount;
 
    package T_Incomes is new T_Utils(
@@ -78,10 +94,32 @@ package Model_Types is
    subtype Benefits_Range is Incomes_Type range disabled_living_allowance .. tax_credits;
    subtype Work_Hours_Range is Natural range 0 .. 150;
 
-   type Education_Type is ( not_in_education, school, apprentice, further_education, higher_education );
-   type Employment_Status is ( full_time, part_time, unemployed, in_education, inactive, retired );
-   type Gender_Type is ( Male, Female );
-   type Relationship_Type is ( head, spouse, civil_partner, child, foster_child, other_relationship );
+   type Education_Type is ( 
+      not_in_education, 
+      school, 
+      apprentice, 
+      further_education, 
+      higher_education );
+      
+   type Employment_Status is ( 
+      full_time, 
+      part_time, 
+      unemployed, 
+      in_education, 
+      inactive, 
+      retired );
+      
+   type Gender_Type is ( 
+      male, 
+      female );
+      
+   type Relationship_Type is ( 
+      head, 
+      spouse, 
+      civil_partner, 
+      child, 
+      foster_child, 
+      other_relationship );
 
    type Budget_Type is ( 
       -- household_budget, 
@@ -93,9 +131,17 @@ package Model_Types is
    type Budget_Array is array( Budget_Type ) of Amount;
    type Budget_By_Year is array( Year_Number range <> ) of Budget_Array;
       
-   type Admin_Activity_Type is ( initial_review, maintenance, placement_ceases, bi_annual_review );
+   type Admin_Activity_Type is ( 
+      initial_review, 
+      maintenance, 
+      placement_ceases, 
+      bi_annual_review );
 
-   type Practitioner_Type is ( personal_advisor, team_manager, adminstrator );
+   type Practitioner_Type is ( 
+      personal_advisor, 
+      team_manager, 
+      adminstrator );
+      
    type Activity_Times is array( Admin_Activity_Type, Practitioner_Type ) of Amount;
    type Admin_Activity_Array is array( Admin_Activity_Type ) of Amount;
 

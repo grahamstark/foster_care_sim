@@ -119,22 +119,27 @@ package body Model.Calculator.Driver is
             overall_gross_receipts_zero,    
             overall_net_expenditures_zero );
          Put_Line( f, "Present Values  " );
-         Put_Line( f, ",,Discounted 3.5%,,,,Undiscounted" );
+         Put_Line( f, ",,Discounted 3.5%" );
          Put_Line( f, " ,Expenditure, Receipts, Net Expenditure,,Expenditure, Receipts, Net" );
          for b in Budget_Array'Range loop
             Put_Line( f, Prettify_Image( Budget_Type'Image( b )) & "," & 
                Format( gross_expenditures( b )) & "," &
                Format( gross_receipts( b )) & "," &
-               Format( net_expenditures( b )) & ",," &
-               Format( gross_expenditures_zero( b )) & "," &
-               Format( gross_receipts_zero( b )) & "," &
-               Format( net_expenditures_zero( b )));
+               Format( net_expenditures( b )) & ",,");
          end loop;
-         New_Line( f );
-         Put_Line( f, "Over all budgets" & "," & 
+         Put_Line( f, "Overall budgets" & "," & 
             Format( overall_gross_expenditures ) & "," &
             Format( overall_gross_receipts ) & "," &
-            Format( overall_net_expenditures ) & ",," &
+            Format( overall_net_expenditures ) & "," );
+         Put_Line( f, ",,Undiscounted" );
+         Put_Line( f, " ,Expenditure, Receipts, Net Expenditure,,Expenditure, Receipts, Net" );
+         for b in Budget_Array'Range loop
+            Put_Line( f, Prettify_Image( Budget_Type'Image( b )) & "," & 
+               Format( gross_expenditures_zero( b )) & "," &
+               Format( gross_receipts_zero( b )) & "," &
+               Format( net_expenditures_zero( b )) & ",,");
+         end loop;
+         Put_Line( f, "Overall budgets" & "," &
             Format( overall_gross_expenditures_zero) & "," &
             Format( overall_gross_receipts_zero) & "," &
             Format( overall_net_expenditures_zero ));
