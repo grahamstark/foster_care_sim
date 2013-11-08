@@ -235,6 +235,14 @@ package body Example_Data is
                     if( target_pers.highest_qualification < a_level )then
                        target_pers.highest_qualification := a_level;
                     end if; 
+                 when start_apprenticeship =>
+                    target_pers.employment := full_time;
+                    target_pers.education := apprentice; 
+                 when completes_apprenticeship => 
+                    if( target_pers.highest_qualification < btec_etc )then
+                       target_pers.highest_qualification := btec_etc;
+                    end if; 
+                    target_pers.education := not_in_education; 
                  when completes_gcses =>
                     if( target_pers.highest_qualification < gcse )then
                        target_pers.highest_qualification := gcse;

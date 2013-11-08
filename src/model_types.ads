@@ -15,8 +15,8 @@ package Model_Types is
    type Qualification_Type is ( 
       no_qualification,
       gcse, 
-      a_level,
       btec_etc,
+      a_level,
       other_higher_ed,
       degree,
       other_qualification );

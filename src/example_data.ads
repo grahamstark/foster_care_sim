@@ -23,7 +23,7 @@ package Example_Data is
         end_wiar,
         leave_school,
         start_apprenticeship,
-        end_apprenticeship,
+        completes_apprenticeship,
         start_higher_education,
         end_higher_education,
         start_work,

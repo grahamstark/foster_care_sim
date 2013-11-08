@@ -119,7 +119,10 @@ package body Example_Data.Model_Household is
          declare
             pers : Person := bu.people( p );
          begin
-         if( pers.age >= start_age and pers.age <= end_age  and pers.relationship >= relationship_from and pers.relationship <= relationship_to )then
+         if pers.age >= start_age and 
+            pers.age <= end_age and 
+            pers.relationship >= relationship_from and 
+            pers.relationship <= relationship_to then
             n := n + 1;
          end if;
          end;
@@ -152,13 +155,22 @@ package body Example_Data.Model_Household is
       n : Person_Count := 0;
    begin
       for b in 1 .. hh.num_benefit_units loop
-            n := n + hh.Get_Benefit_Unit( b ).Get_Num_People( start_age, end_age, relationship_from, relationship_to, start_person );
+            n := n + hh.Get_Benefit_Unit( b ).Get_Num_People( 
+               start_age, 
+               end_age, 
+               relationship_from, 
+               relationship_to, 
+               start_person );
       end loop;
       return n;
    end Get_Num_People;
 
-   function Get_Person( hh : Model_Household; bu_no : Positive; pers_no : Positive ) return Model.Abstract_Household.Person'Class is
-      mp : Model.Abstract_Household.Person'Class := Map_Person( hh.benefit_units( bu_no ).people( pers_no ));
+   function Get_Person( 
+      hh : Model_Household; 
+      bu_no : Positive; 
+      pers_no : Positive ) return Model.Abstract_Household.Person'Class is
+      mp : Model.Abstract_Household.Person'Class := 
+         Map_Person( hh.benefit_units( bu_no ).people( pers_no ));
    begin
       return mp;
    end Get_Person;
@@ -171,7 +183,7 @@ package body Example_Data.Model_Household is
    
    function Get_Benefit_Unit_Type( bu : Model_Benefit_Unit ) return Primary_Or_Secondary is
    begin
-      return ( if bu.bu_number = 1 then primary; else secondary );
+      return ( if bu.bu_number = 1 then primary else secondary );
    end  Get_Benefit_Unit_Type;
 
 
