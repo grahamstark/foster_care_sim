@@ -54,6 +54,8 @@ package Model.Abstract_Household is
       relationship_to   : Relationship_Type := Relationship_Type'Last;
       start_person : Person_Count := 1 ) return Person_Count is abstract;
    function Get_Person( bu : Benefit_Unit; which : Positive ) return Person'Class is abstract;
+   function Get_Benefit_Unit_Type( bu : Benefit_Unit ) return Primary_Or_Secondary is abstract;
+   
    -- procedure Get_People( hh : Benefit_Unit; pv : in out Model.Abstract_Household.Person_Vector ) is abstract;
 
    type Household is interface;

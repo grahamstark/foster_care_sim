@@ -233,6 +233,7 @@ package body Model.Results is
       end loop;
       res.total_taxable_income := 0.0;
       res.net_income := 0.0;
+      res.housing_allowance := 0.0;
       res.intermed.Clear;
    end Zero;
 

@@ -38,6 +38,7 @@ package Model.Results is
       pers                      : Pers_Result_Array;
       total_taxable_income      : Amount := 0.0;
       net_income                : Amount := 0.0;
+      housing_allowance         : Amount := 0.0;
       intermed                  : Auxiliary_Results;
    end record;
    procedure Zero( res : in out Benefit_Unit_Result; including_stocks : Boolean );

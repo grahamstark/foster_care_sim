@@ -168,6 +168,12 @@ package body Example_Data.Model_Household is
    begin
       return mp;
    end Get_Person;
+   
+   function Get_Benefit_Unit_Type( bu : Model_Benefit_Unit ) return Primary_Or_Secondary is
+   begin
+      return ( if bu.bu_number = 1 then primary; else secondary );
+   end  Get_Benefit_Unit_Type;
+
 
 --        procedure Get_People( hh : Model_Household; pv : in out Model.Abstract_Household.Person_Vector ) is
 --        begin

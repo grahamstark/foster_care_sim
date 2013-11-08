@@ -22,6 +22,8 @@ package Example_Data is
         start_wiar,
         end_wiar,
         leave_school,
+        start_apprenticeship,
+        end_apprenticeship,
         start_higher_education,
         end_higher_education,
         start_work,
@@ -103,6 +105,7 @@ package Example_Data is
 
    type Benefit_Unit is tagged record
       num_people   : Person_Count := 0;
+      bu_number    : Benefit_Unit_Number := 1; 
       people       : Person_Array;
    end record;
    function To_String( bu : Benefit_Unit ) return String;

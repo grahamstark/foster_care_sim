@@ -30,7 +30,8 @@ package Example_Data.Model_Household is
       relationship_from : Relationship_Type := Relationship_Type'First;
       relationship_to   : Relationship_Type := Relationship_Type'Last;
       start_person : Person_Count := 1 ) return Person_Count;
-
+   overriding function Get_Benefit_Unit_Type( bu : Model_Benefit_Unit ) return Primary_Or_Secondary;
+   
 
    type Model_Household is new Household and Model.Abstract_Household.Household with null record;
    overriding function Get_Num_Benefit_Units( hh : Model_Household ) return Benefit_Unit_Count;

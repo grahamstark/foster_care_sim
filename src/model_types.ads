@@ -24,10 +24,13 @@ package Model_Types is
    type Tenure_Type is ( 
       social_rented, 
       private_rented, 
-      mortgaged, 
       shared_ownership, 
+      mortgaged,
+      owned_outright,
       other );
 
+   subtype Rented is Tenure_Type range  social_rented .. shared_ownership;  
+      
    type Incomes_Type is (
       wages,
       self_employment,
@@ -88,6 +91,7 @@ package Model_Types is
    subtype Incomes_List is T_Incomes.Amount_Array;
    subtype Incomes_Set is T_Incomes.Set;
 
+   type Primary_Or_Secondary  is ( primary, secondary );
    subtype Calculated_Incomes_Range is Incomes_Type range income_tax .. tax_credits;
    subtype Non_Calculated_Incomes_Range is Incomes_Type range wages .. other_investment_income;
    subtype Direct_Taxes_Range is Incomes_Type range income_tax .. national_insurance;

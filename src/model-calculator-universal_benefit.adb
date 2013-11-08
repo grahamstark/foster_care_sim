@@ -64,7 +64,7 @@ package body Model.Calculator.Universal_Benefit is
      standard_allowance          : Amount := 0.0;
      child_element               : Amount := 0.0;
      additional_child_element    : Amount := 0.0; -- TODO
-     housing_allowance           : Amount  := 0.0;
+     -- housing_allowance           : Amount  := 0.0;
      capability_for_work_element : Amount := 0.0; -- TODO
      head                        : Model.Abstract_Household.Person'Class :=
         bu.Get_Person( 1 );
@@ -110,24 +110,24 @@ package body Model.Calculator.Universal_Benefit is
       end if;
      -- TODO carer, Capability for work elements, Childcare costs element,
      -- Additional amount for disabled child or qualifying young person
-     -- Housing : todo Mortgages
-     
-      if( tenure = private_rented )then
-         if( num_adults = 1 and head.Age < 35 and num_children = 0 )then
-            housing_allowance := sys.one_bedroom_in_shared_accommodation_rate;
+     -- Housing : todo Mortgages     
+      if( tenure in Rented ) then
+         if( bu.Get_Benefit_Unit_Type = secondary ) or ( num_adults = 1 and head.Age < 35 and num_children = 0 )then
+            res.housing_allowance := sys.one_bedroom_in_shared_accommodation_rate;
+         else
+            res.housing_allowance := housing_costs( rent );
          end if;
-      else
-         housing_allowance := housing_costs( rent );
       end if;
+      -- end if;
       -- TODO NDDs, bedroom limits ...
       Add_To_Map( res.intermed, "Universal Credit::child_element ", child_element );
-      Add_To_Map( res.intermed, "Universal Credit::housing_allowance ", housing_allowance );
+      Add_To_Map( res.intermed, "Universal Credit::housing_allowance ", res.housing_allowance );
       Add_To_Map( res.intermed, "Universal Credit::standard_allowance ", standard_allowance );
       total_allowance :=
           standard_allowance +
           child_element +
           additional_child_element +
-          housing_allowance +
+          res.housing_allowance +
           capability_for_work_element;
       Add_To_Map( res.intermed, "Universal Credit::total_allowance ", total_allowance );
 
@@ -136,7 +136,7 @@ package body Model.Calculator.Universal_Benefit is
       -- are not responsible for a child or qualifying young person - £111 a month
       -- are responsible for one or more children or qualifying young persons - £263 a month
       -- have a limited capability to work - £192 a month
-      if( housing_allowance = 0.0 )then
+      if( res.housing_allowance = 0.0 )then
          if( num_adults = 1 )then
             if( num_children = 0 )then
                disregard := sys.disregards.single_no_housing_no_children;

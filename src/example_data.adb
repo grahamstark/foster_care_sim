@@ -27,6 +27,10 @@ package body Example_Data is
       for b in buno .. hh.num_benefit_units loop
          hh.benefit_units( b ) := hh.benefit_units( b+1 );
       end loop;
+      for b in 1 .. hh.num_benefit_units loop
+         hh.benefit_units( b ).bu_number := b;
+      end loop;
+      
    end  Delete_BU;
 
 
@@ -56,8 +60,8 @@ package body Example_Data is
                pers : Person renames hh.benefit_units( lbuno ).people( lpno );
             begin
                if( pers.pid = pid )then
-                  buno := lbuno;
-                  pno := lpno;
+                  buno  := lbuno;
+                  pno   := lpno;
                   found := True;
                   return;
                end if;
@@ -88,6 +92,7 @@ package body Example_Data is
       hh.num_benefit_units := nbu;
       -- pers.relationship := head; -- FIXME add relationship to HoH
       hh.benefit_units( nbu ).num_people := 1;
+      hh.benefit_units( nbu ).bu_number := nbu;
       hh.benefit_units( nbu ).people( 1 ) := pers;
       Remove_From_BU( hh, buno, pno );
    end Move_To_New_BU;
