@@ -195,7 +195,8 @@ package body Model.Calculator.Universal_Benefit is
       payment := Amount'Max( 0.0, total_allowance - unearned_income - sys.withdrawal_rate * earned_income );
       Add_To_Map( res.intermed, "Universal Credit::total_payment", payment );
       payment := Amount'Min( payment, maximum_benefit );
-      res.pers( 1 ).incomes( tax_credits ) := payment;
+      res.pers( 1 ).incomes( housing_benefit ) := Amount'Min( payment, res.housing_allowance );
+      res.pers( 1 ).incomes( tax_credits ) := payment - res.pers( 1 ).incomes( housing_benefit );
   end Calculate_Universal_Benefit;
 
 end Model.Calculator.Universal_Benefit;

@@ -87,12 +87,13 @@ package body Model.Results is
       Inc( expend( welsh_government ), res.incomes( student_grants ));
       Inc( expend( welsh_government ), res.incomes( student_loans ));
       Inc( expend( welsh_government ), res.incomes( council_tax_benefit ));
-      Inc( expend( welsh_government ), res.incomes( housing_benefit ));
       
       Inc( receipts(  welsh_government ), res.incomes( repayments ));
       for i in disabled_living_allowance .. winter_fuel_payments loop
          Inc( expend(  uk_government ), res.incomes( i ));
       end loop;
+      Inc( expend( local_authority ), res.incomes( housing_benefit ));
+      
       Inc( receipts(  uk_government ), res.incomes( income_tax ));
       Inc( receipts(  uk_government ), res.incomes( national_insurance ));
       Inc( receipts(  uk_government ), res.employers_ni );
@@ -141,7 +142,7 @@ package body Model.Results is
           & "national insurance" & delim
           & "employers ni" & delim
           & "tax credits" & delim
-          & "child benefit" & delim
+          & "housing_benefit" & delim
           & "education allowances" & delim
           & "foster care payments" & delim
           & "student grants" & delim
@@ -162,7 +163,7 @@ package body Model.Results is
       s := s & To_String( res.incomes( national_insurance ) ) & delim;
       s := s & To_String( res.employers_ni)  & delim;
       s := s & To_String( res.incomes( tax_credits ) ) & delim;
-      s := s & To_String( res.incomes( child_benefit ) ) & delim;
+      s := s & To_String( res.incomes( housing_benefit ) ) & delim;
       
       s := s & To_String( res.incomes( education_allowances ) )  & delim;
       s := s & To_String( res.incomes( foster_care_payments ) )  & delim;

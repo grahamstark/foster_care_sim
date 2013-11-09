@@ -28,6 +28,18 @@ package body Example_Data.Examples is
                     ev( 2016 ).Add_Event( start_work );                
                     return ev;
                  end;
+              when 4 => -- catherine
+                 declare
+                    ev : Events_List( 2011 .. 2040 );
+                 begin
+                    ev( 2013 ).Add_Event( completes_gcses );
+                    ev( 2013 ).Add_Event( leave_school );
+                    -- ev( 2013 ).Add_Event( start_work );                
+                    ev( 2013 ).Add_Event( start_apprenticeship );
+                    ev( 2015 ).Add_Event( completes_apprenticeship );
+                    ev( 2015 ).Add_Event( leave_fostering );
+                    return ev;
+                 end;
               when 2 => -- catherine, leaving at 18, starting uni at 20
                  declare
                     ev : Events_List( 2011 .. 2040 );
