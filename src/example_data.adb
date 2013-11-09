@@ -570,6 +570,9 @@ package body Example_Data is
         0.0679437 );  
       values : Vector( 1 .. 7 );
    begin
+      if( p.education = apprentice )then
+         return mw;
+      end if;
       values( 1 ) := 1.0;
       values( 2 ) := ( if p.gender = female then 1.0 else 0.0 );
       values( 3 ) := ( if p.highest_qualification = degree then 1.0 else 0.0 );

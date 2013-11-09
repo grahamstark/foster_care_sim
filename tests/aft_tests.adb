@@ -71,13 +71,13 @@ package body AFT_Tests is
    begin
      for which_hh in catherine .. christian loop
         case which_hh is
-           when catherine => start := 6; stop := 8;
-           when christian => start := 9; stop := 16;
+           when catherine => start := 1; stop := 3;
+           when christian => start := 1; stop := 9;
         end case;
         for eno in start .. stop loop
            declare
               fname : constant String := "output/" & which_hh'Img & "_path_" & eno'Img & ".csv";
-              events  : Events_List := Example_Data.Examples.Create_Events( eno ); -- := ( others => default_event );
+              events  : Events_List := Example_Data.Examples.Create_Events( which_hh, eno );
            begin
               Put_Line( "Case " & eno'Img & " which_hh " & which_hh'Img );
               results.Zero( True );

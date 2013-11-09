@@ -7,6 +7,6 @@ package Example_Data.Examples is
    type HH_Type is ( hh1, uc_anne, catherine, christian );
    function Get_Household( which : HH_Type ) return Household;
 
-   function Create_Events( which : Positive ) return Events_List;
+   function Create_Events( hht : HH_Type; which : Positive ) return Events_List;
 
 end Example_Data.Examples;

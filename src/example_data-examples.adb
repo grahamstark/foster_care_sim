@@ -4,213 +4,137 @@ package body Example_Data.Examples is
 
    use Text_Utils;
 
-   function Create_Events( which : Positive ) return Events_List is
+   function Create_Events( hht : HH_Type; which : Positive ) return Events_List is
+      tmp_ev : Events_List( 2013 .. 2013 );
    begin
      -- for i in ev'Range loop
         -- ev( i ).Append( age_1_year );
      -- end loop;
-     case which is
-        when 1 =>
-           declare
-              ev : Events_List( 2015 .. 2027 );
-           begin
-              ev( 2015 ).Add_Event( start_fostering );
-              ev( 2022 ).Add_Event( leave_school );
-              ev( 2022 ).Add_Event( start_work );
-              ev( 2023 ).Add_Event( completes_gcses );
-              ev( 2024 ).Add_Event( leave_fostering );
-              ev( 2025 ).Add_Event( leave_work );
-              ev( 2025 ).Add_Event( leave_household );
-              ev( 2025 ).Add_Event( completes_a_levels );
-              
-              ev( 2026 ).Add_Event( start_higher_education );
-              ev( 2027 ).Add_Event( end_higher_education );
-              ev( 2027 ).Add_Event( graduates );
-              ev( 2027 ).Add_Event( start_work );
-              return ev;
-           end;
-        when 2 =>
-           declare
-              ev : Events_List( 2013 .. 2030 );
-           begin
-              ev( 2013 ).Add_Event( start_fostering );
-              ev( 2022 ).Add_Event( leave_school );
-              ev( 2027 ).Add_Event( leave_fostering );
-              ev( 2029 ).Add_Arbitrary_Event( "Gets Sick", 20_000.0, welsh_government );
-              return ev;
-           end;
-        when 3 => -- child A
-           declare
-              ev : Events_List( 1996 .. 2059 );
-           begin
-              ev( 1997 ).Add_Event( start_fostering );
-              ev( 2010 ).Add_Event( completes_gcses );
-              ev( 2013 ).Add_Event( completes_a_levels );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2013 ).Add_Event( leave_fostering );
-              ev( 2013 ).Add_Event( start_higher_education );
-              ev( 2016 ).Add_Event( graduates );
-              ev( 2016 ).Add_Event( end_higher_education );
-              ev( 2016 ).Add_Event( start_work );
-              return ev;
-           end;
-        when 4 => -- child A
-           declare
-              ev : Events_List( 1996 .. 2059 );
-           begin
-              ev( 1997 ).Add_Event( start_fostering );
-              ev( 2010 ).Add_Event( completes_gcses );
-              ev( 2013 ).Add_Event( completes_a_levels );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2015 ).Add_Event( leave_fostering );
-              -- ev( 2013 ).Add_Event( start_higher_education );
-              -- ev( 2016 ).Add_Event( graduates );
-              -- ev( 2016 ).Add_Event( end_higher_education );
-              ev( 2016 ).Add_Event( start_work );
-              return ev;
-           end;
-        when 5 => -- child A
-           declare
-              ev : Events_List( 1996 .. 2059 );
-           begin
-              ev( 1997 ).Add_Event( start_fostering );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2015 ).Add_Event( leave_fostering );
-              ev( 2016 ).Add_Event( start_work );
-              ev( 2018 ).Add_Event( leave_work );
-              ev( 2025 ).Add_Event( start_work );
-              ev( 2032 ).Add_Event( leave_work );
-              ev( 2040 ).Add_Event( leave_work );
-              return ev;
-           end;
-        when 6 => -- catherine
-           declare
-              ev : Events_List( 2011 .. 2040 );
-           begin
-              ev( 2013 ).Add_Event( completes_a_levels );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2013 ).Add_Event( start_higher_education );
-              ev( 2015 ).Add_Event( leave_fostering );
-              ev( 2016 ).Add_Event( graduates );
-              ev( 2016 ).Add_Event( end_higher_education );
-              ev( 2016 ).Add_Event( start_work );                
-              return ev;
-           end;
-        when 7 => -- catherine, leaving at 18, starting uni at 20
-           declare
-              ev : Events_List( 2011 .. 2040 );
-           begin
-              ev( 2013 ).Add_Event( completes_a_levels );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2013 ).Add_Event( leave_fostering );
-              ev( 2013 ).Add_Event( leave_household );
-              -- ev( 2013 ).Add_Event( start_work );
-              ev( 2015 ).Add_Event( start_higher_education );
-              -- ev( 2015 ).Add_Event( leave_work );
-              ev( 2018 ).Add_Event( graduates );
-              ev( 2018 ).Add_Event( end_higher_education );
-              ev( 2018 ).Add_Event( start_work );                
-              return ev;
-           end;
-        when 8 => -- catherine, leaving at 18, starting uni at 18 but not graduating
-           declare
-              ev : Events_List( 2011 .. 2040 );
-           begin
-              ev( 2013 ).Add_Event( completes_a_levels );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2013 ).Add_Event( leave_fostering );
-              ev( 2013 ).Add_Event( start_higher_education );
-              ev( 2013 ).Add_Event( leave_household );
-              -- ev( 2013 ).Add_Event( start_work );
-              -- ev( 2015 ).Add_Event( leave_work );
-              -- ev( 2018 ).Add_Event( graduates );
-              ev( 2015 ).Add_Event( end_higher_education );
-              ev( 2015 ).Add_Event( start_work );                
-              return ev;
-           end;
-        when 9 .. 11 => -- christian, base case
-           declare
-              ev : Events_List( 2011 .. 2040 );
-              sc_ev : Event_Obj := (
-                event => arbitrary_event,
-                name  => TuS( "Ongoing support from leaving care personal adviser" ),
-                value => 4_865.0,
-                cost_centre => childrens_services );
-              teach_ev : Event_Obj := (
-                event => arbitrary_event,
-                name  => TuS( "Teaching Support" ),
-                value => 806.00,
-                cost_centre => childrens_services );
-           begin
-              ev( 2012 ).Add_Event( leave_fostering );
-              ev( 2013 ).Add_Event( leave_school );
-              ev( 2013 ).Add_Event( leave_household );
-              ev( 2014 ).Append( sc_ev );
-              ev( 2014 ).Append( teach_ev );
-              ev( 2015 ).Append( sc_ev );
-              ev( 2018 ).Add_Event( leave_work );
-              ev( 2010 + which ).Add_Event( start_work );
-              ev( 2022 ).Add_Event( leave_work );
-              ev( 2023 ).Add_Event( start_work );
-              ev( 2025 ).Add_Event( leave_work );
-              ev( 2027 ).Add_Event( start_work );
-              ev( 2030 ).Add_Event( leave_work );
-              ev( 2033 ).Add_Event( start_work );
-              ev( 2035 ).Add_Event( leave_work );
-              ev( 2040 ).Add_Event( start_work );
-              -- ev( 2045 ).Add_Event( leave_work );
-              return ev;
-           end;
-        when 12 .. 16 => -- christian, 
-           declare
-              wage_increase_1 : Event_Obj := (
-                event => wages_bump,
-                name  => TuS( "Wages 1% up from defaults" ),
-                value => 1.01,
-                cost_centre => local_authority );
-              wage_increase_5 : Event_Obj := (
-                event => wages_bump,
-                name  => TuS( "Wages 5% up from defaults" ),
-                value => 1.05,
-                cost_centre => local_authority );
-              ev : Events_List( 2011 .. 2040 );
-           begin
-              if( which = 15 )then
-                 ev( 2015 ).Append( wage_increase_1 );
-              elsif( which = 16 )then
-                 ev( 2015 ).Append( wage_increase_5 );
-              end if;
-              ev( 2015 ).Add_Event( leave_school );
-              ev( 2015 ).Add_Event( completes_gcses );              
-              ev( 2015 ).Add_Event( leave_fostering );
-              ev( 2016 ).Add_Event( start_work );
-              ev( 2016 ).Add_Event( leave_household );
-              ev( 2018 ).Add_Event( leave_work );
-              ev( 2019 ).Add_Event( start_work );
-              ev( 2022 ).Add_Event( leave_work );
-              if( which >= 15 )then
-                 ev( 2011+14 ).Add_Event( start_work );
-              else
-                 ev( 2011+which ).Add_Event( start_work );
-              end if;
-              -- ev( 2014 ).Append( sc_ev );
-              -- ev( 2014 ).Append( teach_ev );
-              -- ev( 2015 ).Append( sc_ev );
-              -- ev( 2013 ).Add_Event( start_work );
-              -- ev( 2013 ).Add_Event( start_higher_education );
-              -- ev( 2015 ).Add_Event( leave_work );
-              -- ev( 2018 ).Add_Event( graduates );
-              -- ev( 2015 ).Add_Event( end_higher_education );
-              -- ev( 2015 ).Add_Event( start_work );                
-              return ev;
-           end;
-        when others => null;
-           declare
-              ev : Events_List( 2013 .. 2013 );
-           begin
-              return ev;
-           end;
+     case hht is
+        when uc_anne => null;
+        when hh1 => null;
+        when catherine =>
+           case which is
+              when 1 => -- catherine
+                 declare
+                    ev : Events_List( 2011 .. 2040 );
+                 begin
+                    ev( 2013 ).Add_Event( completes_a_levels );
+                    ev( 2013 ).Add_Event( leave_school );
+                    ev( 2013 ).Add_Event( start_higher_education );
+                    ev( 2015 ).Add_Event( leave_fostering );
+                    ev( 2016 ).Add_Event( graduates );
+                    ev( 2016 ).Add_Event( end_higher_education );
+                    ev( 2016 ).Add_Event( start_work );                
+                    return ev;
+                 end;
+              when 2 => -- catherine, leaving at 18, starting uni at 20
+                 declare
+                    ev : Events_List( 2011 .. 2040 );
+                 begin
+                    ev( 2013 ).Add_Event( completes_a_levels );
+                    ev( 2013 ).Add_Event( leave_school );
+                    ev( 2013 ).Add_Event( leave_fostering );
+                    ev( 2013 ).Add_Event( leave_household );
+                    -- ev( 2013 ).Add_Event( start_work );
+                    ev( 2015 ).Add_Event( start_higher_education );
+                    -- ev( 2015 ).Add_Event( leave_work );
+                    ev( 2018 ).Add_Event( graduates );
+                    ev( 2018 ).Add_Event( end_higher_education );
+                    ev( 2018 ).Add_Event( start_work );                
+                    return ev;
+                 end;
+              when 3 => -- catherine, leaving at 18, starting uni at 18 but not graduating
+                 declare
+                    ev : Events_List( 2011 .. 2040 );
+                 begin
+                    ev( 2013 ).Add_Event( completes_a_levels );
+                    ev( 2013 ).Add_Event( leave_school );
+                    ev( 2013 ).Add_Event( leave_fostering );
+                    ev( 2013 ).Add_Event( start_higher_education );
+                    ev( 2013 ).Add_Event( leave_household );
+                    -- ev( 2013 ).Add_Event( start_work );
+                    -- ev( 2015 ).Add_Event( leave_work );
+                    -- ev( 2018 ).Add_Event( graduates );
+                    ev( 2015 ).Add_Event( end_higher_education );
+                    ev( 2015 ).Add_Event( start_work );                
+                    return ev;
+                 end;
+              when others => null;
+           end case;
+        when christian =>
+           case which is 
+              when 1 .. 3 => -- christian, base case
+                 declare
+                    ev : Events_List( 2011 .. 2040 );
+                    sc_ev : Event_Obj := (
+                      event => arbitrary_event,
+                      name  => TuS( "Ongoing support from leaving care personal adviser" ),
+                      value => 4_865.0,
+                      cost_centre => childrens_services );
+                    teach_ev : Event_Obj := (
+                      event => arbitrary_event,
+                      name  => TuS( "Teaching Support" ),
+                      value => 806.00,
+                      cost_centre => childrens_services );
+                 begin
+                    ev( 2012 ).Add_Event( leave_fostering );
+                    ev( 2013 ).Add_Event( leave_school );
+                    ev( 2013 ).Add_Event( leave_household );
+                    ev( 2014 ).Append( sc_ev );
+                    ev( 2014 ).Append( teach_ev );
+                    ev( 2015 ).Append( sc_ev );
+                    ev( 2018 ).Add_Event( leave_work );
+                    ev( 2018 + which ).Add_Event( start_work );
+                    ev( 2022 ).Add_Event( leave_work );
+                    ev( 2023 ).Add_Event( start_work );
+                    ev( 2025 ).Add_Event( leave_work );
+                    ev( 2027 ).Add_Event( start_work );
+                    ev( 2030 ).Add_Event( leave_work );
+                    ev( 2033 ).Add_Event( start_work );
+                    ev( 2035 ).Add_Event( leave_work );
+                    ev( 2040 ).Add_Event( start_work );
+                    -- ev( 2045 ).Add_Event( leave_work );
+                    return ev;
+                 end;
+              when 4 .. 9 => -- christian, 
+                 declare
+                    wage_increase_1 : Event_Obj := (
+                      event => wages_bump,
+                      name  => TuS( "Wages 1% up from defaults" ),
+                      value => 1.01,
+                      cost_centre => local_authority );
+                    wage_increase_5 : Event_Obj := (
+                      event => wages_bump,
+                      name  => TuS( "Wages 5% up from defaults" ),
+                      value => 1.05,
+                      cost_centre => local_authority );
+                    ev : Events_List( 2011 .. 2040 );
+                 begin
+                    if( which = 4 )then
+                       ev( 2015 ).Append( wage_increase_1 );
+                    elsif( which = 5 )then
+                       ev( 2015 ).Append( wage_increase_5 );
+                    end if;
+                    ev( 2015 ).Add_Event( leave_school );
+                    ev( 2015 ).Add_Event( completes_gcses );              
+                    ev( 2015 ).Add_Event( leave_fostering );
+                    ev( 2016 ).Add_Event( start_work );
+                    ev( 2016 ).Add_Event( leave_household );
+                    ev( 2018 ).Add_Event( leave_work );
+                    ev( 2019 ).Add_Event( start_work );
+                    ev( 2022 ).Add_Event( leave_work );
+                    if( which >= 6 )then
+                       ev( 2022 + which ).Add_Event( start_work );
+                    else
+                       ev( 2022+which ).Add_Event( start_work );
+                    end if;
+                    return ev;
+                 end;
+              when others => null;
+           end case;
      end case;
+     return tmp_ev;
    end Create_Events;
 
    function Get_Person( who : Pers_Type ) return Person is
