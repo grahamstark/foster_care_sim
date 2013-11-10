@@ -33,16 +33,17 @@ set style line 7 linetype 3 linecolor rgb "#9D1E10" linewidth 2;
 # UK Govt
 set style line 8 linetype 1 linecolor rgb "#1E1E68";
 set style line 9 linetype 3 linecolor rgb "#1E1E68" linewidth 2;
-
+set style data histograms
+set style histogram rowstacked
 set style line 10 linetype 1 linecolor rgb "#41868F";
 set style line 11 linetype 1 linecolor rgb "#8F4167";
 set style line 12 linetype 1 linecolor rgb "#8F8D41";
-set style line 13 linetype 1 linecolor rgb "#AC3FA3";
-
-
+set style line 13 linetype 1 linecolor rgb "#493BE6";
+set style fill solid
+set boxwidth 0.1
 set output 'charts/'.filename."_by_department.svg";
 plot \
-  'output/'.filename.'.csv' \
+  'gnuplot/'.filename.'.csv' \
            using 1:2 with lines ls 1,  \
         '' using 1:11 with lines ls 2, \
         '' using 1:15 with lines ls 3, \
@@ -57,7 +58,7 @@ plot \
 set output 'charts/'.filename."_to_individual.svg";
 plot \
   'gnuplot/'.filename.'.csv' \
-           using 1:2 with lines ls 1,  \
+           using 1:2 with  lines ls 1,  \
         '' using 1:19 with lines ls 4, \
         '' using 1:20 with lines ls 6, \
         '' using 1:21 with lines ls 8, \
