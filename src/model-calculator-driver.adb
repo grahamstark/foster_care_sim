@@ -72,7 +72,11 @@ package body Model.Calculator.Driver is
       if( hh.num_benefit_units = 1 ) then
          if( hh.benefit_units( 1 ).people( 1 ).years_fostered > 0.0 )then
             if( res.bus( 1 ).pers( 1 ).incomes( housing_benefit ) = 0.0 )then
-               res.bus( 1 ).pers( 1 ).incomes( local_taxes ) := WALES_AVERAGE_BAND_D_CT;
+               if( hh.benefit_units( 1 ).people( 1 ).income( wages ) > 15_000.0 )then
+                  res.bus( 1 ).pers( 1 ).incomes( local_taxes ) := WALES_AVERAGE_BAND_D_CT;
+               else
+                  res.bus( 1 ).pers( 1 ).incomes( local_taxes ) := WALES_AVERAGE_BAND_D_CT*BAND_A;
+               end if;
             else
                res.bus( 1 ).pers( 1 ).incomes( local_taxes ) := 0.2*BAND_A*WALES_AVERAGE_BAND_D_CT;
                res.bus( 1 ).pers( 1 ).incomes( council_tax_benefit ) := 0.8*BAND_A*WALES_AVERAGE_BAND_D_CT;                  

@@ -86,7 +86,6 @@ package body Model.Results is
       Inc( expend( welsh_government ), res.incomes( education_allowances ));
       Inc( expend( welsh_government ), res.incomes( student_grants ));
       Inc( expend( welsh_government ), res.incomes( student_loans ));
-      Inc( expend( welsh_government ), res.incomes( council_tax_benefit ));
       
       Inc( receipts(  welsh_government ), res.incomes( repayments ));
       for i in disabled_living_allowance .. winter_fuel_payments loop
@@ -141,8 +140,10 @@ package body Model.Results is
       return "income tax" & delim
           & "national insurance" & delim
           & "employers ni" & delim
+          & "council_tax" & delim
           & "tax credits" & delim
           & "housing_benefit" & delim
+          & "council_tax_benefit" & delim
           & "education allowances" & delim
           & "foster care payments" & delim
           & "student grants" & delim
@@ -162,8 +163,10 @@ package body Model.Results is
       s := s & To_String( res.incomes( income_tax ) ) & delim;
       s := s & To_String( res.incomes( national_insurance ) ) & delim;
       s := s & To_String( res.employers_ni)  & delim;
+      s := s & To_String( res.incomes( local_taxes ))  & delim;
       s := s & To_String( res.incomes( tax_credits ) ) & delim;
       s := s & To_String( res.incomes( housing_benefit ) ) & delim;
+      s := s & To_String( res.incomes( council_tax_benefit ) ) & delim;
       
       s := s & To_String( res.incomes( education_allowances ) )  & delim;
       s := s & To_String( res.incomes( foster_care_payments ) )  & delim;
