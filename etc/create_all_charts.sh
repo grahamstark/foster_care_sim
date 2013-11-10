@@ -1,5 +1,8 @@
-for f in `ls output/*.csv` do
-        b = basename( $f )
+
+for f in `ls output/*.csv` 
+do
+        b=`basename $f .csv`
+        echo "On $b"
         #
         # clear out all non-numeric lines since Gnuplot doesn't like those
         #
@@ -7,7 +10,7 @@ for f in `ls output/*.csv` do
         #
         # strip out summary lines at bottom...
         #
-        vim -s gnuplot/$b.csv etc/delete_to_end.vim
+        vim -s gnuplot/$b.csv < etc/delete_to_end.vim
         #
         # plot the graphs
         #

@@ -22,6 +22,7 @@ with Model.Parameter_System.Defaults;
 with Model.Parameter_System;
 with Model.Results;
 with Model_Types;
+with Text_Utils;
 
 package body AFT_Tests is
 
@@ -76,7 +77,8 @@ package body AFT_Tests is
         end case;
         for eno in start .. stop loop
            declare
-              fname : constant String := "output/" & which_hh'Img & "_path_" & eno'Img & ".csv";
+              nstr : constant String := Text_Utils.Trim( eno'Img );
+              fname : constant String := "output/" & which_hh'Img & "_path_" & nstr & ".csv";
               events  : Events_List := Example_Data.Examples.Create_Events( which_hh, eno );
            begin
               Put_Line( "Case " & eno'Img & " which_hh " & which_hh'Img );
