@@ -282,6 +282,10 @@ package body Example_Data is
                     pers.wage_per_hour := Infer_Wage( pers );
                     Put_Line( "wage calculation hours " & To_String( pers.hours_worked ) & " wage " & To_String( pers.wage_per_hour ));
                     pers.income( wages ) := Amount( pers.hours_worked ) * pers.wage_per_hour;
+                 else
+                    pers.income( wages ) := 0.0;
+                    pers.wage_per_hour := 0.0;
+                    pers.hours_worked := 0;
                  end if;
               end;
            end loop;
@@ -327,7 +331,7 @@ package body Example_Data is
        "education" & delim &
        "highest qualification" & delim &
        "employment" & delim &
-       "wages" & delim &
+       "gross earnings" & delim &
        "hours worked" & delim &
        "wage per hour" & delim &
        "relationship" & delim &

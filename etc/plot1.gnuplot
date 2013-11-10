@@ -37,8 +37,11 @@ set style data histograms
 set style histogram rowstacked
 set style line 10 linetype 1 linecolor rgb "#41868F";
 set style line 11 linetype 1 linecolor rgb "#8F4167";
-set style line 12 linetype 1 linecolor rgb "#8F8D41";
-set style line 13 linetype 1 linecolor rgb "#493BE6";
+set style line 12 linetype 1 linecolor rgb "#FF0000";
+set style line 13 linetype 1 linecolor rgb "#00FF00";
+set style line 14 linetype 1 linecolor rgb "#0000FF";
+set style line 15 linetype 1 linecolor rgb "#EECC00";
+set style line 16 linetype 1 linecolor rgb "#00EECC";
 set style fill solid
 set boxwidth 0.1
 set output 'charts/'.filename."_by_department.svg";
@@ -65,6 +68,8 @@ plot \
         '' using 1:22 with lines ls 10, \
         '' using 1:23 with lines ls 11, \
         '' using 1:24 with lines ls 12, \
-        '' using 1:25 with lines ls 2, \
-        '' using 1:35 with lines ls 13;
+        '' using 1:25 with lines ls 13, \
+        '' using 1:26 with lines ls 14, \
+        '' using 1:27 with lines ls 15, \
+        '' using 1:37 with lines ls 16;
         
