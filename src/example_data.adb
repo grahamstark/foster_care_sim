@@ -212,8 +212,6 @@ package body Example_Data is
                  when start_work =>
                     Put_Line( "Start Work age " & target_pers.age'Img ); 
                     Assert( target_pers.employment /= full_time, "already in f/t work" );
-                    target_pers.hours_worked := 38*WEEKS_WORKED_PER_YEAR;
-                    target_pers.wage_per_hour := Infer_Wage( target_pers );
                     target_pers.years_in_work_this_spell := 0.0;
                     -- end if;
                     target_pers.years_unemployed_this_spell := 0.0;
@@ -278,9 +276,13 @@ package body Example_Data is
               declare
                  pers : Person renames hh.benefit_units( buno ).people( pno );
               begin
-                 pers.wage_per_hour := Infer_Wage( pers );
-                 Put_Line( "wage calculation hours " & To_String( pers.hours_worked ) & " wage " & To_String( pers.wage_per_hour ));
-                 pers.income( wages ) := Amount( pers.hours_worked ) * pers.wage_per_hour;
+                 if( pers.employment = full_time )then 
+                    pers.hours_worked := 38*WEEKS_WORKED_PER_YEAR;
+                    pers.wage_per_hour := Infer_Wage( pers );
+                    pers.wage_per_hour := Infer_Wage( pers );
+                    Put_Line( "wage calculation hours " & To_String( pers.hours_worked ) & " wage " & To_String( pers.wage_per_hour ));
+                    pers.income( wages ) := Amount( pers.hours_worked ) * pers.wage_per_hour;
+                 end if;
               end;
            end loop;
       end loop;
@@ -490,6 +492,9 @@ package body Example_Data is
       mw : constant Amount := Minimum_Wage( p );
       values : V7;
    begin
+      if( p.education = apprentice )then
+         return mw;
+      end if;
       values( 1 ) := 1.0;
       values( 2 ) := 1.0;
       values( 3 ) := Amount( p.age );
@@ -502,110 +507,8 @@ package body Example_Data is
       w := Amount'Max( mw, w * p.wage_scale ); 
       Put_Line( "Wage " & To_String( w ) & "wage scale " & To_String( p.wage_scale ));
       return w;
-      
    end Infer_Wage;
-      
-   function Infer_Wage_2( p : Person ) return Amount is
-      use MF; use MF.Elementary_Functions; use MF.Matrix_Functions;
-      w  : Amount;
-      lw : Amount;
-      mw : constant Amount := Minimum_Wage( p );
-      degree_coeffs : Vector( 1 .. 5 ) := (
-           0.387676,  
-          -0.136099, 
-           0.0123576, 
-          -0.00127556,
-           0.110279  
-      );
-      noqual_coeffs : Vector( 1 .. 5 ) := (
-          1.32846,     
-         -0.210298,
-          0.00342430,  
-         -0.000348076, 
-          0.0330167   
-      );
-      nodegree_coeffs : Vector( 1 .. 5 ) := (
-          0.938340,    
-         -0.199634,    
-          0.0100620,   
-          -0.000744187, 
-         0.0628136 );         
-      values : Vector( 1 .. 5 );
-   begin
-      Put_Line( "getting wage for age " & p.age'Img & "EMPL" & p.employment'Img ); 
-      if( p.employment /= full_time )then
-         return 0.0;
-      end if;
-      values( 1 ) := 1.0;
-      values( 2 ) := ( if p.gender = female then 1.0 else 0.0 );
-      values( 3 ) := p.years_in_work_total;
-      values( 4 ) := Amount( p.age * p.age );
-      values( 5 ) := Amount( p.age );
-      if p.highest_qualification = degree then 
-         lw := degree_coeffs * values;
-      elsif p.highest_qualification = no_qualification then
-         lw := noqual_coeffs * values;
-      else
-         lw := nodegree_coeffs * values;
-      end if;
-      w := exp( lw );
-      w := Amount'Max( mw, w * p.wage_scale ); 
-      Put_Line( "Wage " & To_String( w ) & "wage scale " & To_String( p.wage_scale ));
-      return w;
-   end Infer_Wage_2;
 
-   
-   function Infer_Wage_1( p : Person ) return Amount is
-      use MF; use MF.Elementary_Functions; use MF.Matrix_Functions;
-      w  : Amount;
-      lw : Amount;
-      mw : constant Amount := Minimum_Wage( p );
-      coeffs : Vector( 1 .. 7 ) := ( 
-        0.819018,
-       -0.166837,   
-        0.493757,    
-       -0.259477,    
-        0.00972806,  
-       -0.000790790, 
-        0.0679437 );  
-      values : Vector( 1 .. 7 );
-   begin
-      if( p.education = apprentice )then
-         return mw;
-      end if;
-      values( 1 ) := 1.0;
-      values( 2 ) := ( if p.gender = female then 1.0 else 0.0 );
-      values( 3 ) := ( if p.highest_qualification = degree then 1.0 else 0.0 );
-      values( 4 ) := ( if p.highest_qualification = no_qualification then 1.0 else 0.0 );
-      values( 5 ) := p.years_in_work_total;
-      values( 6 ) := Amount( p.age * p.age );
-      values( 7 ) := Amount( p.age );
-      lw := coeffs * values;
-      w := exp( lw );
-      w := Amount'Max( mw, w );
-      
-      -- if p.years_in_education < 10.0 or p.highest_qualification <= gcse then
-      -- w := Minimum_Wage( p );
-      -- else
-      -- case p.highest_qualification is
-         -- when gcse | no_qualification => w := Minimum_Wage( p );
-         -- when a_level => w := 10.0; -- FIXME 
-         -- when degree => w := 15.18; --  median graduate wage, 2012
-      -- end case;
-      -- end if;
-      -- 
-      -- const             0.819018      0.0416615      19.66    3.36e-85  ***
-      -- female           −0.166837      0.00760130    −21.95    1.78e-105 ***
-      -- degree            0.493757      0.00879733     56.13    0.0000    ***
-      -- noquals          −0.259477      0.0123368     −21.03    4.11e-97  ***
-      -- years_employed    0.00972806    0.000763249    12.75    4.66e-37  ***
-      -- sq_age_mp        −0.000790790   2.32245e-05   −34.05    8.85e-247 ***
-      -- age_mp            0.0679437     0.00209401     32.45    7.12e-225 ***
-      -- 
-      -- 
-      return w;
-   end Infer_Wage_1;
-  
    function Vatable_Expenditure( p : Person; inc : Amount ) return Amount is
       -- FIXME!! Share of expenditure, not income; all a mess.
       use MF; use MF.Elementary_Functions; use MF.Matrix_Functions;
