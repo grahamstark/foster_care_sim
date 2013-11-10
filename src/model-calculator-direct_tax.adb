@@ -178,5 +178,6 @@ package body Model.Calculator.Direct_Tax is
                 sys.employer_out_rates, earnings ).due;
       end if;
    end Calculate_National_Insurance;
+   
 
 end Model.Calculator.Direct_Tax;

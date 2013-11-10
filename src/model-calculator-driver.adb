@@ -20,6 +20,7 @@ package body Model.Calculator.Driver is
    use Ada.Calendar;
    use Text_Utils;
 
+   
    procedure Do_Main_Calculations(
       sys            : Model.Parameter_System.Complete_System;
       hh             : Example_Data.Household;
@@ -61,6 +62,24 @@ package body Model.Calculator.Driver is
       Model.Calculator.Direct_Tax.Make_Household_Taxable_Income( mhh, results );
    end Do_Main_Calculations;
    
+   procedure Calculate_Crude_Council_Tax(
+      hh  : Household;
+      res : in out Model.Results.Household_Result ) is
+   use Model_Types;
+      BAND_A : constant Rate := 2.0/3.0;
+      WALES_AVERAGE_BAND_D_CT : constant Amount := 1_063.0;
+   begin
+      if( hh.num_benefit_units = 1 ) then
+         if( hh.benefit_units( 1 ).people( 1 ).years_fostered > 0.0 )then
+            if( res.bus( 1 ).pers( 1 ).incomes( housing_benefit ) = 0.0 )then
+               res.bus( 1 ).pers( 1 ).incomes( local_taxes ) := WALES_AVERAGE_BAND_D_CT;
+            else
+               res.bus( 1 ).pers( 1 ).incomes( local_taxes ) := 0.2*BAND_A*WALES_AVERAGE_BAND_D_CT;
+               res.bus( 1 ).pers( 1 ).incomes( council_tax_benefit ) := 0.8*BAND_A*WALES_AVERAGE_BAND_D_CT;                  
+            end if;
+         end if;
+      end if;
+   end Calculate_Crude_Council_Tax;
 
    procedure Run_Model( 
       events       : Events_List; 
@@ -84,6 +103,7 @@ package body Model.Calculator.Driver is
       budget_receipts     : Budget_By_Year( events'Range ) := ( others => ( others => 0.0 ));
       f                   : File_Type;
       
+         
       procedure Calculate_And_Print_Present_Values is
          gross_expenditures              : Budget_Array;
          gross_receipts                  : Budget_Array;
@@ -224,6 +244,9 @@ package body Model.Calculator.Driver is
             target_person,
             events( year ),
             results.bus( target_buno ).pers( target_pno ));
+         -- CT of just the hh with the foster child, and just in the
+         -- case 
+         Calculate_Crude_Council_Tax( eh, results );
          Model.Calculator.Direct_Tax.Make_Household_Net_Income( 
             Map_Household( eh ), results ); 
          results.bus( target_buno ).pers( target_pno ).Assign_To_Budgets( 

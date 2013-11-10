@@ -37,7 +37,7 @@ package body Model.Calculator.Universal_Benefit is
         end if;
       end loop;
    end Calculate_Child_Benefit;
-   
+
    --
    -- FIXME change this so the household is sent, and benefit units are arranged as needed
    -- internally. 
