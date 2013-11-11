@@ -326,14 +326,14 @@ package body Example_Data is
    begin
       return
        "pid" & delim &
-       "age" & delim &
+       "Age" & delim &
        "gender" & delim &
        "education" & delim &
        "highest qualification" & delim &
        "employment" & delim &
-       "gross earnings" & delim &
+       "Gross Earnings" & delim &
        "hours worked" & delim &
-       "wage per hour" & delim &
+       "Wage per Hour" & delim &
        "relationship" & delim &
        "is in serps" & delim &
        "foster status" & delim &

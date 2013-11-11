@@ -76,7 +76,7 @@ package body Example_Data.Examples is
            end case;
         when christian =>
            case which is 
-              when 1 .. 3 => -- christian, base case
+              when 1 .. 3 | 10 => -- christian, base case
                  declare
                     ev : Events_List( 2011 .. 2040 );
                     sc_ev : Event_Obj := (
@@ -92,12 +92,54 @@ package body Example_Data.Examples is
                  begin
                     ev( 2012 ).Add_Event( leave_fostering );
                     ev( 2013 ).Add_Event( leave_school );
+                    if( which = 10 )then
+                       ev( 2019 ).Add_Event( start_work );
+                       ev( 2013 ).Add_Event( completes_gcses );
+                    else   
+                       ev( 2018 + which ).Add_Event( start_work );
+                    end if;
                     ev( 2013 ).Add_Event( leave_household );
                     ev( 2014 ).Append( sc_ev );
                     ev( 2014 ).Append( teach_ev );
                     ev( 2015 ).Append( sc_ev );
                     ev( 2018 ).Add_Event( leave_work );
-                    ev( 2018 + which ).Add_Event( start_work );
+                    ev( 2022 ).Add_Event( leave_work );
+                    ev( 2023 ).Add_Event( start_work );
+                    ev( 2025 ).Add_Event( leave_work );
+                    ev( 2027 ).Add_Event( start_work );
+                    ev( 2030 ).Add_Event( leave_work );
+                    ev( 2033 ).Add_Event( start_work );
+                    ev( 2035 ).Add_Event( leave_work );
+                    ev( 2040 ).Add_Event( start_work );
+                    -- ev( 2045 ).Add_Event( leave_work );
+                    return ev;
+                 end;
+              when 11 =>
+                                  declare
+                    ev : Events_List( 2011 .. 2040 );
+                    sc_ev : Event_Obj := (
+                      event => arbitrary_event,
+                      name  => TuS( "Ongoing support from leaving care personal adviser" ),
+                      value => 4_865.0,
+                      cost_centre => childrens_services );
+                    teach_ev : Event_Obj := (
+                      event => arbitrary_event,
+                      name  => TuS( "Teaching Support" ),
+                      value => 806.00,
+                      cost_centre => childrens_services );
+                 begin
+                    ev( 2013 ).Add_Event( leave_school );
+                    ev( 2019 ).Add_Event( start_work );
+
+                    ev( 2014 ).Append( sc_ev );
+                    ev( 2014 ).Append( teach_ev );
+                    
+                    ev( 2015 ).Add_Event( completes_gcses );                    
+                    ev( 2015 ).Append( sc_ev );
+                    ev( 2015 ).Add_Event( leave_fostering );
+                    ev( 2015 ).Add_Event( leave_household );
+
+                    ev( 2018 ).Add_Event( leave_work );
                     ev( 2022 ).Add_Event( leave_work );
                     ev( 2023 ).Add_Event( start_work );
                     ev( 2025 ).Add_Event( leave_work );
