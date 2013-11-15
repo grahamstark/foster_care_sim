@@ -12,6 +12,10 @@ do
         #
         cut -d, -f1,2,3,4,5,6,7,9,10,11,12,16,17,18 --complement tmp/$b.csv > gnuplot/$b.csv
         #
+        # zeros to missing values
+        #
+        sed -i 's/  \+0.00,/\?,/g;s/ ,/,/g' gnuplot/$b.csv
+        #
         # plot the graphs
         #
         gnuplot -e "filename='$b'" etc/plot1.gnuplot

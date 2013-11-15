@@ -76,9 +76,16 @@ package body Example_Data.Examples is
            end case;
         when christian =>
            case which is 
-              when 1 .. 3 | 10 => -- christian, base case
+              when 1 .. 3 | 10 | 12 | 13  | 14 => -- christian, base case
                  declare
                     ev : Events_List( 2011 .. 2040 );
+                    
+                    depress_ev : Event_Obj := (
+                      event => arbitrary_event,
+                      name  => TuS( "Depression Treatment" ),
+                      value => 1_354.80,
+                      cost_centre => welsh_government );
+
                     sc_ev : Event_Obj := (
                       event => arbitrary_event,
                       name  => TuS( "Ongoing support from leaving care personal adviser" ),
@@ -95,17 +102,44 @@ package body Example_Data.Examples is
                     if( which = 10 )then
                        ev( 2019 ).Add_Event( start_work );
                        ev( 2013 ).Add_Event( completes_gcses );
+                    elsif( which >= 12 )then
+                       ev( 2019 ).Add_Event( start_work ); -- same as base case 1
                     else   
                        ev( 2018 + which ).Add_Event( start_work );
                     end if;
                     ev( 2013 ).Add_Event( leave_household );
                     ev( 2014 ).Append( sc_ev );
                     ev( 2014 ).Append( teach_ev );
+                    if( which = 12 )then
+                       ev( 2016 ).Append( depress_ev );
+                       ev( 2017 ).Append( depress_ev );
+                       ev( 2018 ).Append( depress_ev );
+                    elsif( which >= 13 )then
+                       ev( 2016 ).Append( depress_ev );
+                       ev( 2017 ).Append( depress_ev );
+                       ev( 2018 ).Append( depress_ev );
+                       ev( 2022 ).Append( depress_ev );
+                       ev( 2030 ).Append( depress_ev );
+                       ev( 2031 ).Append( depress_ev );
+                       ev( 2032 ).Append( depress_ev );
+                       ev( 2035 ).Append( depress_ev );
+                       ev( 2036 ).Append( depress_ev );
+                       ev( 2037 ).Append( depress_ev );
+                       ev( 2038 ).Append( depress_ev );
+                       ev( 2039 ).Append( depress_ev );
+                    end if;   
                     ev( 2015 ).Append( sc_ev );
                     ev( 2018 ).Add_Event( leave_work );
                     ev( 2022 ).Add_Event( leave_work );
+                    
                     ev( 2023 ).Add_Event( start_work );
                     ev( 2025 ).Add_Event( leave_work );
+                    if( which = 14 )then
+                       ev( 2025 ).Add_Event( starts_homelessness );
+                       ev( 2026 ).Add_Event( ends_homelessness );                       
+                       ev( 2035 ).Add_Event( starts_homelessness );
+                       ev( 2036 ).Add_Event( ends_homelessness );                       
+                    end if;
                     ev( 2027 ).Add_Event( start_work );
                     ev( 2030 ).Add_Event( leave_work );
                     ev( 2033 ).Add_Event( start_work );
@@ -115,8 +149,9 @@ package body Example_Data.Examples is
                     return ev;
                  end;
               when 11 =>
-                                  declare
+                 declare
                     ev : Events_List( 2011 .. 2040 );
+                      
                     sc_ev : Event_Obj := (
                       event => arbitrary_event,
                       name  => TuS( "Ongoing support from leaving care personal adviser" ),
@@ -130,10 +165,10 @@ package body Example_Data.Examples is
                  begin
                     ev( 2013 ).Add_Event( leave_school );
                     ev( 2019 ).Add_Event( start_work );
-
-                    ev( 2014 ).Append( sc_ev );
-                    ev( 2014 ).Append( teach_ev );
-                    
+                    if( which = 11 )then
+                       ev( 2014 ).Append( sc_ev );
+                       ev( 2014 ).Append( teach_ev );
+                    end if;
                     ev( 2015 ).Add_Event( completes_gcses );                    
                     ev( 2015 ).Append( sc_ev );
                     ev( 2015 ).Add_Event( leave_fostering );
@@ -151,7 +186,7 @@ package body Example_Data.Examples is
                     -- ev( 2045 ).Add_Event( leave_work );
                     return ev;
                  end;
-              when 4 .. 9 => -- christian, 
+              when 4 .. 9  => -- christian, 
                  declare
                     wage_increase_1 : Event_Obj := (
                       event => wages_bump,
@@ -178,7 +213,7 @@ package body Example_Data.Examples is
                     ev( 2018 ).Add_Event( leave_work );
                     ev( 2019 ).Add_Event( start_work );
                     ev( 2022 ).Add_Event( leave_work );
-                    if( which >= 6 )then
+                    if( which >= 6 ) then
                        ev( 2022 + which ).Add_Event( start_work );
                     else
                        ev( 2022+which ).Add_Event( start_work );

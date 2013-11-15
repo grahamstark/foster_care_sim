@@ -112,7 +112,7 @@ package body Model.Calculator.Universal_Benefit is
      -- Additional amount for disabled child or qualifying young person
      -- Housing : todo Mortgages     
       if( tenure in Rented ) then
-         if( bu.Get_Benefit_Unit_Type = secondary ) or ( num_adults = 1 and head.Age < 35 and num_children = 0 )then
+         if( bu.Get_Benefit_Unit_Type = secondary ) or ( num_adults = 1 and head.Age in 22 .. 35 and num_children = 0 ) then -- FIXME: this is WRONG 22 and under and *formerly Fostered* which 
             res.housing_allowance := sys.one_bedroom_in_shared_accommodation_rate;
          else
             res.housing_allowance := housing_costs( rent );

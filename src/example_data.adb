@@ -248,6 +248,10 @@ package body Example_Data is
                  when wages_bump =>
                     target_pers.wage_scale := event.value;
                  when arbitrary_event => null;
+                 when starts_homelessness =>
+                    hh.housing( rent ) := HOSTEL_RATE_PER_WEEK * 52.0;
+                 when ends_homelessness =>
+                    hh.housing( rent ) :=  ONE_BEDROOM_FLAT_SOCIAL_HOUSING * 52.0;
                  when leave_household =>
                      declare
                         new_hh : Household;

@@ -42,34 +42,46 @@ set style line 13 linetype 1 linecolor rgb "#00FF00";
 set style line 14 linetype 1 linecolor rgb "#0000FF";
 set style line 15 linetype 1 linecolor rgb "#EECC00";
 set style line 16 linetype 1 linecolor rgb "#00EECC";
-set style fill solid
-set boxwidth 0.1
+set style fill solid;
+set datafile missing "?";
 set output 'charts/'.filename."_by_department.svg";
 plot \
   'gnuplot/'.filename.'.csv' \
-           using 1:2 with lines ls 1,  \
-        '' using 1:11 with lines ls 2, \
-        '' using 1:15 with lines ls 3, \
-        '' using 1:12 with lines ls 4, \
-        '' using 1:16 with lines ls 5, \
-        '' using 1:13 with lines ls 6, \
-        '' using 1:17 with lines ls 7, \
-        '' using 1:14 with lines ls 8, \
-        '' using 1:18 with lines ls 9;
+           using 1:($2) with lines ls 1,  \
+        '' using 1:($11) with steps ls 2, \
+        '' using 1:($15) with steps ls 3, \
+        '' using 1:($12) with steps ls 4, \
+        '' using 1:($16) with steps ls 5, \
+        '' using 1:($13) with steps ls 6, \
+        '' using 1:($17) with steps ls 7, \
+        '' using 1:($14) with steps ls 8, \
+        '' using 1:($18) with steps ls 9;
 
-        
-set output 'charts/'.filename."_to_individual.svg";
+set output 'charts/'.filename."_to_individual_step.svg";
 plot \
   'gnuplot/'.filename.'.csv' \
-           using 1:2 with  lines ls 1,  \
-        '' using 1:19 with lines ls 4, \
-        '' using 1:20 with lines ls 6, \
-        '' using 1:21 with lines ls 8, \
-        '' using 1:22 with lines ls 10, \
-        '' using 1:23 with lines ls 11, \
-        '' using 1:24 with lines ls 12, \
-        '' using 1:25 with lines ls 13, \
-        '' using 1:26 with lines ls 14, \
-        '' using 1:27 with lines ls 15, \
-        '' using 1:37 with lines ls 16;
-        
+           using 1:($2) with lines,  \
+        '' using 1:($19) with steps,\
+        '' using 1:($20) with steps,\
+        '' using 1:($21) with steps,\
+        '' using 1:($22) with steps, \
+        '' using 1:($23) with steps, \
+        '' using 1:($24) with steps, \
+        '' using 1:($25) with steps, \
+        '' using 1:($26) with steps, \
+        '' using 1:($27) with steps, \
+        '' using 1:($37) with steps;
+       
+
+set boxwidth 0.4;
+set output 'charts/'.filename."_to_individual_barchart.svg";
+set style data histogram
+set style histogram rowstacked
+set style fill solid border -1
+plot \
+  'gnuplot/'.filename.'.csv' \
+           using 1:($2) with lines;
+plot 'gnuplot/'.filename.'.csv' \
+  using 1:xtic(1), for [i=19:23] '' using i;
+plot 'gnuplot/'.filename.'.csv' \
+  using 1:xtic(1), for [i=24:27] '' using i;

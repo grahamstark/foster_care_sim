@@ -13,7 +13,11 @@ package Example_Data is
    use Ada.Strings.Unbounded;
 
    WEEKS_WORKED_PER_YEAR : constant := 52; -- assume holiday pay as HR suggested
-   ONE_BEDROOM_FLAT_SOCIAL_HOUSING : constant Amount := 64.63;
+   ONE_BEDROOM_FLAT_SOCIAL_HOUSING : constant Amount := 79.41;
+   -- straight unweighted average from
+   -- http://wales.gov.uk/topics/housingandcommunity/housing/private/renting/rentofficers/publications/lha13/?lang=en
+   HOSTEL_RATE_PER_WEEK  : constant Amount := 185.00;
+   -- 
    type Foster_Status_Type is ( not_fostered, currently_fostered, when_i_am_ready, previously_fostered );
    type Event_Type is (
 	     age_1_year,
@@ -33,6 +37,8 @@ package Example_Data is
         completes_a_levels,
         graduates,
         wages_bump,
+        starts_homelessness,
+        ends_homelessness,
         arbitrary_event );
    
    type Event_Obj is tagged record

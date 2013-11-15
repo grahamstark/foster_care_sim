@@ -1,10 +1,10 @@
 foster_placements = 4400.0; # stat wales
-prop_16_18 =  0.20; # UK Stat
+prop_16_17 =  0.1575;
 pct_in_wir = 0.23
 decay = 0.0
 avg_cost = 13800.0
-join_per_year = foster_placements * (prop_16_18/3) * pct_in_wir
-stock = join_per_year * 3
+join_per_year = foster_placements * (prop_16_17/2) * pct_in_wir
+stock = join_per_year * 2
 cost = stock*avg_cost
 puts "join_per_year #{join_per_year} stock #{stock} cost #{cost}\n"
 
@@ -21,5 +21,28 @@ n = stock
         wt += wp * ps  
 }
 
-cost = join_per_year * wt * avg_cost
-puts "decayed cost #{cost} wt #{wt}"
+people = join_per_year * wt 
+cost =  people * avg_cost
+puts "people #{people} decayed cost #{cost} wt #{wt}"
+
+costs = [ 3300000, 1310000, 782000 ]
+gains = [ 52000.0/2, 52000.0, 52000.0*2 ]
+
+puts "\t"
+gains.each{
+        |gain|
+        puts( "#{gain}\t")
+
+}
+puts("\n")
+
+costs.each{
+        |cost|
+        s = "COST #{cost}"
+        gains.each{
+                |gain|
+                yrs = cost/gain
+                s += "\t#{yrs}"
+        }
+        puts( s )
+}

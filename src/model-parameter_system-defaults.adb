@@ -8,16 +8,16 @@ package body Model.Parameter_System.Defaults is
    use Ada.Text_IO;
 
    procedure Set_Rates_And_Bands(
-	sys   : in out Income_Tax_System;
-        bands : Vector;
+   sys   : in out Income_Tax_System;
+        bands       : Vector;
         non_savings : Vector;
-        savings : Vector;
-        dividends : Vector ) is
+        savings     : Vector;
+        dividends   : Vector ) is
       rb : Rate_And_Band;
    begin
-      Assert( bands'Length = non_savings'Length and
+      Assert( bands'Length       = non_savings'Length and
               non_savings'Length = savings'Length and
-              savings'Length = dividends'Length,
+              savings'Length     = dividends'Length,
               "array size mismatch" );
       for i in bands'Range loop
          rb.band := bands( i );
@@ -35,12 +35,12 @@ package body Model.Parameter_System.Defaults is
    end Set_Rates_And_Bands;
 
    procedure Set_Rates_And_Bands_NI(
-	sys   : in out National_Insurance_System;
-        bands : Vector;
-        employee_in_rates : Vector;
-        employee_out_rates : Vector;
-        employer_in_rates : Vector;
-        employer_out_rates : Vector ) is
+      sys                : in out National_Insurance_System;
+      bands              : Vector;
+      employee_in_rates  : Vector;
+      employee_out_rates : Vector;
+      employer_in_rates  : Vector;
+      employer_out_rates : Vector ) is
       rb : Rate_And_Band;
    begin
       Assert( bands'Length = employee_in_rates'Length and
@@ -253,7 +253,9 @@ package body Model.Parameter_System.Defaults is
             uc.disregards.couple_no_housing_with_children :=  536.0*12.0;
             uc.disregards.couple_no_housing_limited_work_capacity :=  647.0*12.0;
 
-            uc.one_bedroom_in_shared_accommodation_rate := Example_Data.ONE_BEDROOM_FLAT_SOCIAL_HOUSING*52.0;
+            uc.one_bedroom_in_shared_accommodation_rate := 12.0 * 234.37; 
+            -- straight unweighted average over all wales councils; 
+            -- see http://wales.gov.uk/topics/housingandcommunity/housing/private/renting/rentofficers/publications/lha13/?lang=en
             uc.withdrawal_rate :=  65.0/100.0;
             uc.limited_capability_for_work :=  123.62 * 12.0;
             uc.limited_capability_for_work_and_work_related_activity :=  303.66 * 12.0;
@@ -303,7 +305,7 @@ package body Model.Parameter_System.Defaults is
             sys.ema := 30.0*52.0;
             sys.ema_income_limit := 20_817.0;
             sys.ema_income_limit_w_kids := 23_077.00;
-	         sys.algfe := ( 1_500.0, 750.0, 450.0 );
+            sys.algfe := ( 1_500.0, 750.0, 450.0 );
             sys.algfe_income_limit := ( 6120.0, 12_236.00, 18_370.00 );
             sys.higher_education_bursary := 2_000.0;
             -- per week 1 room average in wales * 22 weeks away from course

@@ -73,7 +73,7 @@ package body AFT_Tests is
      for which_hh in catherine .. christian loop
         case which_hh is
            when catherine => start := 1; stop := 4;
-           when christian => start := 1; stop := 10;
+           when christian => start := 1; stop := 14;
         end case;
         for eno in start .. stop loop
            declare
