@@ -150,8 +150,7 @@ package body Example_Data.Examples is
                  end;
               when 11 =>
                  declare
-                    ev : Events_List( 2011 .. 2040 );
-                      
+                    ev : Events_List( 2011 .. 2040 ); 
                     sc_ev : Event_Obj := (
                       event => arbitrary_event,
                       name  => TuS( "Ongoing support from leaving care personal adviser" ),
@@ -169,7 +168,7 @@ package body Example_Data.Examples is
                        ev( 2014 ).Append( sc_ev );
                        ev( 2014 ).Append( teach_ev );
                     end if;
-                    ev( 2015 ).Add_Event( completes_gcses );                    
+                    ev( 2015 ).Add_Event( completes_a_levels );                    
                     ev( 2015 ).Append( sc_ev );
                     ev( 2015 ).Add_Event( leave_fostering );
                     ev( 2015 ).Add_Event( leave_household );
